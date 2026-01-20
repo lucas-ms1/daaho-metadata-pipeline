@@ -29,7 +29,7 @@
     "format": null,
     "medium": "Paper",
     "type": "Text",
-    "rights": "Rights status not determined",
+    "rights": null,
     "repository": null,
     "identifier": null,
     "call_number": null,
@@ -38,7 +38,7 @@
     "permalink": null,
     "digital_collection": null,
     "digital_publisher": null,
-    "digitized": false,
+    "digitized": null,
     "transcript": "October 20, 1937\n\nHis Excellency, the Minister from Siam\nSiamese Legation\nWashington, D. C.\n\nDear Sir:\n\nPrasob Sukhvasth, who has returned to Miami University this fall to continue his college course here, has asked me to write you regarding the record and impression he has made on our campus.\n\nDuring his earlier residence with us we all came to think very highly of him, both on account of his natural ability and because of the determination with which he went to work to improve upon his record in the east and to profit by the educational opportunities here. Except for his wider experience he was just another Miami student, unassuming, dependable, and interested in what life here had to offer. He did first class work in his studies and made many friends among students and faculty. We have all been delighted to have him return to us this year.\n\nThere is every indication that the young man has entered upon his work this fall with the same fine spirit he manifested before. In the interval he has had added experience in teaching and in newspaper work, so that he has more definite objectives than before. His idea of continuing here until he has completed work for the master's degree seems to me entirely sound, since he will have slightly more than enough credits for the A. B. degree at Commencement time in June, and can qualify for the master's degree by the middle of the next college year, about February 1, 1939. I am sure that you may count upon him to do what he undertakes and fulfill all obligations.\n\nRespectfully yours,\n\nPresident",
     "text_reading": "October 20, 1937 His Excellency, the Minister from Siam Siamese Legation Washington, D. C. Dear Sir: Prasob Sukhvasth, who has returned to Miami University this fall to continue his college course here, has asked me to write you regarding the record and impression he has made on our campus. During his earlier residence with us we all came to think very highly of him, both on account of his natural ability and because of the determination with which he went to work to improve upon his record in the east and to profit by the educational opportunities here. Except for his wider experience he was just another Miami student, unassuming, dependable, and interested in what life here had to offer. He did first class work in his studies and made many friends among students and faculty. We have all been delighted to have him return to us this year. There is every indication that the young man has entered upon his work this fall with the same fine spirit he manifested before. In the interval he has had added experience in teaching and in newspaper work, so that he has more definite objectives than before. His idea of continuing here until he has completed work for the master's degree seems to me entirely sound, since he will have slightly more than enough credits for the A. B. degree at Commencement time in June, and can qualify for the master's degree by the middle of the next college year, about February 1, 1939. I am sure that you may count upon him to do what he undertakes and fulfill all obligations. Respectfully yours, President",
     "generated_title": "Letter to the Minister from Siam, October 20, 1937",
@@ -77,9 +77,95 @@
       "generated_title": 90
     }
   },
+  "metadata_tiers": {
+    "tier1": {
+      "transcript": "October 20, 1937\n\nHis Excellency, the Minister from Siam\nSiamese Legation\nWashington, D. C.\n\nDear Sir:\n\nPrasob Sukhvasth, who has returned to Miami University this fall to continue his college course here, has asked me to write you regarding the record and impression he has made on our campus.\n\nDuring his earlier residence with us we all came to think very highly of him, both on account of his natural ability and because of the determination with which he went to work to improve upon his record in the east and to profit by the educational opportunities here. Except for his wider experience he was just another Miami student, unassuming, dependable, and interested in what life here had to offer. He did first class work in his studies and made many friends among students and faculty. We have all been delighted to have him return to us this year.\n\nThere is every indication that the young man has entered upon his work this fall with the same fine spirit he manifested before. In the interval he has had added experience in teaching and in newspaper work, so that he has more definite objectives than before. His idea of continuing here until he has completed work for the master's degree seems to me entirely sound, since he will have slightly more than enough credits for the A. B. degree at Commencement time in June, and can qualify for the master's degree by the middle of the next college year, about February 1, 1939. I am sure that you may count upon him to do what he undertakes and fulfill all obligations.\n\nRespectfully yours,\n\nPresident",
+      "text_reading": "October 20, 1937 His Excellency, the Minister from Siam Siamese Legation Washington, D. C. Dear Sir: Prasob Sukhvasth, who has returned to Miami University this fall to continue his college course here, has asked me to write you regarding the record and impression he has made on our campus. During his earlier residence with us we all came to think very highly of him, both on account of his natural ability and because of the determination with which he went to work to improve upon his record in the east and to profit by the educational opportunities here. Except for his wider experience he was just another Miami student, unassuming, dependable, and interested in what life here had to offer. He did first class work in his studies and made many friends among students and faculty. We have all been delighted to have him return to us this year. There is every indication that the young man has entered upon his work this fall with the same fine spirit he manifested before. In the interval he has had added experience in teaching and in newspaper work, so that he has more definite objectives than before. His idea of continuing here until he has completed work for the master's degree seems to me entirely sound, since he will have slightly more than enough credits for the A. B. degree at Commencement time in June, and can qualify for the master's degree by the middle of the next college year, about February 1, 1939. I am sure that you may count upon him to do what he undertakes and fulfill all obligations. Respectfully yours, President",
+      "description": "Letter concerning Prasob Sukhvasth's academic performance and plans.",
+      "title": null,
+      "generated_title": "Letter to the Minister from Siam, October 20, 1937",
+      "date": "undated",
+      "contributors": [],
+      "correspondents": [
+        "His Excellency, the Minister from Siam"
+      ],
+      "place": "Washington, D.C.",
+      "keywords": null,
+      "decade": null
+    },
+    "tier2": {
+      "subjects": [
+        "Education",
+        "Diplomacy"
+      ],
+      "genre": [
+        "Letter"
+      ],
+      "creator": null,
+      "publisher": null,
+      "theme": [
+        "Student life",
+        "Academic progress"
+      ]
+    },
+    "tier3": {
+      "rights": null,
+      "repository": null,
+      "collection": null,
+      "series": null,
+      "folder": null,
+      "box": null,
+      "identifier": null,
+      "call_number": null,
+      "digital_identifier": null,
+      "reproduction_number": null,
+      "permalink": null,
+      "digital_collection": null,
+      "digital_publisher": null,
+      "digitized": null
+    }
+  },
+  "field_provenance": {
+    "transcript": "OCR Transcript",
+    "text_reading": "OCR Text Reading",
+    "description": "AI-Generated Summary",
+    "title": "AI-Generated Title",
+    "generated_title": "AI-Generated Title (Alternate)",
+    "date": "AI-Inferred Date",
+    "contributors": "AI-Extracted Names (People)",
+    "correspondents": "AI-Extracted Names (People)",
+    "place": "AI-Extracted Places",
+    "keywords": "AI-Generated Keywords",
+    "decade": "AI-Inferred Decade",
+    "subjects": "AI-Proposed Subject",
+    "genre": "AI-Proposed Genre",
+    "creator": "AI-Proposed Creator",
+    "publisher": "AI-Proposed Publisher",
+    "theme": "AI-Proposed Theme",
+    "rights": "Human-only Rights (blank)",
+    "repository": "Human-only Repository (blank)",
+    "collection": "Human-only Collection (blank)",
+    "series": "Human-only Series (blank)",
+    "folder": "Human-only Folder (blank)",
+    "box": "Human-only Box (blank)",
+    "identifier": "Human-only Identifier (blank)",
+    "call_number": "Human-only Call Number (blank)",
+    "digital_identifier": "Human-only Digital Identifier (blank)",
+    "reproduction_number": "Human-only Reproduction Number (blank)",
+    "permalink": "Human-only Permalink (blank)",
+    "digital_collection": "Human-only Digital Collection (blank)",
+    "digital_publisher": "Human-only Digital Publisher (blank)",
+    "digitized": "Human-only Digitized Flag (blank)"
+  },
   "context": {
     "filename": "BC-0695_Recto.jpg",
     "processing_confidence": 85.0,
-    "model": "gpt-4o"
+    "model": "gpt-4o",
+    "policy_notes": [
+      "Cleared tier3 field 'rights' generated by model.",
+      "Cleared tier3 field 'digitized' generated by model."
+    ],
+    "schema_version": "loc15_schema_v1",
+    "rebuilt_from_existing": true
   }
 }

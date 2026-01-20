@@ -29,16 +29,16 @@
     "format": null,
     "medium": "Typed letter with handwritten notes",
     "type": "Text",
-    "rights": "Rights status not determined",
+    "rights": null,
     "repository": null,
     "identifier": null,
     "call_number": null,
-    "digital_identifier": "BC-0688_Recto.jpg",
+    "digital_identifier": null,
     "reproduction_number": null,
     "permalink": null,
     "digital_collection": null,
     "digital_publisher": null,
-    "digitized": true,
+    "digitized": null,
     "transcript": "[HANDWRITTEN: 1) RP. 2) The M/S - Pls note & return]\n[HANDWRITTEN]\n\n2300 KALORAMA ROAD.\nWASHINGTON,D.C.\n\nSTUDENTS’ DEPARTMENT\nMURRAY SHEEHAN, SUPERINTENDENT\n\nSIAMESE LEGATION\n\nOctober 27, 1958\n\nSecretary to the President\nMiami University\nOxford, Ohio\n\nMy dear Miss Marshall:\n\nMiss Aurelia Rosser has written to say that you would like to have Mr. Prasobsukh Sukhsvasti's present address and occupation for the 1938 graduate files.\n\nMr. Sukhsvasti should be listed as M. C. Prasobsukh Sukhsvasti, 10 Pra Aditya Road, Bangkok, Siam. I should like again, as on previous occasions, to request that the title of \"Prince\" be not granted to him by Miami University, despite Mr. Sukhsvasti's own apparent wide publicity on that score. His position in Siam may be, as before, a high-school teahher, or he may now be granted a position in one of the Government offices.\n\nUnfortunately, Miss Rosser named you only as \"Miss Marshall,\" so I am unable to address you more fully.\n\nYours very truly,\n\n[HANDWRITTEN: Murray Sheehan]\n\nSuperintendent",
     "text_reading": "1) RP. 2) The M/S - Pls note & return.\n2300 KALORAMA ROAD. WASHINGTON,D.C. STUDENTS’ DEPARTMENT MURRAY SHEEHAN, SUPERINTENDENT. SIAMESE LEGATION. October 27, 1958 Secretary to the President Miami University Oxford, Ohio. My dear Miss Marshall: Miss Aurelia Rosser has written to say that you would like to have Mr. Prasobsukh Sukhsvasti's present address and occupation for the 1938 graduate files. Mr. Sukhsvasti should be listed as M. C. Prasobsukh Sukhsvasti, 10 Pra Aditya Road, Bangkok, Siam. I should like again, as on previous occasions, to request that the title of \"Prince\" be not granted to him by Miami University, despite Mr. Suchsvasti's own apparent wide publicity on that score. His position in Siam may be, as before, a high-school teahher, or he may now be granted a position on one of the Government offices. Unfortunately, Miss Rosser named you only as \"Miss Marshall,\" so I am unable to address you more fully. Yours very truly, Murray Sheehan, Superintendent.",
     "generated_title": "Letter from Murray Sheehan to Miss Marshall, October 27, 1938",
@@ -77,9 +77,96 @@
       "generated_title": 95
     }
   },
+  "metadata_tiers": {
+    "tier1": {
+      "transcript": "[HANDWRITTEN: 1) RP. 2) The M/S - Pls note & return]\n[HANDWRITTEN]\n\n2300 KALORAMA ROAD.\nWASHINGTON,D.C.\n\nSTUDENTS’ DEPARTMENT\nMURRAY SHEEHAN, SUPERINTENDENT\n\nSIAMESE LEGATION\n\nOctober 27, 1958\n\nSecretary to the President\nMiami University\nOxford, Ohio\n\nMy dear Miss Marshall:\n\nMiss Aurelia Rosser has written to say that you would like to have Mr. Prasobsukh Sukhsvasti's present address and occupation for the 1938 graduate files.\n\nMr. Sukhsvasti should be listed as M. C. Prasobsukh Sukhsvasti, 10 Pra Aditya Road, Bangkok, Siam. I should like again, as on previous occasions, to request that the title of \"Prince\" be not granted to him by Miami University, despite Mr. Sukhsvasti's own apparent wide publicity on that score. His position in Siam may be, as before, a high-school teahher, or he may now be granted a position in one of the Government offices.\n\nUnfortunately, Miss Rosser named you only as \"Miss Marshall,\" so I am unable to address you more fully.\n\nYours very truly,\n\n[HANDWRITTEN: Murray Sheehan]\n\nSuperintendent",
+      "text_reading": "1) RP. 2) The M/S - Pls note & return.\n2300 KALORAMA ROAD. WASHINGTON,D.C. STUDENTS’ DEPARTMENT MURRAY SHEEHAN, SUPERINTENDENT. SIAMESE LEGATION. October 27, 1958 Secretary to the President Miami University Oxford, Ohio. My dear Miss Marshall: Miss Aurelia Rosser has written to say that you would like to have Mr. Prasobsukh Sukhsvasti's present address and occupation for the 1938 graduate files. Mr. Sukhsvasti should be listed as M. C. Prasobsukh Sukhsvasti, 10 Pra Aditya Road, Bangkok, Siam. I should like again, as on previous occasions, to request that the title of \"Prince\" be not granted to him by Miami University, despite Mr. Suchsvasti's own apparent wide publicity on that score. His position in Siam may be, as before, a high-school teahher, or he may now be granted a position on one of the Government offices. Unfortunately, Miss Rosser named you only as \"Miss Marshall,\" so I am unable to address you more fully. Yours very truly, Murray Sheehan, Superintendent.",
+      "description": "Letter from Murray Sheehan regarding Mr. Prasobsukh Sukhsvasti's graduate records.",
+      "title": "Letter from Murray Sheehan to Miss Marshall, October 27, 1938",
+      "generated_title": "Letter from Murray Sheehan to Miss Marshall, October 27, 1938",
+      "date": "undated",
+      "contributors": [],
+      "correspondents": [
+        "Miss Marshall"
+      ],
+      "place": "Washington, D.C.",
+      "keywords": null,
+      "decade": null
+    },
+    "tier2": {
+      "subjects": [
+        "Higher Education",
+        "Diplomatic Relations",
+        "Graduate Records"
+      ],
+      "genre": [
+        "Letter"
+      ],
+      "creator": "Murray Sheehan",
+      "publisher": null,
+      "theme": [
+        "University Administration"
+      ]
+    },
+    "tier3": {
+      "rights": null,
+      "repository": null,
+      "collection": null,
+      "series": null,
+      "folder": null,
+      "box": null,
+      "identifier": null,
+      "call_number": null,
+      "digital_identifier": null,
+      "reproduction_number": null,
+      "permalink": null,
+      "digital_collection": null,
+      "digital_publisher": null,
+      "digitized": null
+    }
+  },
+  "field_provenance": {
+    "transcript": "OCR Transcript",
+    "text_reading": "OCR Text Reading",
+    "description": "AI-Generated Summary",
+    "title": "AI-Generated Title",
+    "generated_title": "AI-Generated Title (Alternate)",
+    "date": "AI-Inferred Date",
+    "contributors": "AI-Extracted Names (People)",
+    "correspondents": "AI-Extracted Names (People)",
+    "place": "AI-Extracted Places",
+    "keywords": "AI-Generated Keywords",
+    "decade": "AI-Inferred Decade",
+    "subjects": "AI-Proposed Subject",
+    "genre": "AI-Proposed Genre",
+    "creator": "AI-Proposed Creator",
+    "publisher": "AI-Proposed Publisher",
+    "theme": "AI-Proposed Theme",
+    "rights": "Human-only Rights (blank)",
+    "repository": "Human-only Repository (blank)",
+    "collection": "Human-only Collection (blank)",
+    "series": "Human-only Series (blank)",
+    "folder": "Human-only Folder (blank)",
+    "box": "Human-only Box (blank)",
+    "identifier": "Human-only Identifier (blank)",
+    "call_number": "Human-only Call Number (blank)",
+    "digital_identifier": "Human-only Digital Identifier (blank)",
+    "reproduction_number": "Human-only Reproduction Number (blank)",
+    "permalink": "Human-only Permalink (blank)",
+    "digital_collection": "Human-only Digital Collection (blank)",
+    "digital_publisher": "Human-only Digital Publisher (blank)",
+    "digitized": "Human-only Digitized Flag (blank)"
+  },
   "context": {
     "filename": "BC-0688_Recto.jpg",
     "processing_confidence": 78.6624203821656,
-    "model": "gpt-4o"
+    "model": "gpt-4o",
+    "policy_notes": [
+      "Cleared tier3 field 'rights' generated by model.",
+      "Cleared tier3 field 'digital_identifier' generated by model.",
+      "Cleared tier3 field 'digitized' generated by model."
+    ],
+    "schema_version": "loc15_schema_v1",
+    "rebuilt_from_existing": true
   }
 }

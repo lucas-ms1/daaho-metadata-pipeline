@@ -19,7 +19,7 @@ IMAGES_OUTPUT_DIR = OUTPUT_DIR / "images"
 
 def main():
     print("=" * 60)
-    print("🚀 Building static site for Vercel deployment")
+    print("Building static site for Vercel deployment")
     print("=" * 60)
     
     # Create output directories
@@ -54,6 +54,8 @@ def main():
                     'id': base_name,
                     'image': image_path,
                     'metadata': data.get('metadata', {}),
+                    'metadata_tiers': data.get('metadata_tiers', {}),
+                    'field_provenance': data.get('field_provenance', {}),
                     'context': data.get('context', {}),
                     'filename': base_name
                 })

@@ -28,7 +28,7 @@
     "format": null,
     "medium": null,
     "type": "Text",
-    "rights": "Rights status not determined",
+    "rights": null,
     "repository": null,
     "identifier": null,
     "call_number": null,
@@ -76,9 +76,93 @@
       "generated_title": 80
     }
   },
+  "metadata_tiers": {
+    "tier1": {
+      "transcript": "[HANDWRITTEN: F13]\n20 September 1945\n\nFinancial assistance given to students and trainees from China.\nAdmission of Chinese nationals to American colleges and universities.\n\nThe American Ambassador to China has made the following request concerning the above two subjects:\n\n\"It would be helpful in the handling of the visa applications of Chinese students and trainees proceeding to the United States if the Department could make known as widely as possible to colleges and universities, special bodies administering scholarship funds such as the China Institute, and to American business organizations accepting Chinese as trainees, that advice of the grant of scholarships, fellowships, stipends and other financial assistance, should be sent directly to the Embassy or to the consular office of the district in which the applicant resides and that advice furnished should be as specific as possible in regard to the amount of such assistance. This is necessary in order to have some assurance of the authenticity of the information and of the adequacy of the financial assistance.\n\n\"It would be helpful if colleges and universities could be asked to send their notices of admittance directly to the visa issuing office and to make the admittance of students absolute and not conditional upon the presentation of satisfactory credentials as frequently is the case.\"\n\nIt should be noted that 4(e) visas may not be given when admission certificates are conditional.",
+      "text_reading": "F13 20 September 1945 Financial assistance given to students and trainees from China. Admission of Chinese nationals to American colleges and universities. The American Ambassador to China has made the following request concerning the above two subjects: \"It would be helpful in the handling of the visa applications of Chinese students and trainees proceeding to the United States if the Department could make known as widely as possible to colleges and universities, special bodies administering scholarship funds such as the China Institute, and to American business organizations accepting Chinese as trainees, that advice of the grant of scholarships, fellowships, stipends and other financial assistance, should be sent directly to the Embassy or to the consular office of the district in which the applicant resides and that advice furnished should be as specific as possible in regard to the amount of such assistance. This is necessary in order to have some assurance of the authenticity of the information and of the adequacy of the financial assistance. \"It would be helpful if colleges and universities could be asked to send their notices of admittance directly to the visa issuing office and to make the admittance of students absolute and not conditional upon the presentation of satisfactory credentials as frequently is the case.\" It should be noted that 4(e) visas may not be given when admission certificates are conditional.",
+      "description": "Document discussing financial assistance and admission of Chinese nationals to American educational institutions.",
+      "title": "Financial assistance given to students and trainees from China",
+      "generated_title": "Financial assistance given to students and trainees from China, 1945",
+      "date": "undated",
+      "contributors": null,
+      "correspondents": null,
+      "place": "Washington, D.C.",
+      "keywords": null,
+      "decade": null
+    },
+    "tier2": {
+      "subjects": [
+        "Chinese students",
+        "Financial assistance",
+        "Visa applications"
+      ],
+      "genre": [
+        "Government document"
+      ],
+      "creator": null,
+      "publisher": "Department of State",
+      "theme": [
+        "International education",
+        "Diplomatic communications"
+      ]
+    },
+    "tier3": {
+      "rights": null,
+      "repository": null,
+      "collection": null,
+      "series": null,
+      "folder": null,
+      "box": null,
+      "identifier": null,
+      "call_number": null,
+      "digital_identifier": null,
+      "reproduction_number": null,
+      "permalink": null,
+      "digital_collection": null,
+      "digital_publisher": null,
+      "digitized": null
+    }
+  },
+  "field_provenance": {
+    "transcript": "OCR Transcript",
+    "text_reading": "OCR Text Reading",
+    "description": "AI-Generated Summary",
+    "title": "AI-Generated Title",
+    "generated_title": "AI-Generated Title (Alternate)",
+    "date": "AI-Inferred Date",
+    "contributors": "AI-Extracted Names (People)",
+    "correspondents": "AI-Extracted Names (People)",
+    "place": "AI-Extracted Places",
+    "keywords": "AI-Generated Keywords",
+    "decade": "AI-Inferred Decade",
+    "subjects": "AI-Proposed Subject",
+    "genre": "AI-Proposed Genre",
+    "creator": "AI-Proposed Creator",
+    "publisher": "AI-Proposed Publisher",
+    "theme": "AI-Proposed Theme",
+    "rights": "Human-only Rights (blank)",
+    "repository": "Human-only Repository (blank)",
+    "collection": "Human-only Collection (blank)",
+    "series": "Human-only Series (blank)",
+    "folder": "Human-only Folder (blank)",
+    "box": "Human-only Box (blank)",
+    "identifier": "Human-only Identifier (blank)",
+    "call_number": "Human-only Call Number (blank)",
+    "digital_identifier": "Human-only Digital Identifier (blank)",
+    "reproduction_number": "Human-only Reproduction Number (blank)",
+    "permalink": "Human-only Permalink (blank)",
+    "digital_collection": "Human-only Digital Collection (blank)",
+    "digital_publisher": "Human-only Digital Publisher (blank)",
+    "digitized": "Human-only Digitized Flag (blank)"
+  },
   "context": {
     "filename": "BC-0926_Recto.jpg",
     "processing_confidence": 81.44078144078144,
-    "model": "gpt-4o"
+    "model": "gpt-4o",
+    "policy_notes": [
+      "Cleared tier3 field 'rights' generated by model."
+    ],
+    "schema_version": "loc15_schema_v1",
+    "rebuilt_from_existing": true
   }
 }

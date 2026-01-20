@@ -237,6 +237,140 @@
             margin-top: 0.5rem;
         }
 
+        .tier-section {
+            margin-top: 1rem;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 0.75rem;
+        }
+
+        .tier-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .provenance {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+
+        .review-form {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .review-form label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #4a5568;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .review-form input,
+        .review-form textarea,
+        .review-form select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        .review-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .review-actions button {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: none;
+            border-radius: 6px;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .review-status {
+            font-size: 0.75rem;
+            color: #4a5568;
+            margin-top: 0.5rem;
+        }
+
+        .vocab-warnings {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 10px;
+            color: #7c2d12;
+            font-size: 0.85rem;
+        }
+
+        .vocab-warning {
+            margin-top: 0.5rem;
+        }
+
+        .vocab-warning-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .vocab-warning-item {
+            margin-top: 0.25rem;
+        }
+
+        .vocab-warning-item span {
+            display: block;
+        }
+
+        .vocab-suggestions {
+            color: #9a3412;
+            font-size: 0.8rem;
+        }
+
+        .autocomplete-menu {
+            position: absolute;
+            z-index: 9999;
+            background: white;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .autocomplete-item {
+            padding: 0.4rem 0.6rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .autocomplete-item:hover {
+            background: #f1f5f9;
+        }
+
+        .autocomplete-loading {
+            color: #64748b;
+            cursor: default;
+        }
+
         .loading {
             text-align: center;
             color: white;
@@ -316,56 +450,104 @@
             });
         }
 
+        function isEmptyValue(value) {
+            if (value === null || value === undefined || value === '') return true;
+            if (Array.isArray(value) && value.length === 0) return true;
+            return false;
+        }
+
+        function formatArray(value) {
+            if (!value || value.length === 0) return '';
+            return value.map(v => `<span class="tag">${v}</span>`).join('');
+        }
+
+        function formatScalar(value) {
+            if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+            return String(value);
+        }
+
+        function buildField(field, value, provenance) {
+            if (isEmptyValue(value)) return '';
+            const provLabel = provenance && provenance[field] ? `<span class="provenance">${provenance[field]}</span>` : '';
+            const displayValue = Array.isArray(value)
+                ? `<div class="field-value array">${formatArray(value)}</div>`
+                : `<div class="field-value">${formatScalar(value)}</div>`;
+            return `
+                <div class="metadata-field">
+                    <div class="field-label">${field}${provLabel}</div>
+                    ${displayValue}
+                </div>
+            `;
+        }
+
+        function buildTierSection(title, fields, data, provenance) {
+            const blocks = fields.map(field => buildField(field, data[field], provenance)).filter(Boolean).join('');
+            if (!blocks) return '';
+            return `
+                <div class="tier-section">
+                    <div class="tier-header">${title}</div>
+                    ${blocks}
+                </div>
+            `;
+        }
+
+        function buildVocabWarnings(validation) {
+            if (!validation) return '';
+            const sections = [];
+            const buildSection = (label, items) => {
+                const invalid = (items || []).filter(item => item && item.valid === false && item.term);
+                if (!invalid.length) return '';
+                const rows = invalid.map(item => {
+                    const suggestions = (item.suggestions || []).slice(0, 5).join('; ');
+                    const error = item.error ? `<span class="vocab-suggestions">Error: ${item.error}</span>` : '';
+                    const suggestionHtml = suggestions ? `<span class="vocab-suggestions">Suggestions: ${suggestions}</span>` : '';
+                    return `
+                        <div class="vocab-warning-item">
+                            <span>${item.term}</span>
+                            ${suggestionHtml}
+                            ${error}
+                        </div>
+                    `;
+                }).join('');
+                return `
+                    <div class="vocab-warning">
+                        <div class="vocab-warning-title">${label}</div>
+                        ${rows}
+                    </div>
+                `;
+            };
+
+            const subjectSection = buildSection('Subjects (FAST) needing review', validation.subjects);
+            const genreSection = buildSection('Genre (AAT) needing review', validation.genre);
+            if (subjectSection) sections.push(subjectSection);
+            if (genreSection) sections.push(genreSection);
+            if (!sections.length) return '';
+            return `<div class="vocab-warnings">${sections.join('')}</div>`;
+        }
+
         // Create a card for an item
         function createItemCard(item) {
             const card = document.createElement('div');
             card.className = 'item-card';
 
-            const metadata = item.metadata;
-            const context = item.context;
+            const metadata = item.metadata || {};
+            const tiers = item.metadata_tiers || {};
+            const provenance = item.field_provenance || {};
+            const tier1 = tiers.tier1 || metadata;
+            const tier2 = tiers.tier2 || {};
+            const tier3 = tiers.tier3 || {};
+            const review = item.review || {};
+            const reviewOverrides = review.overrides || {};
+            const context = item.context || {};
 
             // Image section
             const imageHtml = item.image 
                 ? `<img src="${item.image}" alt="${item.filename}" loading="lazy">`
                 : '<div class="no-image">📄 No image available</div>';
 
-            // Basic metadata fields
-            const basicFields = ['creator', 'date', 'place', 'language', 'collection', 'repository'];
-            const basicFieldsHtml = basicFields
-                .map(field => {
-                    const value = metadata[field];
-                    if (value === null || value === undefined || value === '') return '';
-                    return `
-                        <div class="metadata-field">
-                            <div class="field-label">${field}</div>
-                            <div class="field-value">${value}</div>
-                        </div>
-                    `;
-                })
-                .join('');
-
-            // Array fields (subjects, theme, genre)
-            const arrayFieldsHtml = ['subjects', 'theme', 'genre']
-                .map(field => {
-                    const value = metadata[field];
-                    if (!value || value.length === 0) return '';
-                    const tags = value.map(v => `<span class="tag">${v}</span>`).join('');
-                    return `
-                        <div class="metadata-field">
-                            <div class="field-label">${field}</div>
-                            <div class="field-value array">${tags}</div>
-                        </div>
-                    `;
-                })
-                .join('');
-
-            // Description
-            const descriptionHtml = metadata.description ? `
-                <div class="metadata-field">
-                    <div class="field-label">Description</div>
-                    <div class="field-value">${metadata.description}</div>
-                </div>
-            ` : '';
+            const tier1Fields = ['title', 'generated_title', 'description', 'date', 'place', 'language', 'contributors', 'correspondents', 'keywords', 'decade'];
+            const tier2Fields = ['subjects', 'theme', 'genre', 'creator', 'publisher'];
+            const tier3Fields = ['repository', 'collection', 'series', 'folder', 'box', 'identifier', 'call_number', 'digital_identifier', 'reproduction_number', 'permalink', 'digital_collection', 'digital_publisher', 'digitized', 'rights'];
 
             // Accordion sections for long text fields
             const transcriptHtml = metadata.transcript ? `
@@ -396,10 +578,49 @@
                 </div>
             ` : '';
 
+            const tier1Section = buildTierSection('Tier 1 (AI-generated)', tier1Fields, tier1, provenance);
+            const tier2Section = buildTierSection('Tier 2 (AI-proposed)', tier2Fields, tier2, provenance);
+            const tier3Section = buildTierSection('Tier 3 (Human-only defaults)', tier3Fields, tier3, provenance);
+            const vocabWarningsHtml = buildVocabWarnings(context.vocabulary_validation);
+
             // Context info
             const contextHtml = `
                 <span class="context-badge">Model: ${context.model || 'unknown'}</span>
                 <span class="context-badge">Confidence: ${Math.round(context.processing_confidence || 0)}%</span>
+            `;
+
+            const reviewStatus = review.status ? `Status: ${review.status}` : 'Status: not reviewed';
+            const reviewMeta = review.reviewer ? `${reviewStatus} · Reviewer: ${review.reviewer}` : reviewStatus;
+
+            const reviewFormHtml = `
+                <div class="review-form">
+                    <div class="tier-header">Archivist Review (Tier 2)</div>
+                    <label>Reviewer</label>
+                    <input type="text" class="reviewer" value="${review.reviewer || ''}" placeholder="Initials or name">
+                    <label>Status</label>
+                    <select class="status">
+                        <option value="">Not reviewed</option>
+                        <option value="needs_work" ${review.status === 'needs_work' ? 'selected' : ''}>Needs work</option>
+                        <option value="in_review" ${review.status === 'in_review' ? 'selected' : ''}>In review</option>
+                        <option value="approved" ${review.status === 'approved' ? 'selected' : ''}>Approved</option>
+                    </select>
+                    <label>Subjects (semicolon separated)</label>
+                    <input type="text" class="subjects" value="${(reviewOverrides.subjects || metadata.subjects || []).join('; ')}">
+                    <label>Theme (semicolon separated)</label>
+                    <input type="text" class="theme" value="${(reviewOverrides.theme || metadata.theme || []).join('; ')}">
+                    <label>Genre (semicolon separated)</label>
+                    <input type="text" class="genre" value="${(reviewOverrides.genre || metadata.genre || []).join('; ')}">
+                    <label>Creator</label>
+                    <input type="text" class="creator" value="${reviewOverrides.creator || metadata.creator || ''}">
+                    <label>Publisher</label>
+                    <input type="text" class="publisher" value="${reviewOverrides.publisher || metadata.publisher || ''}">
+                    <label>Notes</label>
+                    <textarea rows="3" class="notes" placeholder="Optional review notes">${review.notes || ''}</textarea>
+                    <div class="review-actions">
+                        <button onclick="saveReview('${item.id}', this)">Save review</button>
+                    </div>
+                    <div class="review-status">${reviewMeta}</div>
+                </div>
             `;
 
             card.innerHTML = `
@@ -409,17 +630,135 @@
                 <div class="metadata-content">
                     <div class="item-title">${metadata.title || item.filename}</div>
                     ${metadata.generated_title ? `<div class="item-generated-title">${metadata.generated_title}</div>` : ''}
-                    ${basicFieldsHtml}
-                    ${arrayFieldsHtml}
-                    ${descriptionHtml}
+                    ${tier1Section}
+                    ${tier2Section}
+                    ${tier3Section}
                     ${transcriptHtml || textReadingHtml ? '<div class="accordion">' + transcriptHtml + textReadingHtml + '</div>' : ''}
+                    ${vocabWarningsHtml}
+                    ${reviewFormHtml}
                     <div style="margin-top: 1rem;">
                         ${contextHtml}
                     </div>
                 </div>
             `;
 
+            initAutocomplete(card);
+
             return card;
+        }
+
+        function initAutocomplete(card) {
+            const subjectsInput = card.querySelector('.review-form .subjects');
+            const genreInput = card.querySelector('.review-form .genre');
+            if (subjectsInput) {
+                attachAutocomplete(subjectsInput, '/api/vocab/fast/search');
+            }
+            if (genreInput) {
+                attachAutocomplete(genreInput, '/api/vocab/aat/search');
+            }
+        }
+
+        function attachAutocomplete(inputEl, endpoint) {
+            const menu = document.createElement('div');
+            menu.className = 'autocomplete-menu';
+            document.body.appendChild(menu);
+
+            let debounceTimer = null;
+            let active = false;
+
+            const positionMenu = () => {
+                const rect = inputEl.getBoundingClientRect();
+                menu.style.width = `${rect.width}px`;
+                menu.style.left = `${rect.left + window.scrollX}px`;
+                menu.style.top = `${rect.bottom + window.scrollY}px`;
+            };
+
+            const hideMenu = () => {
+                menu.style.display = 'none';
+                active = false;
+            };
+
+            const showMenu = () => {
+                if (!menu.innerHTML.trim()) {
+                    hideMenu();
+                    return;
+                }
+                positionMenu();
+                menu.style.display = 'block';
+                active = true;
+            };
+
+            const updateValue = (value) => {
+                const parts = inputEl.value.split(';');
+                if (parts.length === 1) {
+                    inputEl.value = value;
+                    return;
+                }
+                parts[parts.length - 1] = ` ${value}`;
+                inputEl.value = parts.map(part => part.trim()).filter(Boolean).join('; ');
+            };
+
+            const fetchSuggestions = (query) => {
+                if (!query) {
+                    hideMenu();
+                    return;
+                }
+                menu.innerHTML = '<div class="autocomplete-item autocomplete-loading">Loading...</div>';
+                showMenu();
+                fetch(`${endpoint}?q=${encodeURIComponent(query)}`)
+                    .then(resp => resp.json())
+                    .then(data => {
+                        const suggestions = data.suggestions || [];
+                        if (!suggestions.length) {
+                            hideMenu();
+                            return;
+                        }
+                        menu.innerHTML = suggestions
+                            .map(item => `<div class="autocomplete-item" data-value="${item.term}">${item.term}</div>`)
+                            .join('');
+                        showMenu();
+                    })
+                    .catch(() => hideMenu());
+            };
+
+            inputEl.addEventListener('input', (event) => {
+                const value = event.target.value || '';
+                const parts = value.split(';');
+                const current = parts[parts.length - 1].trim();
+                if (debounceTimer) {
+                    clearTimeout(debounceTimer);
+                }
+                debounceTimer = setTimeout(() => fetchSuggestions(current), 250);
+            });
+
+            inputEl.addEventListener('focus', () => {
+                if (active) {
+                    showMenu();
+                }
+            });
+
+            menu.addEventListener('click', (event) => {
+                const target = event.target;
+                if (!target || !target.dataset || !target.dataset.value) {
+                    return;
+                }
+                updateValue(target.dataset.value);
+                hideMenu();
+                inputEl.focus();
+            });
+
+            document.addEventListener('click', (event) => {
+                if (event.target === inputEl || menu.contains(event.target)) {
+                    return;
+                }
+                hideMenu();
+            });
+
+            window.addEventListener('resize', () => {
+                if (active) {
+                    positionMenu();
+                }
+            });
         }
 
         // Toggle accordion
@@ -436,6 +775,40 @@
             if (!isActive) {
                 header.classList.add('active');
                 content.classList.add('active');
+            }
+        }
+
+        async function saveReview(itemId, buttonEl) {
+            const form = buttonEl.closest('.review-form');
+            const payload = {
+                reviewer: form.querySelector('.reviewer').value.trim(),
+                status: form.querySelector('.status').value,
+                notes: form.querySelector('.notes').value.trim(),
+                overrides: {
+                    subjects: form.querySelector('.subjects').value,
+                    theme: form.querySelector('.theme').value,
+                    genre: form.querySelector('.genre').value,
+                    creator: form.querySelector('.creator').value,
+                    publisher: form.querySelector('.publisher').value
+                }
+            };
+            try {
+                const resp = await fetch(`/api/review/${itemId}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!resp.ok) {
+                    alert('Failed to save review.');
+                    return;
+                }
+                const result = await resp.json();
+                const review = result.review || {};
+                const status = review.status ? `Status: ${review.status}` : 'Status: not reviewed';
+                const meta = review.reviewer ? `${status} · Reviewer: ${review.reviewer}` : status;
+                form.querySelector('.review-status').textContent = meta;
+            } catch (error) {
+                alert('Error saving review.');
             }
         }
 

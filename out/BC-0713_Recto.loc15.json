@@ -29,16 +29,16 @@
     "format": null,
     "medium": "Typed letter",
     "type": "Text",
-    "rights": "Rights status not determined",
+    "rights": null,
     "repository": null,
     "identifier": null,
     "call_number": null,
-    "digital_identifier": "BC-0713_Recto",
+    "digital_identifier": null,
     "reproduction_number": null,
     "permalink": null,
     "digital_collection": null,
     "digital_publisher": null,
-    "digitized": true,
+    "digitized": null,
     "transcript": "No. 192/2485\n\nMr. A.H. Upham,\nPresident of Miami University,\nOxford, Ohio.\n\nMy dear President Upham,\n\nThank you for your letter of February 4th and for your offer to\ngive accommodation to the annual meeting of Thai students.\n\nI much regret that, owing to the War, we shall have to cancel our\nusual Students' Meeting this year and we shall therefore be unable to\navail ourselves of the hospitality which you have so kindly extended\non behalf of Miami University. I trust, however, that, at some future date and under happier circumstances, it will be possible to bring our students\nto your campus.\n\nYours very truly,\n[HANDWRITTEN: M.R. Seni Pramoj]\n\nM.R. Seni Pramoj\nMinister for Thailand.",
     "text_reading": "No. 192/2485 Mr. A.H. Upham, President of Miami University, Oxford, Ohio. My dear President Upham, Thank you for your letter of February 4th and for your offer to give accommodation to the annual meeting of Thai students. I much regret that, owing to the War, we shall have to cancel our usual Students' Meeting this year and we shall therefore be unable to avail ourselves of the hospitality which you have so kindly extended on behalf of Miami University. I trust, however, that, at some future date and under happier circumstances, it will be possible to bring our students to your campus. Yours very truly, M.R. Seni Pramoj M.R. Seni Pramoj Minister for Thailand.",
     "generated_title": "Letter from M.R. Seni Pramoj to A.H. Upham, February 28, 1942",
@@ -76,9 +76,96 @@
       "text_reading": 100
     }
   },
+  "metadata_tiers": {
+    "tier1": {
+      "transcript": "No. 192/2485\n\nMr. A.H. Upham,\nPresident of Miami University,\nOxford, Ohio.\n\nMy dear President Upham,\n\nThank you for your letter of February 4th and for your offer to\ngive accommodation to the annual meeting of Thai students.\n\nI much regret that, owing to the War, we shall have to cancel our\nusual Students' Meeting this year and we shall therefore be unable to\navail ourselves of the hospitality which you have so kindly extended\non behalf of Miami University. I trust, however, that, at some future date and under happier circumstances, it will be possible to bring our students\nto your campus.\n\nYours very truly,\n[HANDWRITTEN: M.R. Seni Pramoj]\n\nM.R. Seni Pramoj\nMinister for Thailand.",
+      "text_reading": "No. 192/2485 Mr. A.H. Upham, President of Miami University, Oxford, Ohio. My dear President Upham, Thank you for your letter of February 4th and for your offer to give accommodation to the annual meeting of Thai students. I much regret that, owing to the War, we shall have to cancel our usual Students' Meeting this year and we shall therefore be unable to avail ourselves of the hospitality which you have so kindly extended on behalf of Miami University. I trust, however, that, at some future date and under happier circumstances, it will be possible to bring our students to your campus. Yours very truly, M.R. Seni Pramoj M.R. Seni Pramoj Minister for Thailand.",
+      "description": "A letter from M.R. Seni Pramoj regarding the cancellation of a meeting due to the war.",
+      "title": "Letter from M.R. Seni Pramoj to A.H. Upham, February 28, 1942",
+      "generated_title": "Letter from M.R. Seni Pramoj to A.H. Upham, February 28, 1942",
+      "date": "undated",
+      "contributors": [],
+      "correspondents": [
+        "A.H. Upham"
+      ],
+      "place": "Washington, D.C.",
+      "keywords": null,
+      "decade": null
+    },
+    "tier2": {
+      "subjects": [
+        "Thai students",
+        "war impact"
+      ],
+      "genre": [
+        "letter"
+      ],
+      "creator": "M.R. Seni Pramoj",
+      "publisher": null,
+      "theme": [
+        "cancellation",
+        "hospitality"
+      ]
+    },
+    "tier3": {
+      "rights": null,
+      "repository": null,
+      "collection": null,
+      "series": null,
+      "folder": null,
+      "box": null,
+      "identifier": null,
+      "call_number": null,
+      "digital_identifier": null,
+      "reproduction_number": null,
+      "permalink": null,
+      "digital_collection": null,
+      "digital_publisher": null,
+      "digitized": null
+    }
+  },
+  "field_provenance": {
+    "transcript": "OCR Transcript",
+    "text_reading": "OCR Text Reading",
+    "description": "AI-Generated Summary",
+    "title": "AI-Generated Title",
+    "generated_title": "AI-Generated Title (Alternate)",
+    "date": "AI-Inferred Date",
+    "contributors": "AI-Extracted Names (People)",
+    "correspondents": "AI-Extracted Names (People)",
+    "place": "AI-Extracted Places",
+    "keywords": "AI-Generated Keywords",
+    "decade": "AI-Inferred Decade",
+    "subjects": "AI-Proposed Subject",
+    "genre": "AI-Proposed Genre",
+    "creator": "AI-Proposed Creator",
+    "publisher": "AI-Proposed Publisher",
+    "theme": "AI-Proposed Theme",
+    "rights": "Human-only Rights (blank)",
+    "repository": "Human-only Repository (blank)",
+    "collection": "Human-only Collection (blank)",
+    "series": "Human-only Series (blank)",
+    "folder": "Human-only Folder (blank)",
+    "box": "Human-only Box (blank)",
+    "identifier": "Human-only Identifier (blank)",
+    "call_number": "Human-only Call Number (blank)",
+    "digital_identifier": "Human-only Digital Identifier (blank)",
+    "reproduction_number": "Human-only Reproduction Number (blank)",
+    "permalink": "Human-only Permalink (blank)",
+    "digital_collection": "Human-only Digital Collection (blank)",
+    "digital_publisher": "Human-only Digital Publisher (blank)",
+    "digitized": "Human-only Digitized Flag (blank)"
+  },
   "context": {
     "filename": "BC-0713_Recto.jpg",
     "processing_confidence": 67.94871794871796,
-    "model": "gpt-4o"
+    "model": "gpt-4o",
+    "policy_notes": [
+      "Cleared tier3 field 'rights' generated by model.",
+      "Cleared tier3 field 'digital_identifier' generated by model.",
+      "Cleared tier3 field 'digitized' generated by model."
+    ],
+    "schema_version": "loc15_schema_v1",
+    "rebuilt_from_existing": true
   }
 }

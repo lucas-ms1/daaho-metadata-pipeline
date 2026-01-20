@@ -31,16 +31,16 @@
     "format": null,
     "medium": "paper",
     "type": "text",
-    "rights": "Rights status not determined",
+    "rights": null,
     "repository": null,
     "identifier": null,
     "call_number": null,
-    "digital_identifier": "BC-0897_Recto",
+    "digital_identifier": null,
     "reproduction_number": null,
     "permalink": null,
     "digital_collection": null,
     "digital_publisher": null,
-    "digitized": true,
+    "digitized": null,
     "transcript": "[HANDWRITTEN: Copy]\n\nMIAMI UNIVERSITY \nOXFORD, OHIO\n\nOFFICE OF THE PRESIDENT\n\nApril 24, 1940\n\nPresident\nMiami University\nOxford, Ohio\n\nDear Sir:\n\nIt has come to my attention that a personal note\nfrom me might well be added to your file dealing with the\ncharacter and person of one of your students Wing Kong Chong\nwho, I understand, hopes to be graduated from your university\nin 1940 with intention of returning to Hawaii to enter the\nDepartment of Public Instruction as a teacher here. I am\nvery pleased to send this word of testimony concerning Mr.\nChong whom I have known for the past eight years. While I am\nnot qualified to speak for his scholastic ability or capacity\nI do feel that I know enough of him and his brothers and sisters\nto say definitely that he is the type of young man we are hoping\nmore and more will enter the public school system here.\n\nI knew Wing Kong when he was in High School and during a summer\ndamp I came to know him even better. His character, I believe,\nis above reproach. His willingness to be helpful and his leadership\neven as a boy was very definitely an asset to the camp. If, during\nhis years on the mainland, he has continued on the path I knew him to\nfollow, I am sure he will be a splendid teacher and friend to youth.\n\nVery cordially yours,\n\nHarold V. Lucas,\nGENERAL SECRETARY,[YMCA] [HANDWRITTEN]\n",
     "text_reading": "Copy MIAMI UNIVERSITY OXFORD, OHIO OFFICE OF THE PRESIDENT April 24, 1940 President Miami University Oxford, Ohio Dear Sir: It has come to my attention that a personal note from me might well be added to your file dealing with the character and person of one of your students Wing Kong Chong who, I understand, hopes to be graduated from your university in 1940 with intention of returning to Hawaii to enter the Department of Public Instruction as a teacher here. I am very pleased to send this word of testimony concerning Mr. Chong whom I have known for the past eight years. While I am not qualified to speak for his scholastic ability or capacity I do feel that I know enough of him and his brothers and sisters to say definitely that he is the type of young man we are hoping more and more will enter the public school system here. I knew Wing Kong when he was in High School and during a summer damp I came to know him even better. His character, I believe, is above reproach. His willingness to be helpful and his leadership even as a boy was very definitely an asset to the camp. If, during his years on the mainland, he has continued on the path I knew him to follow, I am sure he will be a splendid teacher and friend to youth. Very cordially yours, Harold V. Lucas, GENERAL SECRETARY,YMCA",
     "generated_title": "Letter from Harold V. Lucas to President, Miami University, April 24, 1940",
@@ -79,9 +79,98 @@
       "generated_title": 95
     }
   },
+  "metadata_tiers": {
+    "tier1": {
+      "transcript": "[HANDWRITTEN: Copy]\n\nMIAMI UNIVERSITY \nOXFORD, OHIO\n\nOFFICE OF THE PRESIDENT\n\nApril 24, 1940\n\nPresident\nMiami University\nOxford, Ohio\n\nDear Sir:\n\nIt has come to my attention that a personal note\nfrom me might well be added to your file dealing with the\ncharacter and person of one of your students Wing Kong Chong\nwho, I understand, hopes to be graduated from your university\nin 1940 with intention of returning to Hawaii to enter the\nDepartment of Public Instruction as a teacher here. I am\nvery pleased to send this word of testimony concerning Mr.\nChong whom I have known for the past eight years. While I am\nnot qualified to speak for his scholastic ability or capacity\nI do feel that I know enough of him and his brothers and sisters\nto say definitely that he is the type of young man we are hoping\nmore and more will enter the public school system here.\n\nI knew Wing Kong when he was in High School and during a summer\ndamp I came to know him even better. His character, I believe,\nis above reproach. His willingness to be helpful and his leadership\neven as a boy was very definitely an asset to the camp. If, during\nhis years on the mainland, he has continued on the path I knew him to\nfollow, I am sure he will be a splendid teacher and friend to youth.\n\nVery cordially yours,\n\nHarold V. Lucas,\nGENERAL SECRETARY,[YMCA] [HANDWRITTEN]\n",
+      "text_reading": "Copy MIAMI UNIVERSITY OXFORD, OHIO OFFICE OF THE PRESIDENT April 24, 1940 President Miami University Oxford, Ohio Dear Sir: It has come to my attention that a personal note from me might well be added to your file dealing with the character and person of one of your students Wing Kong Chong who, I understand, hopes to be graduated from your university in 1940 with intention of returning to Hawaii to enter the Department of Public Instruction as a teacher here. I am very pleased to send this word of testimony concerning Mr. Chong whom I have known for the past eight years. While I am not qualified to speak for his scholastic ability or capacity I do feel that I know enough of him and his brothers and sisters to say definitely that he is the type of young man we are hoping more and more will enter the public school system here. I knew Wing Kong when he was in High School and during a summer damp I came to know him even better. His character, I believe, is above reproach. His willingness to be helpful and his leadership even as a boy was very definitely an asset to the camp. If, during his years on the mainland, he has continued on the path I knew him to follow, I am sure he will be a splendid teacher and friend to youth. Very cordially yours, Harold V. Lucas, GENERAL SECRETARY,YMCA",
+      "description": "Letter of recommendation for Wing Kong Chong.",
+      "title": null,
+      "generated_title": "Letter from Harold V. Lucas to President, Miami University, April 24, 1940",
+      "date": "undated",
+      "contributors": [
+        "YMCA"
+      ],
+      "correspondents": [
+        "President, Miami University"
+      ],
+      "place": "Oxford, Ohio",
+      "keywords": null,
+      "decade": null
+    },
+    "tier2": {
+      "subjects": [
+        "education",
+        "testimony",
+        "teaching career"
+      ],
+      "genre": [
+        "letter"
+      ],
+      "creator": "Harold V. Lucas",
+      "publisher": "Miami University",
+      "theme": [
+        "academic endorsement"
+      ]
+    },
+    "tier3": {
+      "rights": null,
+      "repository": null,
+      "collection": null,
+      "series": null,
+      "folder": null,
+      "box": null,
+      "identifier": null,
+      "call_number": null,
+      "digital_identifier": null,
+      "reproduction_number": null,
+      "permalink": null,
+      "digital_collection": null,
+      "digital_publisher": null,
+      "digitized": null
+    }
+  },
+  "field_provenance": {
+    "transcript": "OCR Transcript",
+    "text_reading": "OCR Text Reading",
+    "description": "AI-Generated Summary",
+    "title": "AI-Generated Title",
+    "generated_title": "AI-Generated Title (Alternate)",
+    "date": "AI-Inferred Date",
+    "contributors": "AI-Extracted Names (People)",
+    "correspondents": "AI-Extracted Names (People)",
+    "place": "AI-Extracted Places",
+    "keywords": "AI-Generated Keywords",
+    "decade": "AI-Inferred Decade",
+    "subjects": "AI-Proposed Subject",
+    "genre": "AI-Proposed Genre",
+    "creator": "AI-Proposed Creator",
+    "publisher": "AI-Proposed Publisher",
+    "theme": "AI-Proposed Theme",
+    "rights": "Human-only Rights (blank)",
+    "repository": "Human-only Repository (blank)",
+    "collection": "Human-only Collection (blank)",
+    "series": "Human-only Series (blank)",
+    "folder": "Human-only Folder (blank)",
+    "box": "Human-only Box (blank)",
+    "identifier": "Human-only Identifier (blank)",
+    "call_number": "Human-only Call Number (blank)",
+    "digital_identifier": "Human-only Digital Identifier (blank)",
+    "reproduction_number": "Human-only Reproduction Number (blank)",
+    "permalink": "Human-only Permalink (blank)",
+    "digital_collection": "Human-only Digital Collection (blank)",
+    "digital_publisher": "Human-only Digital Publisher (blank)",
+    "digitized": "Human-only Digitized Flag (blank)"
+  },
   "context": {
     "filename": "BC-0897_Recto.jpg",
     "processing_confidence": 56.65071770334929,
-    "model": "gpt-4o"
+    "model": "gpt-4o",
+    "policy_notes": [
+      "Cleared tier3 field 'rights' generated by model.",
+      "Cleared tier3 field 'digital_identifier' generated by model.",
+      "Cleared tier3 field 'digitized' generated by model."
+    ],
+    "schema_version": "loc15_schema_v1",
+    "rebuilt_from_existing": true
   }
 }
