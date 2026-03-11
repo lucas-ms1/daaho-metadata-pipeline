@@ -1,38 +1,40 @@
 {
   "metadata": {
-    "title": "College Aid Letter #4",
-    "creator": "Federal Security Agency, National Youth Administration for Ohio",
+    "title": "College aid letter #4, 8 November 1939",
+    "creator": "S. Burns Weston",
     "contributors": [
-      "S. Burns Weston",
       "Harry E. Rabe"
     ],
     "correspondents": [
       "Presidents of Ohio Colleges and Universities"
     ],
     "publisher": null,
-    "date": "undated",
-    "place": "Columbus, Ohio",
-    "language": "English",
+    "date": "1939-11-08",
+    "place": "Ohio--Columbus",
+    "language": null,
     "subjects": [
-      "College Enrollment",
-      "Educational Administration",
-      "Federal Aid Programs"
+      "National Youth Administration",
+      "College and Graduate Aid Program"
     ],
-    "theme": [
-      "Education",
-      "Student Aid"
-    ],
+    "theme": null,
     "genre": [
-      "Administrative Letter"
+      "Letter"
     ],
-    "description": "Letter requesting information for the NYA College and Graduate Aid Program.",
+    "keywords": [
+      "NYA",
+      "College Aid",
+      "Enrollment",
+      "Negro Students"
+    ],
+    "decade": "1930-1939",
+    "description": "Letter from the National Youth Administration for Ohio requesting information on college participation in the NYA College and Graduate Aid Program.",
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
-    "medium": "Paper",
-    "type": "Text",
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -43,78 +45,45 @@
     "digital_collection": null,
     "digital_publisher": null,
     "digitized": null,
-    "transcript": "Federal Security Agency\n\nNATIONAL YOUTH ADMINISTRATION FOR OHIO\n\nHoster Bldg-\nColumbus, Ohio\n\nNovember 8, 1939\n\nCOLLEGE AID LETTER #4\n\nTO; Presidents of Ohio Colleges and Universities\n\nThe Washington office of the National Youth Administration\n\nhas requested a report on institution participation in the\n\nNYA College and Graduate Aid Program, including the following information:\n\n1. The institution's total enrollment as of November 1, 1939.\n2. The number of Negro students enrolled.\n3. The total number of NYA applications received.\n4. The number of applications which the institution has approved or is planning to approve for NYA Aid.\n5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned.\n\nWill you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939.\n\nSincerely yours,\n\nS. Burns Weston\nState Administrator\n\nBy: [HANDWRITTEN: Harry E. Rabe]\nHarry E. Rabe, Assistant Director Work Projects Division",
-    "text_reading": "Federal Security Agency NATIONAL YOUTH ADMINISTRATION FOR OHIO Hoster Bldg- Columbus, Ohio November 8, 1939 COLLEGE AID LETTER #4 TO; Presidents of Ohio Colleges and Universities The Washington office of the National Youth Administration has requested a report on institution participation in the NYA College and Graduate Aid Program, including the following information: 1. The institution's total enrollment as of November 1, 1939. 2. The number of Negro students enrolled. 3. The total number of NYA applications received. 4. The number of applications which the institution has approved or is planning to approve for NYA Aid. 5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned. Will you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939. Sincerely yours, S. Burns Weston State Administrator By: Harry E. Rabe Harry E. Rabe, Assistant Director Work Projects Division",
-    "generated_title": "Letter from Federal Security Agency to Ohio Colleges, November 8, 1939",
-    "field_confidence": {
-      "title": 100,
-      "creator": 100,
-      "contributors": 100,
-      "correspondents": 100,
-      "publisher": 0,
-      "date": 100,
-      "place": 100,
-      "language": 100,
-      "subjects": 100,
-      "theme": 100,
-      "genre": 100,
-      "description": 100,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 100,
-      "type": 100,
-      "rights": 0,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 0,
-      "transcript": 100,
-      "text_reading": 100,
-      "generated_title": 100
-    }
+    "transcript": "Federal Security Agency  \nNATIONAL YOUTH ADMINISTRATION FOR OHIO  \nHoster Bldg.  \nColumbus, Ohio  \n\nNovember 8, 1939  \n\nCOLLEGE AID LETTER #4  \n\nTO: Presidents of Ohio Colleges and Universities  \n\nThe Washington office of the National Youth Administration has requested a report on institution participation in the NYA College and Graduate Aid Program, including the following information:  \n\n1. The institution's total enrollment as of November 1, 1939.  \n2. The number of Negro students enrolled.  \n3. The total number of NYA applications received.  \n4. The number of applications which the institution has approved or is planning to approve for NYA Aid.  \n5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned.  \n\nWill you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939.  \n\nSincerely yours,  \n\nS. Burns Weston  \nState Administrator  \n\nBY: [handwritten] Harry E. Rabe  \nHarry E. Rabe, Assistant Director  \nWork Projects Division",
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
-      "transcript": "Federal Security Agency\n\nNATIONAL YOUTH ADMINISTRATION FOR OHIO\n\nHoster Bldg-\nColumbus, Ohio\n\nNovember 8, 1939\n\nCOLLEGE AID LETTER #4\n\nTO; Presidents of Ohio Colleges and Universities\n\nThe Washington office of the National Youth Administration\n\nhas requested a report on institution participation in the\n\nNYA College and Graduate Aid Program, including the following information:\n\n1. The institution's total enrollment as of November 1, 1939.\n2. The number of Negro students enrolled.\n3. The total number of NYA applications received.\n4. The number of applications which the institution has approved or is planning to approve for NYA Aid.\n5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned.\n\nWill you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939.\n\nSincerely yours,\n\nS. Burns Weston\nState Administrator\n\nBy: [HANDWRITTEN: Harry E. Rabe]\nHarry E. Rabe, Assistant Director Work Projects Division",
-      "text_reading": "Federal Security Agency NATIONAL YOUTH ADMINISTRATION FOR OHIO Hoster Bldg- Columbus, Ohio November 8, 1939 COLLEGE AID LETTER #4 TO; Presidents of Ohio Colleges and Universities The Washington office of the National Youth Administration has requested a report on institution participation in the NYA College and Graduate Aid Program, including the following information: 1. The institution's total enrollment as of November 1, 1939. 2. The number of Negro students enrolled. 3. The total number of NYA applications received. 4. The number of applications which the institution has approved or is planning to approve for NYA Aid. 5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned. Will you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939. Sincerely yours, S. Burns Weston State Administrator By: Harry E. Rabe Harry E. Rabe, Assistant Director Work Projects Division",
-      "description": "Letter requesting information for the NYA College and Graduate Aid Program.",
-      "title": "College Aid Letter #4",
-      "generated_title": "Letter from Federal Security Agency to Ohio Colleges, November 8, 1939",
-      "date": "undated",
+      "transcript": "Federal Security Agency  \nNATIONAL YOUTH ADMINISTRATION FOR OHIO  \nHoster Bldg.  \nColumbus, Ohio  \n\nNovember 8, 1939  \n\nCOLLEGE AID LETTER #4  \n\nTO: Presidents of Ohio Colleges and Universities  \n\nThe Washington office of the National Youth Administration has requested a report on institution participation in the NYA College and Graduate Aid Program, including the following information:  \n\n1. The institution's total enrollment as of November 1, 1939.  \n2. The number of Negro students enrolled.  \n3. The total number of NYA applications received.  \n4. The number of applications which the institution has approved or is planning to approve for NYA Aid.  \n5. Institutions which have approved Negro applicants are requested to indicate the type of work to which they have been assigned.  \n\nWill you, therefore, kindly furnish us with this information, and as soon as possible, on the enclosed form? We shall appreciate receiving your report before November 17, 1939.  \n\nSincerely yours,  \n\nS. Burns Weston  \nState Administrator  \n\nBY: [handwritten] Harry E. Rabe  \nHarry E. Rabe, Assistant Director  \nWork Projects Division",
+      "text_reading": null,
+      "description": "Letter from the National Youth Administration for Ohio requesting information on college participation in the NYA College and Graduate Aid Program.",
+      "title": "College aid letter #4, 8 November 1939",
+      "generated_title": null,
+      "date": "1939-11-08",
       "contributors": [
-        "S. Burns Weston",
         "Harry E. Rabe"
       ],
       "correspondents": [
         "Presidents of Ohio Colleges and Universities"
       ],
-      "place": "Columbus, Ohio",
-      "keywords": null,
-      "decade": null
+      "place": "Ohio--Columbus",
+      "keywords": [
+        "NYA",
+        "College Aid",
+        "Enrollment",
+        "Negro Students"
+      ],
+      "decade": "1930-1939"
     },
     "tier2": {
       "subjects": [
-        "College Enrollment",
-        "Educational Administration",
-        "Federal Aid Programs"
+        "National Youth Administration",
+        "College and Graduate Aid Program"
       ],
       "genre": [
-        "Administrative Letter"
+        "Letter"
       ],
-      "creator": "Federal Security Agency, National Youth Administration for Ohio",
+      "creator": "S. Burns Weston",
       "publisher": null,
-      "theme": [
-        "Education",
-        "Student Aid"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -167,12 +136,61 @@
   },
   "context": {
     "filename": "BC-0708_Recto.jpg",
-    "processing_confidence": 80.1094890510949,
+    "processing_confidence": 85.0,
     "model": "gpt-4o",
-    "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [
+          {
+            "iso_date": "1939-11-08",
+            "precision": "day",
+            "line_idx": 4,
+            "raw": "November 8, 1939",
+            "confidence": 0.95
+          },
+          {
+            "iso_date": "1939-11-01",
+            "precision": "day",
+            "line_idx": 8,
+            "raw": "November 1, 1939",
+            "confidence": 0.95
+          },
+          {
+            "iso_date": "1939-11-17",
+            "precision": "day",
+            "line_idx": 13,
+            "raw": "November 17, 1939",
+            "confidence": 0.95
+          }
+        ],
+        "header_places": [
+          {
+            "fast_place": "Ohio--Columbus",
+            "line_idx": 3,
+            "raw": "Columbus, Ohio",
+            "confidence": 0.85
+          }
+        ]
+      }
+    },
+    "title_derivation": {
+      "raw_title": "College aid letter #4, 8 November 1939",
+      "normalized_title": "College aid letter #4, 8 November 1939",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    }
   }
 }

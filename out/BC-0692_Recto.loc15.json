@@ -1,31 +1,28 @@
 {
   "metadata": {
-    "title": null,
+    "title": "Upham itinerary document, undated",
     "creator": null,
-    "contributors": [],
-    "correspondents": [],
+    "contributors": null,
+    "correspondents": null,
     "publisher": null,
-    "date": "undated",
-    "place": null,
-    "language": "en",
+    "date": null,
+    "place": "Ohio--Oxford",
+    "language": null,
     "subjects": [
-      "itinerary",
-      "travel"
+      "Correspondence"
     ],
-    "theme": [
-      "travel"
-    ],
-    "genre": [
-      "document"
-    ],
-    "description": "Travel itinerary with dates and addresses for stops in Yokohama, Manila, Singapore, Calcutta, Bombay, Cairo, Naples, and Italy.",
+    "theme": null,
+    "genre": null,
+    "keywords": null,
+    "decade": null,
+    "description": null,
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
-    "medium": "paper",
-    "type": "text",
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -36,71 +33,31 @@
     "digital_collection": null,
     "digital_publisher": null,
     "digitized": null,
-    "transcript": "Upham Itinerary Address Mailing dates\n\nfrom Oxford, Ohio\n\nYokohama and Japan December 6 - 19 American Express Co. 7 Nihon Odori, Nakaku (P. O. Box 407) Yokohama, Japan November 17 - 24\n\nManila December 27 - January 5 American Express Co. 95 Plaza Moraga (P. O. Box 1463) Manila, P. I. November 24 - December 1\n\nSingapore January 9 - 27 American Express Co. No. 1, Collyer Quay Singapore, Straits Settlements December 1 - 14\n\nCalcutta February 6 - 7 American Express Co. 14-15 Government Place, East (P. O. Box 2331) Calcutta, India December 14 - January 1\n\nBombay February 17 - 18 American Express Co. 82-84 Esplanade Road, Fort (P. O. Box 507) Bombay, India January 1 - 21\n\nCairo February 28 - March 14 American Express Co. Continental Savoy Bldg. (P. O. Box 2160) Cairo, Egypt January 21 - February 28\n\nNaples and Italy March 19 - April 10 American Express Co. 23a Piazza dei Martiri Naples, Italy February 28 - March 15 American Express Co. Via Balbi (Hotel Colombia) Genoa, Italy March 15 - 30",
-    "text_reading": "Upham Itinerary Address Mailing dates from Oxford, Ohio Yokohama and Japan December 6 - 19 American Express Co. 7 Nihon Odori, Nakaku P. O. Box 407 Yokohama, Japan November 17 - 24 Manila December 27 - January 5 American Express Co. 95 Plaza Moraga P. O. Box 1463 Manila, P. I. November 24 - December 1 Singapore January 9 - 27 American Express Co. No. 1, Collyer Quay Singapore, Straits Settlements December 1 - 14 Calcutta February 6 - 7 American Express Co. 14-15 Government Place, East P. O. Box 2331 Calcutta, India December 14 - January 1 Bombay February 17 - 18 American Express Co. 82-84 Esplanade Road, Fort P. O. Box 507 Bombay, India January 1 - 21 Cairo February 28 - March 14 American Express Co. Continental Savoy Bldg. P. O. Box 2160 Cairo, Egypt January 21 - February 28 Naples and Italy March 19 - April 10 American Express Co. 23a Piazza dei Martiri Naples, Italy February 28 - March 15 American Express Co. Via Balbi Hotel Colombia Genoa, Italy March 15 - 30",
-    "generated_title": "Upham Itinerary, undated",
-    "field_confidence": {
-      "title": 0,
-      "creator": 0,
-      "contributors": 0,
-      "correspondents": 0,
-      "publisher": 0,
-      "date": 0,
-      "place": 0,
-      "language": 100,
-      "subjects": 100,
-      "theme": 100,
-      "genre": 100,
-      "description": 100,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 100,
-      "type": 100,
-      "rights": 0,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 0,
-      "transcript": 100,
-      "text_reading": 100,
-      "generated_title": 100
-    }
+    "transcript": "Upham Itinerary\n\nYokohama and Japan\nDecember 6 - 19\n\nManila\nDecember 27 - January 5\n\nSingapore\nJanuary 9 - 27\n\nCalcutta\nFebruary 6 - 7\n\nBombay\nFebruary 17 - 18\n\nCairo\nFebruary 28 - March 14\n\nNaples and Italy\nMarch 19 - April 10\n\nAddress\n\nAmerican Express Co.\n7 Nihon Odori, Nakku\n(P. O. Box 407)\nYokohama, Japan\n\nAmerican Express Co.\n95 Plaza Moraga\n(P. O. Box 1463)\nManila, P. I.\n\nAmerican Express Co.\nNo. 1, Collyer Quay\nSingapore, Straits Settlements\n\nAmerican Express Co.\n14-15 Government Place, East\n(P. O. Box 2311)\nCalcutta, India\n\nAmerican Express Co.\n82-84 Esplanade Road, Fort\n(P. O. Box 507)\nBombay, India\n\nAmerican Express Co.\nContinental Savoy Bldg.\n(P. O. Box 2160)\nCairo, Egypt\n\nAmerican Express Co.\n23a Piazza dei Martiri\nNaples, Italy\n\nAmerican Express Co.\nVia Balbi (Hotel Colombia)\nGenoa, Italy\n\nMailing dates\nfrom Oxford, Ohio\n\nNovember 17 - 24\n\nNovember 24 -\nDecember 1\n\nDecember 1 - 14\n\nDecember 14 -\nJanuary 1\n\nJanuary 1 - 21\n\nJanuary 21 -\nFebruary 28\n\nFebruary 28 - March 15\n\nMarch 15 - 30",
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
-      "transcript": "Upham Itinerary Address Mailing dates\n\nfrom Oxford, Ohio\n\nYokohama and Japan December 6 - 19 American Express Co. 7 Nihon Odori, Nakaku (P. O. Box 407) Yokohama, Japan November 17 - 24\n\nManila December 27 - January 5 American Express Co. 95 Plaza Moraga (P. O. Box 1463) Manila, P. I. November 24 - December 1\n\nSingapore January 9 - 27 American Express Co. No. 1, Collyer Quay Singapore, Straits Settlements December 1 - 14\n\nCalcutta February 6 - 7 American Express Co. 14-15 Government Place, East (P. O. Box 2331) Calcutta, India December 14 - January 1\n\nBombay February 17 - 18 American Express Co. 82-84 Esplanade Road, Fort (P. O. Box 507) Bombay, India January 1 - 21\n\nCairo February 28 - March 14 American Express Co. Continental Savoy Bldg. (P. O. Box 2160) Cairo, Egypt January 21 - February 28\n\nNaples and Italy March 19 - April 10 American Express Co. 23a Piazza dei Martiri Naples, Italy February 28 - March 15 American Express Co. Via Balbi (Hotel Colombia) Genoa, Italy March 15 - 30",
-      "text_reading": "Upham Itinerary Address Mailing dates from Oxford, Ohio Yokohama and Japan December 6 - 19 American Express Co. 7 Nihon Odori, Nakaku P. O. Box 407 Yokohama, Japan November 17 - 24 Manila December 27 - January 5 American Express Co. 95 Plaza Moraga P. O. Box 1463 Manila, P. I. November 24 - December 1 Singapore January 9 - 27 American Express Co. No. 1, Collyer Quay Singapore, Straits Settlements December 1 - 14 Calcutta February 6 - 7 American Express Co. 14-15 Government Place, East P. O. Box 2331 Calcutta, India December 14 - January 1 Bombay February 17 - 18 American Express Co. 82-84 Esplanade Road, Fort P. O. Box 507 Bombay, India January 1 - 21 Cairo February 28 - March 14 American Express Co. Continental Savoy Bldg. P. O. Box 2160 Cairo, Egypt January 21 - February 28 Naples and Italy March 19 - April 10 American Express Co. 23a Piazza dei Martiri Naples, Italy February 28 - March 15 American Express Co. Via Balbi Hotel Colombia Genoa, Italy March 15 - 30",
-      "description": "Travel itinerary with dates and addresses for stops in Yokohama, Manila, Singapore, Calcutta, Bombay, Cairo, Naples, and Italy.",
-      "title": null,
-      "generated_title": "Upham Itinerary, undated",
-      "date": "undated",
-      "contributors": [],
-      "correspondents": [],
-      "place": null,
+      "transcript": "Upham Itinerary\n\nYokohama and Japan\nDecember 6 - 19\n\nManila\nDecember 27 - January 5\n\nSingapore\nJanuary 9 - 27\n\nCalcutta\nFebruary 6 - 7\n\nBombay\nFebruary 17 - 18\n\nCairo\nFebruary 28 - March 14\n\nNaples and Italy\nMarch 19 - April 10\n\nAddress\n\nAmerican Express Co.\n7 Nihon Odori, Nakku\n(P. O. Box 407)\nYokohama, Japan\n\nAmerican Express Co.\n95 Plaza Moraga\n(P. O. Box 1463)\nManila, P. I.\n\nAmerican Express Co.\nNo. 1, Collyer Quay\nSingapore, Straits Settlements\n\nAmerican Express Co.\n14-15 Government Place, East\n(P. O. Box 2311)\nCalcutta, India\n\nAmerican Express Co.\n82-84 Esplanade Road, Fort\n(P. O. Box 507)\nBombay, India\n\nAmerican Express Co.\nContinental Savoy Bldg.\n(P. O. Box 2160)\nCairo, Egypt\n\nAmerican Express Co.\n23a Piazza dei Martiri\nNaples, Italy\n\nAmerican Express Co.\nVia Balbi (Hotel Colombia)\nGenoa, Italy\n\nMailing dates\nfrom Oxford, Ohio\n\nNovember 17 - 24\n\nNovember 24 -\nDecember 1\n\nDecember 1 - 14\n\nDecember 14 -\nJanuary 1\n\nJanuary 1 - 21\n\nJanuary 21 -\nFebruary 28\n\nFebruary 28 - March 15\n\nMarch 15 - 30",
+      "text_reading": null,
+      "description": null,
+      "title": "Upham itinerary document, undated",
+      "generated_title": null,
+      "date": null,
+      "contributors": null,
+      "correspondents": null,
+      "place": "Ohio--Oxford",
       "keywords": null,
       "decade": null
     },
     "tier2": {
-      "subjects": [
-        "itinerary",
-        "travel"
-      ],
-      "genre": [
-        "document"
-      ],
+      "subjects": null,
+      "genre": null,
       "creator": null,
       "publisher": null,
-      "theme": [
-        "travel"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -153,13 +110,35 @@
   },
   "context": {
     "filename": "BC-0692_Recto.jpg",
-    "processing_confidence": 74.95029821073558,
+    "processing_confidence": 85.0,
     "model": "gpt-4o",
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [],
+        "header_places": []
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Upham itinerary document, undated",
+      "normalized_title": "Upham itinerary document, undated",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    },
     "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model.",
-      "Cleared tier3 field 'digitized' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+      "Applied deterministic fallback FAST subject 'Correspondence'."
+    ]
   }
 }

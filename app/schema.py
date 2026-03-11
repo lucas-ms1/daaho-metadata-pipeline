@@ -62,13 +62,13 @@ LOC15_SCHEMA: Dict[str, Any] = {
     "type": "object",
     "additionalProperties": False,
     "properties": {
-        "title":  {"type": ["string", "null"], "maxLength": 240},
+        "title":  {"type": "string", "minLength": 1, "maxLength": 240},
         "creator":{"type": ["string", "null"], "maxLength": 200},
         "contributors":{"type": ["array", "null"], "items": {"type": "string"}, "maxItems": 8},
         "correspondents":{"type": ["array", "null"], "items": {"type": "string"}, "maxItems": 12},
         "publisher":{"type": ["string", "null"], "maxLength": 160},
-        "date":   {"type": ["string", "null"], "pattern": r"^(\d{4}(-\d{2}(-\d{2})?)?|undated)$"},
-        "place":  {"type": ["string", "null"], "maxLength": 160},
+        "date":   {"type": ["string", "null"], "pattern": r"^\d{4}(-\d{2}(-\d{2})?)?$"},
+        "place":  {"type": ["string", "null"], "maxLength": 160, "pattern": r"^([^;]+--[^;]+)(;\s*[^;]+--[^;]+)*$"},
         "language":{"type": ["string", "null"], "maxLength": 80},
 
         "subjects": {"type": ["array", "null"], "items": {"type": "string", "maxLength": 80}, "maxItems": 8},
@@ -117,7 +117,7 @@ LOC15_SCHEMA: Dict[str, Any] = {
 MAX_OCR_CHARS = 12000
 MAX_OUTPUT_TOKENS = 4096
 DEFAULT_MODEL = "gpt-4o"
-SCHEMA_VERSION = "loc15_schema_v1"
+SCHEMA_VERSION = "loc15_schema_v2"
 
 # Trust tiers for policy enforcement and labeling (ordered for deterministic output).
 TIER1_FIELDS = [

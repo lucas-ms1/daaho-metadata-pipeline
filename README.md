@@ -127,3 +127,16 @@ python export_csv.py --out-dir ./out --output final_metadata.csv \
 ## File path (Google Drive)
 
 NHPTC Planning/Pilot Projects/Digital Collections/Asian American Experience
+
+## Validation counts (SAMPLES)
+
+**Dataset:** `SAMPLES/`  
+**Date:** 2026-03-11  
+
+Baseline (before evidence place normalization):
+- 0 errors, 6 warnings (all `place` evidence warnings)
+- Top warning codes: `place_looks_like_recipient_not_sender`=3, `place_mismatch_with_header_sender`=2, `likely_missing_secondary_place`=1
+
+After evidence place normalization:
+- 0 errors, 0 warnings
+- Top warning codes: (none)

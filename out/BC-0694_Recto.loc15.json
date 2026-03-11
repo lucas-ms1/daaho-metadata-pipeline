@@ -1,33 +1,34 @@
 {
   "metadata": {
-    "title": null,
-    "creator": null,
-    "contributors": [],
+    "title": "Letter to Mr. Kiyoshi Tomizawa from the President, 19 October 1937",
+    "creator": "President",
+    "contributors": null,
     "correspondents": [
       "Mr. Kiyoshi Tomizawa"
     ],
     "publisher": null,
-    "date": "undated",
-    "place": "San Francisco, California",
+    "date": "1937-10-19",
+    "place": "California--San Francisco; Ohio--Oxford",
     "language": "English",
     "subjects": [
-      "Travel",
+      "Vacation plans",
+      "World War II",
       "Correspondence"
     ],
-    "theme": [
-      "Travel plans"
-    ],
+    "theme": null,
     "genre": [
-      "Letter"
+      "Correspondence"
     ],
-    "description": "Letter discussing travel plans and a past visit to Oxford.",
+    "keywords": null,
+    "decade": "1930-1939",
+    "description": "A letter discussing the Upham family's planned winter vacation and a potential meeting in San Francisco.",
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
-    "medium": "Typed letter",
-    "type": "Text",
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -39,72 +40,34 @@
     "digital_publisher": null,
     "digitized": null,
     "transcript": "October 19, 1937\n\nMr. Kiyoshi Tomizawa\n1826 Bush Street\nSan Francisco, California\n\nMy dear Tomizawa:\n\nAll summer and fall the Upham family have been planning a winter vacation which would take the shape of a trip around the world. In spite of many discouragements we are still hopeful of carrying out our plans. If we do, we shall sail from San Francisco at noon on Saturday, November 13, using the President Hoover of the Dollar Line. Of course these ships do not now touch at any Chinese ports, but we are still hopeful that we may be allowed to land at Yokohama and spend a number of days in Japan. For that reason in particular I should enjoy having opportunity for a chat with you either at the pier or shortly before we sail. Since our time is limited we do not expect to reach San Francisco before Friday night. We shall probably stay overnight at the Sir Francis Drake Hotel.\n\nWe all enjoyed your visit to Oxford in June quite as much as I suspect you did. You reestablished many warm friendships here, and we are all proud of the work you are doing.\n\nWith all good wishes,\n\nVery truly yours,\n\nPresident",
-    "text_reading": "October 19, 1937 Mr. Kiyoshi Tomizawa 1826 Bush Street San Francisco, California My dear Tomizawa: All summer and fall the Upham family have been planning a winter vacation which would take the shape of a trip around the world. In spite of many discouragements we are still hopeful of carrying out our plans. If we do, we shall sail from San Francisco at noon on Saturday, November 13, using the President Hoover of the Dollar Line. Of course these ships do not now touch at any Chinese ports, but we are still hopeful that we may be allowed to land at Yokohama and spend a number of days in Japan. For that reason in particular I should enjoy having opportunity for a chat with you either at the pier or shortly before we sail. Since our time is limited we do not expect to reach San Francisco before Friday night. We shall probably stay overnight at the Sir Francis Drake Hotel. We all enjoyed your visit to Oxford in June quite as much as I suspect you did. You reestablished many warm friendships here, and we are all proud of the work you are doing. With all good wishes, Very truly yours, President",
-    "generated_title": "Letter to Mr. Kiyoshi Tomizawa, October 19, 1937",
-    "field_confidence": {
-      "title": 0,
-      "creator": 0,
-      "contributors": 0,
-      "correspondents": 100,
-      "publisher": 0,
-      "date": 0,
-      "place": 100,
-      "language": 100,
-      "subjects": 100,
-      "theme": 100,
-      "genre": 100,
-      "description": 100,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 100,
-      "type": 100,
-      "rights": 0,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 0,
-      "transcript": 100,
-      "text_reading": 100,
-      "generated_title": 100
-    }
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
       "transcript": "October 19, 1937\n\nMr. Kiyoshi Tomizawa\n1826 Bush Street\nSan Francisco, California\n\nMy dear Tomizawa:\n\nAll summer and fall the Upham family have been planning a winter vacation which would take the shape of a trip around the world. In spite of many discouragements we are still hopeful of carrying out our plans. If we do, we shall sail from San Francisco at noon on Saturday, November 13, using the President Hoover of the Dollar Line. Of course these ships do not now touch at any Chinese ports, but we are still hopeful that we may be allowed to land at Yokohama and spend a number of days in Japan. For that reason in particular I should enjoy having opportunity for a chat with you either at the pier or shortly before we sail. Since our time is limited we do not expect to reach San Francisco before Friday night. We shall probably stay overnight at the Sir Francis Drake Hotel.\n\nWe all enjoyed your visit to Oxford in June quite as much as I suspect you did. You reestablished many warm friendships here, and we are all proud of the work you are doing.\n\nWith all good wishes,\n\nVery truly yours,\n\nPresident",
-      "text_reading": "October 19, 1937 Mr. Kiyoshi Tomizawa 1826 Bush Street San Francisco, California My dear Tomizawa: All summer and fall the Upham family have been planning a winter vacation which would take the shape of a trip around the world. In spite of many discouragements we are still hopeful of carrying out our plans. If we do, we shall sail from San Francisco at noon on Saturday, November 13, using the President Hoover of the Dollar Line. Of course these ships do not now touch at any Chinese ports, but we are still hopeful that we may be allowed to land at Yokohama and spend a number of days in Japan. For that reason in particular I should enjoy having opportunity for a chat with you either at the pier or shortly before we sail. Since our time is limited we do not expect to reach San Francisco before Friday night. We shall probably stay overnight at the Sir Francis Drake Hotel. We all enjoyed your visit to Oxford in June quite as much as I suspect you did. You reestablished many warm friendships here, and we are all proud of the work you are doing. With all good wishes, Very truly yours, President",
-      "description": "Letter discussing travel plans and a past visit to Oxford.",
-      "title": null,
-      "generated_title": "Letter to Mr. Kiyoshi Tomizawa, October 19, 1937",
-      "date": "undated",
-      "contributors": [],
+      "text_reading": null,
+      "description": "A letter discussing the Upham family's planned winter vacation and a potential meeting in San Francisco.",
+      "title": "Letter to Mr. Kiyoshi Tomizawa from the President, 19 October 1937",
+      "generated_title": null,
+      "date": "1937-10-19",
+      "contributors": null,
       "correspondents": [
         "Mr. Kiyoshi Tomizawa"
       ],
-      "place": "San Francisco, California",
+      "place": "California--San Francisco; Ohio--Oxford",
       "keywords": null,
-      "decade": null
+      "decade": "1930-1939"
     },
     "tier2": {
-      "subjects": [
-        "Travel",
+      "subjects": null,
+      "genre": [
         "Correspondence"
       ],
-      "genre": [
-        "Letter"
-      ],
-      "creator": null,
+      "creator": "President",
       "publisher": null,
-      "theme": [
-        "Travel plans"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -159,10 +122,48 @@
     "filename": "BC-0694_Recto.jpg",
     "processing_confidence": 85.0,
     "model": "gpt-4o",
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [
+          {
+            "iso_date": "1937-10-19",
+            "precision": "day",
+            "line_idx": 0,
+            "raw": "October 19, 1937",
+            "confidence": 0.95
+          }
+        ],
+        "header_places": [
+          {
+            "fast_place": "California--San Francisco",
+            "line_idx": 3,
+            "raw": "San Francisco, California",
+            "confidence": 0.85
+          }
+        ]
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Letter to Mr. Kiyoshi Tomizawa from the President, 19 October 1937",
+      "normalized_title": "Letter to Mr. Kiyoshi Tomizawa from the President, 19 October 1937",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    },
     "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+      "Derived subjects deterministically from metadata text overlap with approved FAST list."
+    ]
   }
 }

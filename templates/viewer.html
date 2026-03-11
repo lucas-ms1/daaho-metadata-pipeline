@@ -539,6 +539,7 @@
             const review = item.review || {};
             const reviewOverrides = review.overrides || {};
             const context = item.context || {};
+            const normalizedTitle = (context.title_derivation && context.title_derivation.normalized_title) || metadata.title;
 
             // Image section
             const imageHtml = item.image 
@@ -578,7 +579,8 @@
                 </div>
             ` : '';
 
-            const tier1Section = buildTierSection('Tier 1 (AI-generated)', tier1Fields, tier1, provenance);
+            const tier1Display = Object.assign({}, tier1, { title: normalizedTitle || tier1.title });
+            const tier1Section = buildTierSection('Tier 1 (AI-generated)', tier1Fields, tier1Display, provenance);
             const tier2Section = buildTierSection('Tier 2 (AI-proposed)', tier2Fields, tier2, provenance);
             const tier3Section = buildTierSection('Tier 3 (Human-only defaults)', tier3Fields, tier3, provenance);
             const vocabWarningsHtml = buildVocabWarnings(context.vocabulary_validation);
@@ -628,7 +630,7 @@
                     ${imageHtml}
                 </div>
                 <div class="metadata-content">
-                    <div class="item-title">${metadata.title || item.filename}</div>
+                    <div class="item-title">${normalizedTitle || item.filename}</div>
                     ${metadata.generated_title ? `<div class="item-generated-title">${metadata.generated_title}</div>` : ''}
                     ${tier1Section}
                     ${tier2Section}

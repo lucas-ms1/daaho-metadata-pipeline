@@ -107,17 +107,29 @@ def validate_fast_subject(term: str) -> Dict[str, Any]:
             timeout=_api_timeout(),
         )
         resp.raise_for_status()
-        payload = resp.json() if resp.content else {}
+        payload: Dict[str, Any] = {}
+        if resp.content:
+            try:
+                payload = resp.json()
+            except ValueError:
+                text = (resp.text or "").strip()
+                raise ValueError(text or "FAST API returned non-JSON response.")
         items = payload.get("response", {}).get("docs", [])
         suggestions = []
         exact_match = False
         for item in items:
-            label = item.get("auth") or item.get("label") or ""
-            if not label:
-                continue
-            suggestions.append(label)
-            if _normalize_term(label) == normalized:
-                exact_match = True
+            labels: List[str] = []
+            suggestall = item.get("suggestall")
+            if isinstance(suggestall, list):
+                labels.extend([str(value) for value in suggestall if str(value).strip()])
+            for key in ("auth", "label"):
+                value = item.get(key)
+                if isinstance(value, str) and value.strip():
+                    labels.append(value)
+            for label in labels:
+                suggestions.append(label)
+                if _normalize_term(label) == normalized:
+                    exact_match = True
         unique_suggestions = list(dict.fromkeys(suggestions))[:10]
         result = _build_fast_result(
             term=term,

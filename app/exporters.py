@@ -10,6 +10,7 @@ SAMPLE_HEADERS = [
 def to_sample_row(envelope: Dict[str, Any]) -> Dict[str, str]:
     md = envelope.get("metadata", {})
     ctx = envelope.get("context", {})
+    normalized_title = (ctx.get("title_derivation") or {}).get("normalized_title")
     def join(vals):
         if not vals: return ""
         if isinstance(vals, list): return "; ".join([str(v) for v in vals if v])
@@ -17,7 +18,7 @@ def to_sample_row(envelope: Dict[str, Any]) -> Dict[str, str]:
 
     row = {
         "Identifier": md.get("identifier") or md.get("digital_identifier") or "",
-        "Title": md.get("title") or md.get("generated_title") or "",
+        "Title": normalized_title or md.get("title") or md.get("generated_title") or "",
         "Series": md.get("series") or "",
         "Issue": "",
         "Creator": md.get("creator") or "",

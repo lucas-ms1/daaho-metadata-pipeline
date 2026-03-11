@@ -1,32 +1,38 @@
 {
   "metadata": {
-    "title": null,
+    "title": "Foreword by A. H. Upham, undated",
     "creator": "A. H. Upham",
-    "contributors": [],
-    "correspondents": [],
+    "contributors": null,
+    "correspondents": null,
     "publisher": null,
-    "date": "undated",
-    "place": "Miami University",
+    "date": null,
+    "place": "Ohio--Oxford",
     "language": "English",
     "subjects": [
       "Dancing",
+      "Cultural exchange",
       "Thailand",
-      "Students"
+      "American students"
     ],
-    "theme": [
-      "Cultural Exchange"
-    ],
+    "theme": null,
     "genre": [
       "Foreword"
     ],
-    "description": "Foreword discussing Thai dancing and cultural exchange at Miami University written by A. H. Upham.",
+    "keywords": [
+      "Dancing",
+      "Thailand",
+      "American students",
+      "Cultural exchange"
+    ],
+    "decade": null,
+    "description": "A foreword discussing the cultural exchange through dance between a Thai instructor and American students at Miami University.",
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
-    "medium": "Text",
-    "type": "Text",
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -37,72 +43,43 @@
     "digital_collection": null,
     "digital_publisher": null,
     "digitized": null,
-    "transcript": "FO REWARD\n\nDancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores.\n\nSwasdi Nitibhon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances.\n\nA. H. Upham",
-    "text_reading": "Dancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores. Swasdi Nitibhon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances. A. H. Upham",
-    "generated_title": "Foreword by A. H. Upham, undated",
-    "field_confidence": {
-      "title": 0,
-      "creator": 95,
-      "contributors": 0,
-      "correspondents": 0,
-      "publisher": 0,
-      "date": 0,
-      "place": 90,
-      "language": 100,
-      "subjects": 90,
-      "theme": 90,
-      "genre": 90,
-      "description": 95,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 95,
-      "type": 95,
-      "rights": 50,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 0,
-      "transcript": 95,
-      "text_reading": 95,
-      "generated_title": 95
-    }
+    "transcript": "Dancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores.\n\nSwadi Nitibon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances.\n\nA. H. Upham",
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
-      "transcript": "FO REWARD\n\nDancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores.\n\nSwasdi Nitibhon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances.\n\nA. H. Upham",
-      "text_reading": "Dancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores. Swasdi Nitibhon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances. A. H. Upham",
-      "description": "Foreword discussing Thai dancing and cultural exchange at Miami University written by A. H. Upham.",
-      "title": null,
-      "generated_title": "Foreword by A. H. Upham, undated",
-      "date": "undated",
-      "contributors": [],
-      "correspondents": [],
-      "place": "Miami University",
-      "keywords": null,
+      "transcript": "Dancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores.\n\nSwadi Nitibon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances.\n\nA. H. Upham",
+      "text_reading": null,
+      "description": "A foreword discussing the cultural exchange through dance between a Thai instructor and American students at Miami University.",
+      "title": "Foreword by A. H. Upham, undated",
+      "generated_title": null,
+      "date": null,
+      "contributors": null,
+      "correspondents": null,
+      "place": "Ohio--Oxford",
+      "keywords": [
+        "Dancing",
+        "Thailand",
+        "American students",
+        "Cultural exchange"
+      ],
       "decade": null
     },
     "tier2": {
       "subjects": [
         "Dancing",
+        "Cultural exchange",
         "Thailand",
-        "Students"
+        "American students"
       ],
       "genre": [
         "Foreword"
       ],
       "creator": "A. H. Upham",
       "publisher": null,
-      "theme": [
-        "Cultural Exchange"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -155,12 +132,32 @@
   },
   "context": {
     "filename": "BC-0703_Recto.jpg",
-    "processing_confidence": 79.66260543580131,
+    "processing_confidence": 85.0,
     "model": "gpt-4o",
-    "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [],
+        "header_places": []
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Foreword by A. H. Upham, undated",
+      "normalized_title": "Foreword by A. H. Upham, undated",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    }
   }
 }

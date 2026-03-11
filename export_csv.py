@@ -46,13 +46,15 @@ def extract_decade(date_str: Optional[str]) -> str:
 def map_json_to_csv_row(json_data: Dict[str, Any], filename: str) -> Dict[str, str]:
     """Map JSON metadata to CSV row matching the spreadsheet format."""
     md = json_data.get("metadata", {})
+    context = json_data.get("context", {})
+    normalized_title = (context.get("title_derivation") or {}).get("normalized_title")
     
     # Get identifier - prefer identifier, fall back to digital_identifier, or use filename stem
     identifier = md.get("identifier") or md.get("digital_identifier") or Path(filename).stem
     
     row = {
         "Identifier": identifier,
-        "Title": md.get("title") or "",
+        "Title": normalized_title or md.get("title") or "",
         "Series": md.get("series") or "",
         "Issue": "",  # Not in JSON schema
         "Creator": md.get("creator") or "",

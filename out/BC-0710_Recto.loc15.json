@@ -1,32 +1,37 @@
 {
   "metadata": {
-    "title": null,
-    "creator": null,
-    "contributors": [],
+    "title": "Letter to Mr. Murray Sheehan, 8 September 1941",
+    "creator": "President",
+    "contributors": null,
     "correspondents": [
       "Mr. Murray Sheehan"
     ],
     "publisher": null,
-    "date": "undated",
-    "place": "Glouchester, Massachusetts",
+    "date": "1941-09-08",
+    "place": "Massachusetts--Glouchester",
     "language": "English",
     "subjects": [
-      "University Admissions"
+      "University admissions",
+      "International students"
     ],
-    "theme": [
-      "Education"
-    ],
+    "theme": null,
     "genre": [
       "Correspondence"
     ],
-    "description": "Letter from university president to Mr. Murray Sheehan regarding admission of a student from Thailand.",
+    "keywords": [
+      "Karoon Gengradomying",
+      "Miami University",
+      "Freshman admission"
+    ],
+    "decade": "1940-1949",
+    "description": "A letter from the President to Mr. Murray Sheehan regarding the admission of Karoon Gengradomying to Miami University as a freshman.",
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
-    "medium": "Paper",
-    "type": "Text",
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -37,72 +42,42 @@
     "digital_collection": null,
     "digital_publisher": null,
     "digitized": null,
-    "transcript": "September 8, 1941\n\nMr. Murray Sheehan\nMonsoonhurst 59\nGlouchester, Massachusetts\nDear Murray:\n\nReplying to your letter of September 6, I can assure you that we shall be pleased to admit Karoon Geangadmonying to Miami University as a freshman.\n\nWhile of course we know nothing of the University you mention in Bangkok or of its entrance examinations, the other boys from Thailand have made such a good record here that we do not hesitate.\n\nFreshman Week begins with a convocation next Sunday evening, September 14, but we can hold a room for him a little longer if necessary. We are trying to squeeze him into one of the freshman dormitories.\n\nCordially yours,\n\nPresident",
-    "text_reading": "September 8, 1941 Mr. Murray Sheehan Monsoonhurst 59 Glouchester, Massachusetts Dear Murray: Replying to your letter of September 6, I can assure you that we shall be pleased to admit Karoon Geangadmonying to Miami University as a freshman. While of course we know nothing of the University you mention in Bangkok or of its entrance examinations, the other boys from Thailand have made such a good record here that we do not hesitate. Freshman Week begins with a convocation next Sunday evening, September 14, but we can hold a room for him a little longer if necessary. We are trying to squeeze him into one of the freshman dormitories. Cordially yours, President",
-    "generated_title": "Letter to Mr. Murray Sheehan, September 8, 1941",
-    "field_confidence": {
-      "title": 0,
-      "creator": 0,
-      "contributors": 0,
-      "correspondents": 100,
-      "publisher": 0,
-      "date": 100,
-      "place": 100,
-      "language": 100,
-      "subjects": 90,
-      "theme": 90,
-      "genre": 95,
-      "description": 90,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 90,
-      "type": 90,
-      "rights": 50,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 100,
-      "transcript": 100,
-      "text_reading": 100,
-      "generated_title": 100
-    }
+    "transcript": "September 8, 1941\n\nMr. Murray Sheehan  \nMonsonhurst 59  \nGlouchester, Massachusetts  \n\nDear Murray:  \n\nReplying to your letter of September 6, I can  \nassure you that we shall be pleased to admit Karoon  \nGengradomying to Miami University as a freshman.  \n\nWhile of course we know nothing of the University  \nyou mention in Bangkok or of its entrance examinations,  \nthe other boys from Thailand have made such a good  \nrecord here that we do not hesitate.  \n\nFreshman Week begins with a convocation next  \nSunday evening, September 14, but we can hold a room  \nfor him a little longer if necessary. We are trying  \nto squeeze him into one of the freshman dormitories.  \n\nCordially yours,  \n\nPresident",
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
-      "transcript": "September 8, 1941\n\nMr. Murray Sheehan\nMonsoonhurst 59\nGlouchester, Massachusetts\nDear Murray:\n\nReplying to your letter of September 6, I can assure you that we shall be pleased to admit Karoon Geangadmonying to Miami University as a freshman.\n\nWhile of course we know nothing of the University you mention in Bangkok or of its entrance examinations, the other boys from Thailand have made such a good record here that we do not hesitate.\n\nFreshman Week begins with a convocation next Sunday evening, September 14, but we can hold a room for him a little longer if necessary. We are trying to squeeze him into one of the freshman dormitories.\n\nCordially yours,\n\nPresident",
-      "text_reading": "September 8, 1941 Mr. Murray Sheehan Monsoonhurst 59 Glouchester, Massachusetts Dear Murray: Replying to your letter of September 6, I can assure you that we shall be pleased to admit Karoon Geangadmonying to Miami University as a freshman. While of course we know nothing of the University you mention in Bangkok or of its entrance examinations, the other boys from Thailand have made such a good record here that we do not hesitate. Freshman Week begins with a convocation next Sunday evening, September 14, but we can hold a room for him a little longer if necessary. We are trying to squeeze him into one of the freshman dormitories. Cordially yours, President",
-      "description": "Letter from university president to Mr. Murray Sheehan regarding admission of a student from Thailand.",
-      "title": null,
-      "generated_title": "Letter to Mr. Murray Sheehan, September 8, 1941",
-      "date": "undated",
-      "contributors": [],
+      "transcript": "September 8, 1941\n\nMr. Murray Sheehan  \nMonsonhurst 59  \nGlouchester, Massachusetts  \n\nDear Murray:  \n\nReplying to your letter of September 6, I can  \nassure you that we shall be pleased to admit Karoon  \nGengradomying to Miami University as a freshman.  \n\nWhile of course we know nothing of the University  \nyou mention in Bangkok or of its entrance examinations,  \nthe other boys from Thailand have made such a good  \nrecord here that we do not hesitate.  \n\nFreshman Week begins with a convocation next  \nSunday evening, September 14, but we can hold a room  \nfor him a little longer if necessary. We are trying  \nto squeeze him into one of the freshman dormitories.  \n\nCordially yours,  \n\nPresident",
+      "text_reading": null,
+      "description": "A letter from the President to Mr. Murray Sheehan regarding the admission of Karoon Gengradomying to Miami University as a freshman.",
+      "title": "Letter to Mr. Murray Sheehan, 8 September 1941",
+      "generated_title": null,
+      "date": "1941-09-08",
+      "contributors": null,
       "correspondents": [
         "Mr. Murray Sheehan"
       ],
-      "place": "Glouchester, Massachusetts",
-      "keywords": null,
-      "decade": null
+      "place": "Massachusetts--Glouchester",
+      "keywords": [
+        "Karoon Gengradomying",
+        "Miami University",
+        "Freshman admission"
+      ],
+      "decade": "1940-1949"
     },
     "tier2": {
       "subjects": [
-        "University Admissions"
+        "University admissions",
+        "International students"
       ],
       "genre": [
         "Correspondence"
       ],
-      "creator": null,
+      "creator": "President",
       "publisher": null,
-      "theme": [
-        "Education"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -155,13 +130,47 @@
   },
   "context": {
     "filename": "BC-0710_Recto.jpg",
-    "processing_confidence": 68.60986547085201,
+    "processing_confidence": 85.0,
     "model": "gpt-4o",
-    "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model.",
-      "Cleared tier3 field 'digitized' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [
+          {
+            "iso_date": "1941-09-08",
+            "precision": "day",
+            "line_idx": 0,
+            "raw": "September 8, 1941",
+            "confidence": 0.95
+          }
+        ],
+        "header_places": [
+          {
+            "fast_place": "Massachusetts--Glouchester",
+            "line_idx": 3,
+            "raw": "Glouchester, Massachusetts",
+            "confidence": 0.85
+          }
+        ]
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Letter to Mr. Murray Sheehan, 8 September 1941",
+      "normalized_title": "Letter to Mr. Murray Sheehan, 8 September 1941",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    }
   }
 }

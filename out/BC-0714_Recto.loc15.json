@@ -1,34 +1,31 @@
 {
   "metadata": {
-    "title": "Letter from President to Murray Sheehan, May 26, 1942",
-    "creator": null,
-    "contributors": [
-      "President"
-    ],
+    "title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
+    "creator": "President",
+    "contributors": null,
     "correspondents": [
-      "Murray Sheehan"
+      "Mr. Murray Sheehan"
     ],
     "publisher": null,
-    "date": "undated",
-    "place": "Washington, D.C.",
-    "language": "en",
+    "date": "1942-05-26",
+    "place": "District of Columbia--Washington",
+    "language": null,
     "subjects": [
-      "Commencement"
+      "Thailand--Washington (D.C.)",
+      "Thailand"
     ],
-    "theme": [
-      "Education"
-    ],
-    "genre": [
-      "Letter"
-    ],
-    "description": "Letter discussing Commencement attendance and reservations for Murray Sheehan.",
+    "theme": null,
+    "genre": null,
+    "keywords": null,
+    "decade": "1940-1949",
+    "description": null,
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
-    "format": "image/jpeg",
-    "medium": "paper",
-    "type": "document",
+    "format": null,
+    "medium": null,
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -39,73 +36,33 @@
     "digital_collection": null,
     "digital_publisher": null,
     "digitized": null,
-    "transcript": "May 26, 1942\n\nMr. Murray Sheehan\nRoyal Thai Legation\n2300 Kalorama Road\nWashington, D. C.\n\nDear Murray:\n\nI am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you.\n\nIt is too bad that we cannot have at least one boy from Theiland in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker.\n\nCordially yours,\n\nPresident",
-    "text_reading": "May 26, 1942 Mr. Murray Sheehan Royal Thai Legation 2300 Kalorama Road Washington, D. C. Dear Murray: I am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you. It is too bad that we cannot have at least one boy from Theiland in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker. Cordially yours, President",
-    "generated_title": "Letter from President to Murray Sheehan, May 26, 1942",
-    "field_confidence": {
-      "title": 90,
-      "creator": 0,
-      "contributors": 70,
-      "correspondents": 90,
-      "publisher": 0,
-      "date": 0,
-      "place": 80,
-      "language": 90,
-      "subjects": 70,
-      "theme": 70,
-      "genre": 80,
-      "description": 80,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 80,
-      "medium": 60,
-      "type": 75,
-      "rights": 50,
-      "repository": 0,
-      "identifier": 85,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 0,
-      "transcript": 95,
-      "text_reading": 95
-    }
+    "transcript": "May 26, 1942\n\nMr. Murray Sheehan\nRoyal Thai Legation\n2300 Kalorama Road\nWashington, D. C.\n\nDear Murray:\n\nI am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you.\n\nIt is too bad that we cannot have at least one boy from Thailand in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker.\n\nCordially yours,\n\nPresident",
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
-      "transcript": "May 26, 1942\n\nMr. Murray Sheehan\nRoyal Thai Legation\n2300 Kalorama Road\nWashington, D. C.\n\nDear Murray:\n\nI am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you.\n\nIt is too bad that we cannot have at least one boy from Theiland in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker.\n\nCordially yours,\n\nPresident",
-      "text_reading": "May 26, 1942 Mr. Murray Sheehan Royal Thai Legation 2300 Kalorama Road Washington, D. C. Dear Murray: I am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you. It is too bad that we cannot have at least one boy from Theiland in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker. Cordially yours, President",
-      "description": "Letter discussing Commencement attendance and reservations for Murray Sheehan.",
-      "title": "Letter from President to Murray Sheehan, May 26, 1942",
-      "generated_title": "Letter from President to Murray Sheehan, May 26, 1942",
-      "date": "undated",
-      "contributors": [
-        "President"
-      ],
+      "transcript": "May 26, 1942\n\nMr. Murray Sheehan\nRoyal Thai Legation\n2300 Kalorama Road\nWashington, D. C.\n\nDear Murray:\n\nI am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you.\n\nIt is too bad that we cannot have at least one boy from Thailand in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker.\n\nCordially yours,\n\nPresident",
+      "text_reading": null,
+      "description": null,
+      "title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
+      "generated_title": null,
+      "date": "1942-05-26",
+      "contributors": null,
       "correspondents": [
-        "Murray Sheehan"
+        "Mr. Murray Sheehan"
       ],
-      "place": "Washington, D.C.",
+      "place": "District of Columbia--Washington",
       "keywords": null,
-      "decade": null
+      "decade": "1940-1949"
     },
     "tier2": {
-      "subjects": [
-        "Commencement"
-      ],
-      "genre": [
-        "Letter"
-      ],
-      "creator": null,
+      "subjects": null,
+      "genre": null,
+      "creator": "President",
       "publisher": null,
-      "theme": [
-        "Education"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -158,13 +115,50 @@
   },
   "context": {
     "filename": "BC-0714_Recto.jpg",
-    "processing_confidence": 59.210526315789465,
+    "processing_confidence": 85.0,
     "model": "gpt-4o",
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [
+          {
+            "iso_date": "1942-05-26",
+            "precision": "day",
+            "line_idx": 0,
+            "raw": "May 26, 1942",
+            "confidence": 0.95
+          },
+          {
+            "iso_date": "1942",
+            "precision": "year",
+            "line_idx": 0,
+            "raw": "1942",
+            "confidence": 0.6
+          }
+        ],
+        "header_places": []
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
+      "normalized_title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    },
     "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model.",
-      "Cleared tier3 field 'identifier' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+      "Derived subjects deterministically from metadata text overlap with approved FAST list."
+    ]
   }
 }

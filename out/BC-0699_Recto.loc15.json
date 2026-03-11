@@ -1,33 +1,31 @@
 {
   "metadata": {
-    "title": null,
+    "title": "Letter to Mr. Koichi Hasegawa, 19 October 1937",
     "creator": "President",
     "contributors": null,
     "correspondents": [
-      "Koichi Hasegawa"
+      "Mr. Koichi Hasegawa"
     ],
     "publisher": null,
-    "date": "undated",
+    "date": "1937-10-19",
     "place": null,
-    "language": "English",
+    "language": null,
     "subjects": [
-      "Travel",
-      "Correspondence"
+      "Vacation plans",
+      "Travel"
     ],
-    "theme": [
-      "Travel planning"
-    ],
-    "genre": [
-      "Letter"
-    ],
-    "description": "Letter discussing travel plans and itinerary in Japan.",
+    "theme": null,
+    "genre": null,
+    "keywords": null,
+    "decade": "1930-1939",
+    "description": "A letter discussing travel plans of the Upham family to Japan and arrangements for meeting.",
     "collection": null,
     "series": null,
     "folder": null,
     "box": null,
     "format": null,
     "medium": null,
-    "type": "Text",
+    "type": null,
     "rights": null,
     "repository": null,
     "identifier": null,
@@ -39,72 +37,32 @@
     "digital_publisher": null,
     "digitized": null,
     "transcript": "October 19, 1937\n\nMr. Koichi Hasegawa  \n57 Naka 1 Chome  \nSonezaki, Kitaku  \nOsaka, Japan  \n\nMy dear Hasegawa:  \n\nIn spite of many discouragements the Upham family is still planning quite definitely a winter vacation which will take the form of a trip around the world. We shall have to be detoured around China, but we still have every assurance that your country will be open to visitors and that we shall have every opportunity to get around. I have heard from Dr. Shideler, who has been in Japan until very recently and who I believe saw you during his visit there. We would be glad also to see you sometime and some place which proves to be convenient for you during our all too limited stay in the country.  \n\nOur present plan is to reach Yokohama on the President Hoover on the morning of Saturday, November 27. We have reservations at the Imperial Hotel in Tokyo for several days. We are to reach Kioto Wednesday afternoon, December 1, and will be at the Miyako Hotel there. We plan to sail from Kobe Sunday, December 5. I am writing you these details so that it may be easier for you to establish contact with us, and not with the thought that you should feel any obligation whatever to show us around or do things for us. We have arranged a rather busy itinerary with the American Express, and hope that the rather unusual conditions now prevailing will not interfere too seriously with what we should like to do.  \n\nWith all good wishes,  \n\nVery truly yours,  \n\nPresident",
-    "text_reading": "October 19, 1937 Mr. Koichi Hasegawa 57 Naka 1 Chome Sonezaki, Kitaku Osaka, Japan My dear Hasegawa: In spite of many discouragements the Upham family is still planning quite definitely a winter vacation which will take the form of a trip around the world. We shall have to be detoured around China, but we still have every assurance that your country will be open to visitors and that we shall have every opportunity to get around. I have heard from Dr. Shideler, who has been in Japan until very recently and who I believe saw you during his visit there. We would be glad also to see you sometime and some place which proves to be convenient for you during our all too limited stay in the country. Our present plan is to reach Yokohama on the President Hoover on the morning of Saturday, November 27. We have reservations at the Imperial Hotel in Tokyo for several days. We are to reach Kioto Wednesday afternoon, December 1, and will be at the Miyako Hotel there. We plan to sail from Kobe Sunday, December 5. I am writing you these details so that it may be easier for you to establish contact with us, and not with the thought that you should feel any obligation whatever to show us around or do things for us. We have arranged a rather busy itinerary with the American Express, and hope that the rather unusual conditions now prevailing will not interfere too seriously with what we should like to do. With all good wishes, Very truly yours, President",
-    "generated_title": "Letter to Koichi Hasegawa, October 19, 1937",
-    "field_confidence": {
-      "title": 0,
-      "creator": 90,
-      "contributors": 0,
-      "correspondents": 95,
-      "publisher": 0,
-      "date": 95,
-      "place": 0,
-      "language": 100,
-      "subjects": 90,
-      "theme": 90,
-      "genre": 90,
-      "description": 80,
-      "collection": 0,
-      "series": 0,
-      "folder": 0,
-      "box": 0,
-      "format": 0,
-      "medium": 0,
-      "type": 100,
-      "rights": 50,
-      "repository": 0,
-      "identifier": 0,
-      "call_number": 0,
-      "digital_identifier": 0,
-      "reproduction_number": 0,
-      "permalink": 0,
-      "digital_collection": 0,
-      "digital_publisher": 0,
-      "digitized": 100,
-      "transcript": 95,
-      "text_reading": 95,
-      "generated_title": 95
-    }
+    "text_reading": null,
+    "generated_title": null,
+    "field_confidence": null
   },
   "metadata_tiers": {
     "tier1": {
       "transcript": "October 19, 1937\n\nMr. Koichi Hasegawa  \n57 Naka 1 Chome  \nSonezaki, Kitaku  \nOsaka, Japan  \n\nMy dear Hasegawa:  \n\nIn spite of many discouragements the Upham family is still planning quite definitely a winter vacation which will take the form of a trip around the world. We shall have to be detoured around China, but we still have every assurance that your country will be open to visitors and that we shall have every opportunity to get around. I have heard from Dr. Shideler, who has been in Japan until very recently and who I believe saw you during his visit there. We would be glad also to see you sometime and some place which proves to be convenient for you during our all too limited stay in the country.  \n\nOur present plan is to reach Yokohama on the President Hoover on the morning of Saturday, November 27. We have reservations at the Imperial Hotel in Tokyo for several days. We are to reach Kioto Wednesday afternoon, December 1, and will be at the Miyako Hotel there. We plan to sail from Kobe Sunday, December 5. I am writing you these details so that it may be easier for you to establish contact with us, and not with the thought that you should feel any obligation whatever to show us around or do things for us. We have arranged a rather busy itinerary with the American Express, and hope that the rather unusual conditions now prevailing will not interfere too seriously with what we should like to do.  \n\nWith all good wishes,  \n\nVery truly yours,  \n\nPresident",
-      "text_reading": "October 19, 1937 Mr. Koichi Hasegawa 57 Naka 1 Chome Sonezaki, Kitaku Osaka, Japan My dear Hasegawa: In spite of many discouragements the Upham family is still planning quite definitely a winter vacation which will take the form of a trip around the world. We shall have to be detoured around China, but we still have every assurance that your country will be open to visitors and that we shall have every opportunity to get around. I have heard from Dr. Shideler, who has been in Japan until very recently and who I believe saw you during his visit there. We would be glad also to see you sometime and some place which proves to be convenient for you during our all too limited stay in the country. Our present plan is to reach Yokohama on the President Hoover on the morning of Saturday, November 27. We have reservations at the Imperial Hotel in Tokyo for several days. We are to reach Kioto Wednesday afternoon, December 1, and will be at the Miyako Hotel there. We plan to sail from Kobe Sunday, December 5. I am writing you these details so that it may be easier for you to establish contact with us, and not with the thought that you should feel any obligation whatever to show us around or do things for us. We have arranged a rather busy itinerary with the American Express, and hope that the rather unusual conditions now prevailing will not interfere too seriously with what we should like to do. With all good wishes, Very truly yours, President",
-      "description": "Letter discussing travel plans and itinerary in Japan.",
-      "title": null,
-      "generated_title": "Letter to Koichi Hasegawa, October 19, 1937",
-      "date": "undated",
+      "text_reading": null,
+      "description": "A letter discussing travel plans of the Upham family to Japan and arrangements for meeting.",
+      "title": "Letter to Mr. Koichi Hasegawa, 19 October 1937",
+      "generated_title": null,
+      "date": "1937-10-19",
       "contributors": null,
       "correspondents": [
-        "Koichi Hasegawa"
+        "Mr. Koichi Hasegawa"
       ],
       "place": null,
       "keywords": null,
-      "decade": null
+      "decade": "1930-1939"
     },
     "tier2": {
-      "subjects": [
-        "Travel",
-        "Correspondence"
-      ],
-      "genre": [
-        "Letter"
-      ],
+      "subjects": null,
+      "genre": null,
       "creator": "President",
       "publisher": null,
-      "theme": [
-        "Travel planning"
-      ]
+      "theme": null
     },
     "tier3": {
       "rights": null,
@@ -159,11 +117,41 @@
     "filename": "BC-0699_Recto.jpg",
     "processing_confidence": 85.0,
     "model": "gpt-4o",
+    "prompt_version": "loc15_v2",
+    "schema_version": "loc15_schema_v2",
+    "validation_core": {
+      "ok": true,
+      "errors": [],
+      "warnings": []
+    },
+    "validation_evidence_qc": {
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "signals": {
+        "header_dates": [
+          {
+            "iso_date": "1937-10-19",
+            "precision": "day",
+            "line_idx": 0,
+            "raw": "October 19, 1937",
+            "confidence": 0.95
+          }
+        ],
+        "header_places": []
+      }
+    },
+    "title_derivation": {
+      "raw_title": "Letter to Mr. Koichi Hasegawa, 19 October 1937",
+      "normalized_title": "Letter to Mr. Koichi Hasegawa, 19 October 1937",
+      "applied": false,
+      "normalized_title_validation": {
+        "title_ok": true,
+        "title_error_codes": []
+      }
+    },
     "policy_notes": [
-      "Cleared tier3 field 'rights' generated by model.",
-      "Cleared tier3 field 'digitized' generated by model."
-    ],
-    "schema_version": "loc15_schema_v1",
-    "rebuilt_from_existing": true
+      "Derived subjects deterministically from metadata text overlap with approved FAST list."
+    ]
   }
 }

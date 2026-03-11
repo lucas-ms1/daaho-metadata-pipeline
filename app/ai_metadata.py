@@ -18,7 +18,7 @@ try:
 except Exception:
     OpenAI = None
 
-PROMPT_VERSION = "loc15_v1"
+PROMPT_VERSION = "loc15_v2"
 _PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
 _SYSTEM_PROMPT_PATH = _PROMPTS_DIR / f"{PROMPT_VERSION}_system.txt"
 _USER_PROMPT_PATH = _PROMPTS_DIR / f"{PROMPT_VERSION}_user.txt"
@@ -49,70 +49,19 @@ def _get_client() -> OpenAI:
     return OpenAI()
 
 def _clean_metadata(md: Dict[str, Any]) -> Dict[str, Any]:
-    """Post-process metadata to fix common issues."""
-    import re
-    
-    # Fix date field - handle "\\" or invalid dates
-    if "date" in md and md["date"]:
-        date_val = str(md["date"]).strip()
-        # If it's just backslashes or invalid, try to extract from title or set to null
-        if date_val in ["\\", "\\\\", ""] or not re.match(r"^(\d{4}(-\d{2}(-\d{2})?)?|undated)$", date_val):
-            # Try to extract date from title if it contains one
-            title = md.get("title", "")
-            date_match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}|\d{4})", title)
-            if date_match:
-                md["date"] = date_match.group(1)
-            else:
-                md["date"] = "undated"
-    
-    # Fix subjects - split semicolon-separated strings into arrays
-    if "subjects" in md and md["subjects"]:
-        if isinstance(md["subjects"], list):
-            new_subjects = []
-            for subj in md["subjects"]:
-                if isinstance(subj, str) and ";" in subj:
-                    # Split semicolon-separated string
-                    split_subjects = [s.strip() for s in subj.split(";") if s.strip()]
-                    new_subjects.extend(split_subjects)
-                elif isinstance(subj, str) and subj.strip():
-                    new_subjects.append(subj.strip())
-            md["subjects"] = [s for s in new_subjects if s] if new_subjects else None
-        elif isinstance(md["subjects"], str):
-            # Convert string to array
-            md["subjects"] = [s.strip() for s in md["subjects"].split(";") if s.strip()] or None
-    
-    # Remove broken/empty subject entries
-    if "subjects" in md and isinstance(md["subjects"], list):
-        md["subjects"] = [s for s in md["subjects"] if s and len(s.strip()) > 1 and not s.strip().startswith(";")]
-    
-    # Fix genre - same as subjects
-    if "genre" in md and md["genre"]:
-        if isinstance(md["genre"], list):
-            new_genre = []
-            for gen in md["genre"]:
-                if isinstance(gen, str) and ";" in gen:
-                    split_genre = [g.strip() for g in gen.split(";") if g.strip()]
-                    new_genre.extend(split_genre)
-                elif isinstance(gen, str) and gen.strip():
-                    new_genre.append(gen.strip())
-            md["genre"] = [g for g in new_genre if g] if new_genre else None
-        elif isinstance(md["genre"], str):
-            md["genre"] = [g.strip() for g in md["genre"].split(";") if g.strip()] or None
-
-    # Fix keywords - same as subjects
-    if "keywords" in md and md["keywords"]:
-        if isinstance(md["keywords"], list):
-            new_keywords = []
-            for kw in md["keywords"]:
-                if isinstance(kw, str) and ";" in kw:
-                    split_keywords = [k.strip() for k in kw.split(";") if k.strip()]
-                    new_keywords.extend(split_keywords)
-                elif isinstance(kw, str) and kw.strip():
-                    new_keywords.append(kw.strip())
-            md["keywords"] = [k for k in new_keywords if k] if new_keywords else None
-        elif isinstance(md["keywords"], str):
-            md["keywords"] = [k.strip() for k in md["keywords"].split(";") if k.strip()] or None
-    
+    """Normalize whitespace without semantic correction."""
+    for field, value in list(md.items()):
+        if isinstance(value, str):
+            trimmed = value.strip()
+            md[field] = trimmed if trimmed != "" else None
+        elif isinstance(value, list):
+            cleaned = []
+            for item in value:
+                if isinstance(item, str):
+                    item = item.strip()
+                if item not in [None, ""]:
+                    cleaned.append(item)
+            md[field] = cleaned
     return md
 
 def _extract_decade(date_value: Optional[str]) -> Optional[str]:
@@ -237,48 +186,64 @@ def extract_metadata(img_bytes: bytes, ocr_text: str, filename: str, model: str 
         {"type": "image_url", "image_url": {"url": data_url}},
     ]
 
-    try:
-        resp = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "system", "content": system_prompt},
-                      {"role": "user", "content": content}],
-            temperature=0,
-            top_p=1,
-            presence_penalty=0,
-            frequency_penalty=0,
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "loc15_metadata",
-                    "schema": LOC15_SCHEMA,
-                    "strict": True,
-                },
-            },
-            max_tokens=MAX_OUTPUT_TOKENS,
-        )
-        raw = resp.choices[0].message.content or "{}"
+    last_error: Optional[str] = None
+    for attempt in range(2):
         try:
-            parsed = json.loads(raw)
-            if not parsed or len(parsed) == 0:
-                print(f"WARNING: API returned empty metadata for {filename}. Raw response: {raw[:200]}")
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "system", "content": system_prompt},
+                          {"role": "user", "content": content}],
+                temperature=0,
+                top_p=1,
+                presence_penalty=0,
+                frequency_penalty=0,
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "loc15_metadata",
+                        "schema": LOC15_SCHEMA,
+                        "strict": True,
+                    },
+                },
+                max_tokens=MAX_OUTPUT_TOKENS,
+            )
+            raw = resp.choices[0].message.content or "{}"
+            try:
+                parsed = json.loads(raw)
+                if not parsed or len(parsed) == 0:
+                    last_error = f"API returned empty metadata. Raw response: {raw[:200]}"
+                    if attempt == 0:
+                        print(f"WARNING: {last_error} Retrying once for {filename}.")
+                        continue
+                    print(f"WARNING: {last_error}")
+                    return {}
+
+                parsed = _clean_metadata(parsed)
+                return parsed
+            except json.JSONDecodeError as parse_err:
+                print(f"WARNING: JSON parse error for {filename}: {parse_err}")
+                i, j = raw.find("{"), raw.rfind("}")
+                if i >= 0 and j > i:
+                    try:
+                        parsed = json.loads(raw[i:j+1])
+                        parsed = _clean_metadata(parsed)
+                        return parsed
+                    except Exception:
+                        pass
+                last_error = "Could not recover JSON."
+                if attempt == 0:
+                    print(f"WARNING: {last_error} Retrying once for {filename}.")
+                    continue
+                print(f"ERROR: {last_error} for {filename}")
                 return {}
-            
-            # Clean the metadata
-            parsed = _clean_metadata(parsed)
-            return parsed
-        except json.JSONDecodeError as parse_err:
-            print(f"WARNING: JSON parse error for {filename}: {parse_err}")
-            # Try to extract JSON from the response
-            i, j = raw.find("{"), raw.rfind("}")
-            if i >= 0 and j > i:
-                try:
-                    parsed = json.loads(raw[i:j+1])
-                    parsed = _clean_metadata(parsed)
-                    return parsed
-                except:
-                    pass
-            print(f"ERROR: Could not recover JSON for {filename}")
+        except Exception as e:
+            last_error = str(e)
+            if attempt == 0:
+                print(f"WARNING extracting metadata for {filename}: {e}. Retrying once.")
+                continue
+            print(f"ERROR extracting metadata for {filename}: {e}")
             return {}
-    except Exception as e:
-        print(f"ERROR extracting metadata for {filename}: {e}")
-        return {}
+
+    if last_error:
+        print(f"ERROR extracting metadata for {filename}: {last_error}")
+    return {}
