@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Letter to Mr. Murray Sheehan, 8 September 1941",
-    "creator": "President",
+    "creator": "Upham, Alfred H.",
     "contributors": null,
     "correspondents": [
       "Mr. Murray Sheehan"
@@ -11,12 +11,12 @@
     "place": "Massachusetts--Glouchester",
     "language": "English",
     "subjects": [
-      "University admissions",
-      "International students"
+      "Universities and colleges--Admission",
+      "international students"
     ],
     "theme": null,
     "genre": [
-      "Correspondence"
+      "correspondence"
     ],
     "keywords": [
       "Karoon Gengradomying",
@@ -24,7 +24,7 @@
       "Freshman admission"
     ],
     "decade": "1940-1949",
-    "description": "A letter from the President to Mr. Murray Sheehan regarding the admission of Karoon Gengradomying to Miami University as a freshman.",
+    "description": "A letter from Alfred H. Upham, president of Miami University (1928–1945), to Mr. Murray Sheehan, confirming the admission of Karoon Gengradomying as a freshman and mentioning other Thai students at the university.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -51,7 +51,7 @@
     "tier1": {
       "transcript": "September 8, 1941\n\nMr. Murray Sheehan  \nMonsonhurst 59  \nGlouchester, Massachusetts  \n\nDear Murray:  \n\nReplying to your letter of September 6, I can  \nassure you that we shall be pleased to admit Karoon  \nGengradomying to Miami University as a freshman.  \n\nWhile of course we know nothing of the University  \nyou mention in Bangkok or of its entrance examinations,  \nthe other boys from Thailand have made such a good  \nrecord here that we do not hesitate.  \n\nFreshman Week begins with a convocation next  \nSunday evening, September 14, but we can hold a room  \nfor him a little longer if necessary. We are trying  \nto squeeze him into one of the freshman dormitories.  \n\nCordially yours,  \n\nPresident",
       "text_reading": null,
-      "description": "A letter from the President to Mr. Murray Sheehan regarding the admission of Karoon Gengradomying to Miami University as a freshman.",
+      "description": "A letter from Alfred H. Upham, president of Miami University (1928–1945), to Mr. Murray Sheehan, confirming the admission of Karoon Gengradomying as a freshman and mentioning other Thai students at the university.",
       "title": "Letter to Mr. Murray Sheehan, 8 September 1941",
       "generated_title": null,
       "date": "1941-09-08",
@@ -69,13 +69,13 @@
     },
     "tier2": {
       "subjects": [
-        "University admissions",
-        "International students"
+        "university admissions",
+        "international students"
       ],
       "genre": [
-        "Correspondence"
+        "correspondence"
       ],
-      "creator": "President",
+      "creator": "Upham, Alfred H.",
       "publisher": null,
       "theme": null
     },

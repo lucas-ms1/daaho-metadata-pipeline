@@ -9,13 +9,15 @@
     "place": "Ohio--Cincinnati",
     "language": null,
     "subjects": [
-      "Correspondence"
+      "correspondence"
     ],
     "theme": null,
-    "genre": null,
+    "genre": [
+      "clippings (information artifacts)"
+    ],
     "keywords": null,
     "decade": "1930-1939",
-    "description": null,
+    "description": "A newspaper article from The Post discussing the rescue of Alfred H. Upham, president of Miami University, among 503 passengers from a grounded liner.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -42,7 +44,7 @@
     "tier1": {
       "transcript": null,
       "text_reading": null,
-      "description": null,
+      "description": "A newspaper article from The Post discussing the rescue of Alfred H. Upham, president of Miami University, among 503 passengers from a grounded liner.",
       "title": "Tosses his dime, 11 December 1937",
       "generated_title": null,
       "date": "1937-12-11",

@@ -11,16 +11,16 @@
     "place": "District of Columbia--Washington; Ohio--Oxford",
     "language": "English",
     "subjects": [
-      "Miami University",
-      "Correspondence"
+      "Miami University (Oxford, Ohio)",
+      "correspondence"
     ],
     "theme": null,
     "genre": [
-      "Correspondence"
+      "correspondence"
     ],
     "keywords": null,
     "decade": "1940-1949",
-    "description": "A letter from the Royal Thai Legation to President A. H. Upham expressing gratitude for courtesies shown during a visit to Miami University.",
+    "description": "A letter from the Royal Thai Legation's Student Department to President A.H. Upham of Miami University expressing appreciation for hospitality and admiration for the university's work.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -47,7 +47,7 @@
     "tier1": {
       "transcript": "ROYAL THAI LEGATION\nSTUDENT'S DEPARTMENT\n\n2300 KALORAMA ROAD\nWASHINGTON, D. C.\n\nJune 2, 1942\n\nPresident A. H. Upham\nMiami University\nOxford, Ohio\n\nDear President Upham:\n\nJust a line, upon my return to the\nLegation, to thank you for the many courtesies which were\nshown to me while I was at the University, and to tell you\nagain how proud I am of the wonderful work which you are\ndoing there. There is a charm and a dignity about the place\nwhich I had never so thoroughly felt before. If only I could\nnow be looking backward to the pleasure of having been the\nagency through whom you secured yesterday's Commencement\nspeaker, my cup would indeed be running over. I shall still\nhope in that direction!\n\nKindest regards to Mrs. Upham and yourself.\n\nSincerely yours,\n\n[handwritten] Murry [unclear]",
       "text_reading": null,
-      "description": "A letter from the Royal Thai Legation to President A. H. Upham expressing gratitude for courtesies shown during a visit to Miami University.",
+      "description": "A letter from the Royal Thai Legation's Student Department to President A.H. Upham of Miami University expressing appreciation for hospitality and admiration for the university's work.",
       "title": "Letter to President A. H. Upham from Royal Thai Legation, 2 June 1942",
       "generated_title": null,
       "date": "1942-06-02",
@@ -62,7 +62,7 @@
     "tier2": {
       "subjects": null,
       "genre": [
-        "Correspondence"
+        "correspondence"
       ],
       "creator": "Royal Thai Legation",
       "publisher": null,

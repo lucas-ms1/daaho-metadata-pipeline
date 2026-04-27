@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Letter from Harold V. Lucas to the President of Miami University, 24 April 1940",
-    "creator": "Harold V. Lucas",
+    "creator": "Lucas, Harold V.",
     "contributors": null,
     "correspondents": [
       "President of Miami University"
@@ -11,12 +11,11 @@
     "place": "Ohio--Oxford",
     "language": "English",
     "subjects": [
-      "Education",
-      "Character reference"
+      "education"
     ],
     "theme": null,
     "genre": [
-      "Letter"
+      "letters (correspondence)"
     ],
     "keywords": [
       "Wing Kong Chong",
@@ -25,7 +24,7 @@
       "Hawaii"
     ],
     "decade": "1940-1949",
-    "description": "A letter from Harold V. Lucas, General Secretary of the YMCA, providing a character reference for Wing Kong Chong, a student at Miami University.",
+    "description": "A letter from Harold V. Lucas to Alfred H. Upham, president of Miami University (1928–1945) providing a character reference for student Wing Kong Chong, highlighting his qualities as a future educator.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -52,7 +51,7 @@
     "tier1": {
       "transcript": "[handwritten] Copy\n\nMIAMI UNIVERSITY\nOXFORD, OHIO\n\nOFFICE OF THE PRESIDENT\n\nApril 24, 1940\n\nPresident\nMiami University\nOxford, Ohio\n\nDear Sir:\n\nIt has come to my attention that a personal note from me might well be added to your file dealing with the character and person of one of your students Wing Kong Chong who, I understand, hopes to be graduated from your university in 1940 with intention of returning to Hawaii to enter the Department of Public Instruction as a teacher here. I am very pleased to send this word of testimony concerning Mr. Chong whom I have known for the past eight years. While I am not qualified to speak for his scholastic ability or capacity I do feel that I know enough of him and his brothers and sisters to say definitely that he is the type of young man we are hoping more and more will enter the public school system here.\n\nI knew Wing Kong when he was in High School and during a summer camp I came to know him even better. His character, I believe, is above reproach. His willingness to be helpful and his leadership even as a boy was very definitely an asset to the camp. If, during his years on the mainland, he has continued on the path I knew him to follow, I am sure he will be a splendid teacher and friend to youth.\n\nVery cordially yours,\n\nHarold V. Lucas,\nGENERAL SECRETARY, [handwritten] YMCA",
       "text_reading": null,
-      "description": "A letter from Harold V. Lucas, General Secretary of the YMCA, providing a character reference for Wing Kong Chong, a student at Miami University.",
+      "description": "A letter from Harold V. Lucas to the President of Miami University providing a character reference for student Wing Kong Chong, highlighting his qualities as a future educator.",
       "title": "Letter from Harold V. Lucas to the President of Miami University, 24 April 1940",
       "generated_title": null,
       "date": "1940-04-24",
@@ -71,13 +70,13 @@
     },
     "tier2": {
       "subjects": [
-        "Education",
-        "Character reference"
+        "education",
+        "character references"
       ],
       "genre": [
-        "Letter"
+        "letters (correspondence)"
       ],
-      "creator": "Harold V. Lucas",
+      "creator": "Lucas, Harold V.",
       "publisher": null,
       "theme": null
     },

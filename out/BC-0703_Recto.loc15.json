@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Foreword by A. H. Upham, undated",
-    "creator": "A. H. Upham",
+    "creator": "Upham, A. H.",
     "contributors": null,
     "correspondents": null,
     "publisher": null,
@@ -9,14 +9,14 @@
     "place": "Ohio--Oxford",
     "language": "English",
     "subjects": [
-      "Dancing",
-      "Cultural exchange",
+      "dancing",
+      "cultural exchange",
       "Thailand",
       "American students"
     ],
     "theme": null,
     "genre": [
-      "Foreword"
+      "prefaces"
     ],
     "keywords": [
       "Dancing",
@@ -25,7 +25,7 @@
       "Cultural exchange"
     ],
     "decade": null,
-    "description": "A foreword discussing the cultural exchange through dance between a Thai instructor and American students at Miami University.",
+    "description": "A foreword written by A. H. Upham, discussing a ballroom dancing class led by Swadi Nitibon from Thailand at Miami University.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -52,7 +52,7 @@
     "tier1": {
       "transcript": "Dancing, like music, is an art that has no boundaries of race and language. This little book by a native of Thailand has grown out of a voluntary class in ball-room dancing conducted by him for a typical group of American students. He perfected his art in England. His pupils have never witnessed the subtle posturing of Siamese dancers or heard the temple-bells that still echo in his ears. But they appreciate and profit by the added grace and rhythm and sense of refined beauty he has brought with him from other shores.\n\nSwadi Nitibon and the little group of other young men from Thailand who have chosen to live and work for a time among us are very welcome here at Miami University. They have sent our imaginations questing half way around the world. At the same time, with their American nicknames, their interest in our sports and recreations, and their ability to show us up in the classroom, they have made us realize how much all students everywhere have in common. We frankly admit that one of them can effectively teach us to dance our own dances.\n\nA. H. Upham",
       "text_reading": null,
-      "description": "A foreword discussing the cultural exchange through dance between a Thai instructor and American students at Miami University.",
+      "description": "A foreword written by A. H. Upham, discussing a ballroom dancing class led by Swadi Nitibon from Thailand at Miami University.",
       "title": "Foreword by A. H. Upham, undated",
       "generated_title": null,
       "date": null,
@@ -69,15 +69,15 @@
     },
     "tier2": {
       "subjects": [
-        "Dancing",
-        "Cultural exchange",
+        "dancing",
+        "cultural exchange",
         "Thailand",
         "American students"
       ],
       "genre": [
-        "Foreword"
+        "forewords"
       ],
-      "creator": "A. H. Upham",
+      "creator": "Upham, A. H.",
       "publisher": null,
       "theme": null
     },

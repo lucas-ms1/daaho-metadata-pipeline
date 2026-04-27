@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Letter to Miss Marshall from Murray Sheehan, 27 October 1938",
-    "creator": "Murray Sheehan",
+    "creator": "Sheehan, Murray",
     "contributors": null,
     "correspondents": [
       "Miss Marshall"
@@ -11,12 +11,11 @@
     "place": "District of Columbia--Washington; Ohio--Oxford",
     "language": "English",
     "subjects": [
-      "Siamese Legation",
-      "Miami University"
+      "Miami University (Oxford, Ohio)"
     ],
     "theme": null,
     "genre": [
-      "Correspondence"
+      "correspondence"
     ],
     "keywords": [
       "Siam",
@@ -24,7 +23,7 @@
       "Graduate files"
     ],
     "decade": "1930-1939",
-    "description": "A letter from Murray Sheehan to Miss Marshall regarding Mr. Prasobsukh Sukhsvasti's address and occupation for the 1938 graduate files.",
+    "description": "A letter from Murray Sheehan of the Siamese Legation to the secretary to the president of Miami University regarding the listing of Mr. Prasobsukh Sukhsvasti and the request to not grant him the title 'Prince'.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -51,7 +50,7 @@
     "tier1": {
       "transcript": "STUDENTS' DEPARTMENT\nMURRAY SHEEHAN, SUPERINTENDENT\n\nSIAMESE LEGATION\n\n2300 KALORAMA ROAD\nWASHINGTON, D.C.\n\nOctober 27, 1938\n\nSecretary to the President\nMiami University\nOxford, Ohio\n\nMy dear Miss Marshall:\n\nMiss Aurelia Rosser has written to say that you would like to have Mr. Prasobsukh Sukhsvasti's present address and occupation for the 1938 graduate files.\n\nMr. Sukhsvasti should be listed as M. C. Prasobsukh Sukhsvasti, 10 Pra Aditya Road, Bangkok, Siam. I should like again, as on previous occasions, to request that the title of \"Prince\" be not granted to him by Miami University, despite Mr. Sukhsvasti's own apparent wide publicity on that score. His position in Siam may be, as before, a high-school teacher, or he may now be granted a position in one of the Government offices.\n\nUnfortunately, Miss Rosser named you only as \"Miss Marshall,\" so I am unable to address you more fully.\n\nYours very truly,\n\nMurray Sheehan\n\nSuperintendent",
       "text_reading": null,
-      "description": "A letter from Murray Sheehan to Miss Marshall regarding Mr. Prasobsukh Sukhsvasti's address and occupation for the 1938 graduate files.",
+      "description": "A letter from Murray Sheehan of the Siamese Legation to the secretary to the president of Miami University regarding the listing of Mr. Prasobsukh Sukhsvasti and the request to not grant him the title 'Prince'.",
       "title": "Letter to Miss Marshall from Murray Sheehan, 27 October 1938",
       "generated_title": null,
       "date": "1938-10-27",
@@ -74,9 +73,9 @@
         "Prasobsukh Sukhsvasti"
       ],
       "genre": [
-        "Correspondence"
+        "correspondence"
       ],
-      "creator": "Murray Sheehan",
+      "creator": "Sheehan, Murray",
       "publisher": null,
       "theme": null
     },

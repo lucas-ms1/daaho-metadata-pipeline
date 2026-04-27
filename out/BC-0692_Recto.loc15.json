@@ -9,13 +9,15 @@
     "place": "Ohio--Oxford",
     "language": null,
     "subjects": [
-      "Correspondence"
+      "correspondence"
     ],
     "theme": null,
-    "genre": null,
+    "genre": [
+      "itineraries"
+    ],
     "keywords": null,
     "decade": null,
-    "description": null,
+    "description": "Document detailing the travel itinerary for Upham, listing destinations and addresses of American Express branches from December to March.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -42,7 +44,7 @@
     "tier1": {
       "transcript": "Upham Itinerary\n\nYokohama and Japan\nDecember 6 - 19\n\nManila\nDecember 27 - January 5\n\nSingapore\nJanuary 9 - 27\n\nCalcutta\nFebruary 6 - 7\n\nBombay\nFebruary 17 - 18\n\nCairo\nFebruary 28 - March 14\n\nNaples and Italy\nMarch 19 - April 10\n\nAddress\n\nAmerican Express Co.\n7 Nihon Odori, Nakku\n(P. O. Box 407)\nYokohama, Japan\n\nAmerican Express Co.\n95 Plaza Moraga\n(P. O. Box 1463)\nManila, P. I.\n\nAmerican Express Co.\nNo. 1, Collyer Quay\nSingapore, Straits Settlements\n\nAmerican Express Co.\n14-15 Government Place, East\n(P. O. Box 2311)\nCalcutta, India\n\nAmerican Express Co.\n82-84 Esplanade Road, Fort\n(P. O. Box 507)\nBombay, India\n\nAmerican Express Co.\nContinental Savoy Bldg.\n(P. O. Box 2160)\nCairo, Egypt\n\nAmerican Express Co.\n23a Piazza dei Martiri\nNaples, Italy\n\nAmerican Express Co.\nVia Balbi (Hotel Colombia)\nGenoa, Italy\n\nMailing dates\nfrom Oxford, Ohio\n\nNovember 17 - 24\n\nNovember 24 -\nDecember 1\n\nDecember 1 - 14\n\nDecember 14 -\nJanuary 1\n\nJanuary 1 - 21\n\nJanuary 21 -\nFebruary 28\n\nFebruary 28 - March 15\n\nMarch 15 - 30",
       "text_reading": null,
-      "description": null,
+      "description": "Document detailing the travel itinerary for Upham, listing destinations and addresses of American Express branches from December to March.",
       "title": "Upham itinerary document, undated",
       "generated_title": null,
       "date": null,

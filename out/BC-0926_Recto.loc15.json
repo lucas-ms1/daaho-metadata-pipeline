@@ -9,13 +9,11 @@
     "place": "District of Columbia--Washington",
     "language": null,
     "subjects": [
-      "Financial assistance",
-      "Chinese students",
-      "Visa applications"
+      "Chinese students"
     ],
     "theme": null,
     "genre": [
-      "Official correspondence"
+      "correspondence"
     ],
     "keywords": [
       "Financial assistance",
@@ -25,7 +23,7 @@
       "Universities"
     ],
     "decade": "1940-1949",
-    "description": "Document discussing financial assistance and visa applications for Chinese students and trainees in the United States.",
+    "description": "Letter from the Department of State discussing financial aid and admission requirements for Chinese students in the U.S. dated September 20, 1945.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -52,7 +50,7 @@
     "tier1": {
       "transcript": "ADDRESS OFFICIAL COMMUNICATIONS TO\nTHE SECRETARY OF STATE\nWASHINGTON 25, D.C.\n\nDEPARTMENT OF STATE\nWASHINGTON\n\nFOR VICTORY\nBUY\nUNITED\nSTATES\nWAR\nSAVINGS\nBONDS\nAND\nSTAMPS\n\n[handwritten] FLS\n\n20 September 1945\n\nFinancial assistance given to students and trainees from China.\nAdmission of Chinese nationals to American colleges and universities.\n\nThe American Ambassador to China has made the following request\nconcerning the above two subjects:\n\n\"It would be helpful in the handling of the visa applications\nof Chinese students and trainees proceeding to the United States if\nthe Department could make known as widely as possible to colleges\nand universities, special bodies administering scholarship funds\nsuch as the China Institute, and to American business organizations\naccepting Chinese as trainees, that advice of the grant of scholar-\nships, fellowships, stipends and other financial assistance, should\nbe sent directly to the Embassy or to the consular office of the\ndistrict in which the applicant resides and that advice furnished\nshould be as specific as possible in regard to the amount of such\nassistance. This is necessary in order to have some assurance of\nthe authenticity of the information and of the adequacy of the financial\nassistance.\n\n\"It would be helpful if colleges and universities could be asked\nto send their notices of admittance directly to the visa issuing\noffice and to make the admittance of students absolute and not condi-\ntional upon the presentation of satisfactory credentials as frequently\nis the case.\"\n\nIt should be noted that 4(e) visas may not be given when admis-\nsion certificates are conditional.",
       "text_reading": null,
-      "description": "Document discussing financial assistance and visa applications for Chinese students and trainees in the United States.",
+      "description": "Letter from the Department of State discussing financial aid and admission requirements for Chinese students in the U.S. dated September 20, 1945.",
       "title": "Financial assistance given to students and trainees from China, 20 September 1945",
       "generated_title": null,
       "date": "1945-09-20",
@@ -70,12 +68,12 @@
     },
     "tier2": {
       "subjects": [
-        "Financial assistance",
+        "financial assistance",
         "Chinese students",
-        "Visa applications"
+        "visa applications"
       ],
       "genre": [
-        "Official correspondence"
+        "official correspondence"
       ],
       "creator": null,
       "publisher": null,

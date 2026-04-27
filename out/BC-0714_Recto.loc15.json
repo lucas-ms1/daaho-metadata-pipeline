@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
-    "creator": "President",
+    "creator": "Upham, Alfred H.",
     "contributors": null,
     "correspondents": [
       "Mr. Murray Sheehan"
@@ -11,14 +11,15 @@
     "place": "District of Columbia--Washington",
     "language": null,
     "subjects": [
-      "Thailand--Washington (D.C.)",
       "Thailand"
     ],
     "theme": null,
-    "genre": null,
+    "genre": [
+      "letters (correspondence)"
+    ],
     "keywords": null,
     "decade": "1940-1949",
-    "description": null,
+    "description": "A letter from Alfred H. Upham, president of Miami University (1928–1945), to Mr. Murray Sheehan at the Royal Thai Legation, regarding plans for commencement and arrangements for Sheehan's visit.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -45,7 +46,7 @@
     "tier1": {
       "transcript": "May 26, 1942\n\nMr. Murray Sheehan\nRoyal Thai Legation\n2300 Kalorama Road\nWashington, D. C.\n\nDear Murray:\n\nI am delighted to know that you are coming on for Commencement. We shall all be glad to see you and I think you will find yourself very comfortable in David Swing Hall where we are making a reservation for you.\n\nIt is too bad that we cannot have at least one boy from Thailand in the graduating class while you are here, particularly since we were unable to secure the Minister as our speaker.\n\nCordially yours,\n\nPresident",
       "text_reading": null,
-      "description": null,
+      "description": "A letter from Alfred H. Upham, president of Miami University (1928–1945), to Mr. Murray Sheehan at the Royal Thai Legation, regarding plans for commencement and arrangements for Sheehan's visit.",
       "title": "Letter to Mr. Murray Sheehan from the President, 26 May 1942",
       "generated_title": null,
       "date": "1942-05-26",
@@ -60,7 +61,7 @@
     "tier2": {
       "subjects": null,
       "genre": null,
-      "creator": "President",
+      "creator": "Upham, Alfred H.",
       "publisher": null,
       "theme": null
     },

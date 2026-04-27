@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Letter from M.R. Seni Pramoj to President A.H. Upham, 28 February 1942",
-    "creator": "M.R. Seni Pramoj",
+    "creator": "Pramoj, M.R. Seni",
     "contributors": null,
     "correspondents": [
       "A.H. Upham"
@@ -12,12 +12,12 @@
     "language": "English",
     "subjects": [
       "Thai students",
-      "World War II",
-      "Miami University"
+      "World War (1939-1945)",
+      "Miami University (Oxford, Ohio)"
     ],
     "theme": null,
     "genre": [
-      "Correspondence"
+      "correspondence"
     ],
     "keywords": [
       "Thai Legation",
@@ -25,7 +25,7 @@
       "cancellation"
     ],
     "decade": "1940-1949",
-    "description": "A letter from M.R. Seni Pramoj, Minister for Thailand, to President A.H. Upham of Miami University, discussing the cancellation of the annual meeting of Thai students due to the war.",
+    "description": "A letter from M.R. Seni Pramoj to Mr. A.H. Upham, discussing the cancellation of an annual meeting of Thai students due to the war.",
     "collection": null,
     "series": null,
     "folder": null,
@@ -52,7 +52,7 @@
     "tier1": {
       "transcript": "No.192/2485\n\nRECEIVED\nMAR 2 1942\n\nPRESIDENT'S OFFICE\nMIAMI UNIVERSITY\n\nTHE ROYAL THAI LEGATION\nWASHINGTON, D. C.\n\nFebruary 28th, 1942.\n\nMr. A.H. Upham,\nPresident of Miami University,\nOxford, Ohio.\n\nMy dear President Upham,\n\nThank you for your letter of February 4th and for your offer to\ngive accommodation to the annual meeting of Thai students.\n\nI much regret that, owing to the War, we shall have to cancel our\nusual Students' Meeting this year and we shall therefore be unable to\navail ourselves of the hospitality which you have so kindly extended\non behalf of Miami University. I trust, however, that, at some future date\nand under happier circumstances, it will be possible to bring our students\nto your campus.\n\nYours very truly,\n[handwritten] Seni Pramoj\n\nM.R. Seni Pramoj\nMinister for Thailand.",
       "text_reading": null,
-      "description": "A letter from M.R. Seni Pramoj, Minister for Thailand, to President A.H. Upham of Miami University, discussing the cancellation of the annual meeting of Thai students due to the war.",
+      "description": "A letter from M.R. Seni Pramoj to Mr. A.H. Upham, discussing the cancellation of an annual meeting of Thai students due to the war.",
       "title": "Letter from M.R. Seni Pramoj to President A.H. Upham, 28 February 1942",
       "generated_title": null,
       "date": "1942-02-28",
@@ -71,13 +71,13 @@
     "tier2": {
       "subjects": [
         "Thai students",
-        "World War II",
+        "World War, 1939-1945",
         "Miami University"
       ],
       "genre": [
-        "Correspondence"
+        "correspondence"
       ],
-      "creator": "M.R. Seni Pramoj",
+      "creator": "Pramoj, M.R. Seni",
       "publisher": null,
       "theme": null
     },
