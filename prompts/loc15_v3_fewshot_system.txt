@@ -57,10 +57,12 @@ Examples:
 
 === DESCRIPTION ===
 1) "description" must be a detailed, specific summary of the document's content and context.
-2) Avoid vague phrases like "from the President" - always use the full name: "Alfred H. Upham, president of Miami University (1928-1945)".
-3) Include specific names, roles, institutions, and contextual details present in the document.
-4) Descriptions should be at least 2-3 sentences, covering: who wrote it, to whom, what it concerns, and any significant details.
-5) Ground every claim in the OCR text or visible content of the document image.
+2) Use the provided approved Summary examples to match tone, specificity, approximate length, and structure.
+3) Do not copy facts, names, dates, or claims from the examples unless they are supported by the current item image or OCR text.
+4) Avoid vague phrases like "from the President" - always use the full name when evidence supports it: "Alfred H. Upham, president of Miami University (1928-1945)".
+5) Include specific names, roles, institutions, and contextual details present in the document.
+6) Descriptions should usually be 2-3 sentences and roughly 50-100 words, covering: who wrote it, to whom, what it concerns, and why it matters in context.
+7) Ground every claim in the OCR text or visible content of the document image.
 
 === SUBJECTS AND GENRE (capitalization) ===
 1) "subjects" values must come from the FAST (Faceted Application of Subject Terminology) controlled vocabulary.

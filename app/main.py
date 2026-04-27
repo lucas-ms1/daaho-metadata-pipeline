@@ -1,4 +1,5 @@
 import argparse
+import csv
 import json
 import os
 import re
@@ -68,6 +69,103 @@ def _load_controlled_list(path_str: Optional[str]) -> Set[str]:
             continue
         values.add(token)
     return values
+
+
+def _normalize_item_id(value: str) -> str:
+    stem = Path(str(value).strip()).stem
+    if stem.endswith(".loc15"):
+        stem = stem[: -len(".loc15")]
+    if stem.endswith("_Recto"):
+        stem = stem[: -len("_Recto")]
+    return stem
+
+
+def _first_header_index(headers: List[str], name: str) -> Optional[int]:
+    try:
+        return headers.index(name)
+    except ValueError:
+        return None
+
+
+def _csv_cell(row: List[str], index: Optional[int]) -> str:
+    if index is None or index >= len(row):
+        return ""
+    return row[index].strip()
+
+
+def _load_summary_examples(path_str: str) -> Dict[str, Dict[str, str]]:
+    if not path_str:
+        return {}
+    path = Path(path_str)
+    if not path.exists():
+        raise FileNotFoundError(f"Summary examples CSV not found: {path_str}")
+
+    examples: Dict[str, Dict[str, str]] = {}
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.reader(handle)
+        headers = next(reader)
+        indexes = {
+            "identifier": _first_header_index(headers, "Identifier"),
+            "title": _first_header_index(headers, "Title"),
+            "summary": _first_header_index(headers, "Summary"),
+            "creator": _first_header_index(headers, "Creator"),
+            "date": _first_header_index(headers, "Date"),
+            "location": _first_header_index(headers, "Location"),
+            "genre": _first_header_index(headers, "Genre"),
+        }
+        if indexes["identifier"] is None or indexes["summary"] is None:
+            raise ValueError("Summary examples CSV must contain Identifier and Summary columns.")
+
+        for row in reader:
+            identifier = _normalize_item_id(_csv_cell(row, indexes["identifier"]))
+            summary = _csv_cell(row, indexes["summary"])
+            if not identifier or not summary:
+                continue
+            examples[identifier] = {
+                "identifier": identifier,
+                "title": _csv_cell(row, indexes["title"]),
+                "creator": _csv_cell(row, indexes["creator"]),
+                "date": _csv_cell(row, indexes["date"]),
+                "location": _csv_cell(row, indexes["location"]),
+                "genre": _csv_cell(row, indexes["genre"]),
+                "summary": summary,
+            }
+    return examples
+
+
+def _format_summary_examples(
+    item_id: str,
+    examples: Dict[str, Dict[str, str]],
+    mode: str,
+) -> tuple[str, List[str]]:
+    if not examples:
+        return "", []
+    if mode != "leave-one-out":
+        raise ValueError(f"Unsupported summary few-shot mode: {mode}")
+
+    included_ids = [identifier for identifier in sorted(examples) if identifier != item_id]
+    blocks: List[str] = [
+        "SUMMARY STYLE EXAMPLES",
+        "Use these approved human-written Summary examples only to match tone, detail, and structure.",
+        "Do not copy facts from these examples into the current item unless they are supported by the current OCR/image.",
+        f"The current item id is {item_id}; its own approved Summary is intentionally excluded.",
+        "",
+    ]
+    for identifier in included_ids:
+        example = examples[identifier]
+        blocks.extend(
+            [
+                f"Example Identifier: {example['identifier']}",
+                f"Title: {example['title'] or '(blank)'}",
+                f"Creator: {example['creator'] or '(blank)'}",
+                f"Date: {example['date'] or '(blank)'}",
+                f"Location: {example['location'] or '(blank)'}",
+                f"Genre: {example['genre'] or '(blank)'}",
+                f"Approved Summary: {example['summary']}",
+                "",
+            ]
+        )
+    return "\n".join(blocks).strip(), included_ids
 
 
 def _normalize_subject_token(value: str) -> str:
@@ -147,6 +245,77 @@ def _enforce_approved_subjects(md: Dict[str, Any], approved_subjects: Set[str]) 
         notes.append(f"Applied deterministic fallback FAST subject '{fallback_subject}'.")
 
     md["subjects"] = subjects
+    return notes
+
+
+def _enforce_approved_genre(md: Dict[str, Any], approved_genre: Set[str]) -> List[str]:
+    if not approved_genre:
+        return []
+
+    notes: List[str] = []
+    normalized_approved_genre: Dict[str, str] = {}
+    for approved_term in sorted(approved_genre):
+        normalized_term = _normalize_subject_token(approved_term)
+        if normalized_term and normalized_term not in normalized_approved_genre:
+            normalized_approved_genre[normalized_term] = approved_term
+
+    genre: List[str] = []
+    existing_genre = md.get("genre")
+    if isinstance(existing_genre, list):
+        for raw_genre in existing_genre:
+            term = str(raw_genre).strip()
+            if not term:
+                continue
+            normalized_term = _normalize_subject_token(term)
+            canonical_term = normalized_approved_genre.get(normalized_term)
+            if canonical_term is None:
+                matches = get_close_matches(normalized_term, sorted(normalized_approved_genre.keys()), n=1, cutoff=0.86)
+                if matches:
+                    canonical_term = normalized_approved_genre[matches[0]]
+            if canonical_term and canonical_term not in genre:
+                genre.append(canonical_term)
+
+    if not genre:
+        fallback_genre = normalized_approved_genre.get("correspondence", "correspondence")
+        genre = [fallback_genre]
+        notes.append(f"Applied deterministic fallback AAT genre '{fallback_genre}'.")
+
+    md["genre"] = genre
+    return notes
+
+
+def _enforce_approved_places(md: Dict[str, Any], approved_places: Set[str]) -> List[str]:
+    if not approved_places:
+        return []
+
+    place_value = md.get("place")
+    if not isinstance(place_value, str) or not place_value.strip():
+        return []
+
+    notes: List[str] = []
+    normalized_places: Dict[str, str] = {place.lower(): place for place in approved_places}
+    places: List[str] = []
+    for raw_token in place_value.split(";"):
+        token = " ".join(raw_token.strip().split())
+        if not token:
+            continue
+
+        canonical = token if token in approved_places else None
+        if canonical is None:
+            lower_token = token.lower()
+            canonical = normalized_places.get(lower_token)
+            if canonical is None and "washington" in lower_token and ("d.c" in lower_token or "district of columbia" in lower_token):
+                dc_place = "District of Columbia--Washington"
+                if dc_place in approved_places:
+                    canonical = dc_place
+
+        if canonical and canonical not in places:
+            places.append(canonical)
+            if canonical != token:
+                notes.append(f"Canonicalized place '{token}' to '{canonical}'.")
+
+    if places and "; ".join(places) != place_value:
+        md["place"] = "; ".join(places)
     return notes
 
 
@@ -239,6 +408,7 @@ def rebuild_existing_outputs(
     apply_reviews: bool,
     approved_places: Set[str],
     approved_subjects: Set[str],
+    approved_genre: Set[str],
     online_vocab_advisory: bool,
 ) -> None:
     out_path = Path(out_dir)
@@ -274,6 +444,12 @@ def rebuild_existing_outputs(
         subject_notes = _enforce_approved_subjects(md, approved_subjects)
         if subject_notes:
             policy_notes = policy_notes + subject_notes
+        genre_notes = _enforce_approved_genre(md, approved_genre)
+        if genre_notes:
+            policy_notes = policy_notes + genre_notes
+        place_notes = _enforce_approved_places(md, approved_places)
+        if place_notes:
+            policy_notes = policy_notes + place_notes
 
         context.update(
             _apply_validation(
@@ -327,11 +503,15 @@ def process_path(
     model: str,
     approved_places: Set[str],
     approved_subjects: Set[str],
+    approved_genre: Set[str],
     online_vocab_advisory: bool,
     output_ext: str = ".loc15.json",
     defaults: Optional[Dict[str, Any]] = None,
     overwrite: bool = False,
     apply_reviews: bool = False,
+    prompt_version: str = PROMPT_VERSION,
+    summary_examples: Optional[Dict[str, Dict[str, str]]] = None,
+    summary_fewshot_mode: str = "leave-one-out",
 ) -> None:
     item_path = Path(path)
     if not item_path.exists():
@@ -344,6 +524,12 @@ def process_path(
         return
 
     print(f"Processing {item_path.name}...", end="", flush=True)
+    item_id = _normalize_item_id(item_path.name)
+    summary_style_examples, summary_example_ids = _format_summary_examples(
+        item_id=item_id,
+        examples=summary_examples or {},
+        mode=summary_fewshot_mode,
+    )
 
     text, conf = tesseract_ocr(str(item_path))
     img_bytes = pil_bytes(str(item_path))
@@ -364,6 +550,8 @@ def process_path(
         known_collection=collection,
         known_repository=repository,
         known_permalink=permalink,
+        prompt_version=prompt_version,
+        summary_style_examples=summary_style_examples,
     )
 
     review_notes: List[str] = []
@@ -387,14 +575,27 @@ def process_path(
     subject_notes = _enforce_approved_subjects(md, approved_subjects)
     if subject_notes:
         policy_notes = policy_notes + subject_notes
+    genre_notes = _enforce_approved_genre(md, approved_genre)
+    if genre_notes:
+        policy_notes = policy_notes + genre_notes
+    place_notes = _enforce_approved_places(md, approved_places)
+    if place_notes:
+        policy_notes = policy_notes + place_notes
 
     context = {
         "filename": item_path.name,
         "processing_confidence": float(conf),
         "model": model,
-        "prompt_version": PROMPT_VERSION,
+        "prompt_version": prompt_version,
         "schema_version": SCHEMA_VERSION,
     }
+    if summary_example_ids:
+        context["summary_fewshot"] = {
+            "mode": summary_fewshot_mode,
+            "item_id": item_id,
+            "example_count": len(summary_example_ids),
+            "example_ids": summary_example_ids,
+        }
     context.update(
         _apply_validation(
             md=md,
@@ -451,6 +652,18 @@ def main() -> None:
     parser.add_argument("--gdrive", action="store_true", help="Fetch from Google Drive folder first")
     parser.add_argument("--samples", action="store_true", help="Process all .jpg files in SAMPLES/")
     parser.add_argument("--model", default="gpt-4o", help="OpenAI model (default: gpt-4o)")
+    parser.add_argument("--prompt-version", default=PROMPT_VERSION, help=f"Prompt version in prompts/ (default: {PROMPT_VERSION})")
+    parser.add_argument(
+        "--summary-examples-csv",
+        default="",
+        help="CSV containing approved human Summary examples for few-shot summary prompting",
+    )
+    parser.add_argument(
+        "--summary-fewshot-mode",
+        default="leave-one-out",
+        choices=["leave-one-out"],
+        help="How to include summary examples; leave-one-out excludes the current item's own approved Summary",
+    )
     parser.add_argument("--collection", default="", help="Known collection (Tier 3 default)")
     parser.add_argument("--repository", default="", help="Known repository (Tier 3 default)")
     parser.add_argument("--permalink", default="", help="Known permalink (Tier 3 default)")
@@ -468,6 +681,7 @@ def main() -> None:
     parser.add_argument(
         "--approved-subjects", default="./vocab/fast_subjects.txt", help="Path to approved reviewed FAST subject list"
     )
+    parser.add_argument("--aat-genre", default="vocab/aat_genre.txt", help="Path to approved AAT genre list")
     parser.add_argument(
         "--online-vocab-advisory",
         action="store_true",
@@ -491,10 +705,16 @@ def main() -> None:
     online_vocab_advisory = bool(args.online_vocab_advisory or args.validate_vocab)
     approved_places = _load_controlled_list(args.approved_places)
     approved_subjects = _load_controlled_list(args.approved_subjects)
+    approved_genre = _load_controlled_list(args.aat_genre)
     if not approved_places:
         print(f"Warning: approved places list not found or empty: {args.approved_places}")
     if not approved_subjects:
         print(f"Warning: approved subjects list not found or empty: {args.approved_subjects}")
+    if not approved_genre:
+        print(f"Warning: approved AAT genre list not found or empty: {args.aat_genre}")
+    summary_examples = _load_summary_examples(args.summary_examples_csv) if args.summary_examples_csv else {}
+    if summary_examples:
+        print(f"Loaded {len(summary_examples)} approved Summary examples from {args.summary_examples_csv}")
 
     paths: List[str] = []
     if args.gdrive:
@@ -559,6 +779,7 @@ def main() -> None:
             apply_reviews=args.apply_reviews,
             approved_places=approved_places,
             approved_subjects=approved_subjects,
+            approved_genre=approved_genre,
             online_vocab_advisory=online_vocab_advisory,
         )
         return
@@ -574,11 +795,15 @@ def main() -> None:
                 model=args.model,
                 approved_places=approved_places,
                 approved_subjects=approved_subjects,
+                approved_genre=approved_genre,
                 online_vocab_advisory=online_vocab_advisory,
                 output_ext=".loc15.json",
                 defaults=defaults,
                 overwrite=args.overwrite,
                 apply_reviews=args.apply_reviews,
+                prompt_version=args.prompt_version,
+                summary_examples=summary_examples,
+                summary_fewshot_mode=args.summary_fewshot_mode,
             )
         except Exception as exc:
             print(f"x {path}: {exc}")

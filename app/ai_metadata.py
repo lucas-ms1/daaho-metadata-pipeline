@@ -20,10 +20,7 @@ except Exception:
 
 PROMPT_VERSION = "loc15_v2"
 _PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
-_SYSTEM_PROMPT_PATH = _PROMPTS_DIR / f"{PROMPT_VERSION}_system.txt"
-_USER_PROMPT_PATH = _PROMPTS_DIR / f"{PROMPT_VERSION}_user.txt"
-_CACHED_SYSTEM_PROMPT: Optional[str] = None
-_CACHED_USER_PROMPT: Optional[str] = None
+_CACHED_PROMPTS: Dict[str, Tuple[str, str]] = {}
 
 
 def _load_prompt(path: Path) -> str:
@@ -32,13 +29,15 @@ def _load_prompt(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def _get_prompts() -> Tuple[str, str]:
-    global _CACHED_SYSTEM_PROMPT, _CACHED_USER_PROMPT
-    if _CACHED_SYSTEM_PROMPT is None:
-        _CACHED_SYSTEM_PROMPT = _load_prompt(_SYSTEM_PROMPT_PATH)
-    if _CACHED_USER_PROMPT is None:
-        _CACHED_USER_PROMPT = _load_prompt(_USER_PROMPT_PATH)
-    return _CACHED_SYSTEM_PROMPT, _CACHED_USER_PROMPT
+def _get_prompts(prompt_version: str = PROMPT_VERSION) -> Tuple[str, str]:
+    if prompt_version not in _CACHED_PROMPTS:
+        system_prompt_path = _PROMPTS_DIR / f"{prompt_version}_system.txt"
+        user_prompt_path = _PROMPTS_DIR / f"{prompt_version}_user.txt"
+        _CACHED_PROMPTS[prompt_version] = (
+            _load_prompt(system_prompt_path),
+            _load_prompt(user_prompt_path),
+        )
+    return _CACHED_PROMPTS[prompt_version]
 
 
 def _get_client() -> OpenAI:
@@ -168,18 +167,29 @@ def transcribe_with_model(img_bytes: bytes, max_chars: int = MAX_OCR_CHARS, mode
     text = (resp.choices[0].message.content or "").strip()
     return text[:max_chars]
 
-def extract_metadata(img_bytes: bytes, ocr_text: str, filename: str, model: str = DEFAULT_MODEL, known_collection: str = "", known_repository: str = "", known_permalink: str = "") -> Dict[str, Any]:
+def extract_metadata(
+    img_bytes: bytes,
+    ocr_text: str,
+    filename: str,
+    model: str = DEFAULT_MODEL,
+    known_collection: str = "",
+    known_repository: str = "",
+    known_permalink: str = "",
+    prompt_version: str = PROMPT_VERSION,
+    summary_style_examples: str = "",
+) -> Dict[str, Any]:
     client = _get_client()
     data_url = _image_to_data_url(img_bytes)
     ocr_text = (ocr_text or "").strip()[:MAX_OCR_CHARS]
 
-    system_prompt, user_prompt_template = _get_prompts()
+    system_prompt, user_prompt_template = _get_prompts(prompt_version)
     user_prompt = user_prompt_template.format(
         filename=filename,
         ocr_text=ocr_text if ocr_text else "(none)",
         known_collection=known_collection or "",
         known_repository=known_repository or "",
         known_permalink=known_permalink or "",
+        summary_style_examples=summary_style_examples or "No approved summary style examples supplied.",
     )
     content: List[Dict[str, Any]] = [
         {"type": "text", "text": user_prompt},

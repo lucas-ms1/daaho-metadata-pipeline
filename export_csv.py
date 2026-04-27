@@ -8,12 +8,24 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional
 from app.ai_metadata import apply_review_overrides
 
+def normalize_headers(headers: List[str]) -> List[str]:
+    """Drop duplicate Identifier headers while preserving the upload order."""
+    normalized = []
+    seen_identifier = False
+    for header in headers:
+        if header == "Identifier":
+            if seen_identifier:
+                continue
+            seen_identifier = True
+        normalized.append(header)
+    return normalized
+
 def read_csv_headers(csv_path: str) -> List[str]:
     """Read the header row from the CSV to get exact column order."""
     with open(csv_path, 'r', encoding='utf-8-sig') as f:
         reader = csv.reader(f)
         headers = next(reader)
-    return headers
+    return normalize_headers(headers)
 
 def join_list(value: Any, separator: str = "; ") -> str:
     """Join list items with separator, or return empty string if None/empty."""
@@ -51,6 +63,7 @@ def map_json_to_csv_row(json_data: Dict[str, Any], filename: str) -> Dict[str, s
     
     # Get identifier - prefer identifier, fall back to digital_identifier, or use filename stem
     identifier = md.get("identifier") or md.get("digital_identifier") or Path(filename).stem
+    identifier = identifier.replace(".loc15", "")
     
     row = {
         "Identifier": identifier,
@@ -82,8 +95,7 @@ def map_json_to_csv_row(json_data: Dict[str, Any], filename: str) -> Dict[str, s
         "Digital Publisher": md.get("digital_publisher") or "",
         "Digitized": convert_digitized(md.get("digitized")),
         "Transcript": md.get("transcript") or "",
-        "Identifier": identifier,  # Duplicate column
-        "Preservation Filename": Path(filename).stem or "",
+        "Preservation Filename": Path(filename).stem.replace(".loc15", "") or "",
         "Object ID": "",  # Not in JSON schema
     }
     
@@ -128,6 +140,7 @@ def main():
             "Digital Collection", "Digital Publisher", "Digitized", "Transcript",
             "Identifier", "Preservation Filename", "Object ID"
         ]
+        headers = normalize_headers(headers)
     
     # Find all canonical LOC15 JSON files in out/ directory
     json_files = sorted([f for f in out_dir.glob("*.loc15.json") if not f.name.endswith(".raw.json")])
@@ -192,9 +205,10 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     
-    print(f"✓ Successfully exported to {output_csv}")
-    print(f"  Total rows: {len(rows)}")
-    print(f"  Columns: {len(headers)}")
+    # Keep stdout ASCII-safe for Windows terminals that default to cp1252.
+    print(f"OK: exported to {output_csv}")
+    print(f"Rows: {len(rows)}")
+    print(f"Columns: {len(headers)}")
 
 if __name__ == "__main__":
     main()

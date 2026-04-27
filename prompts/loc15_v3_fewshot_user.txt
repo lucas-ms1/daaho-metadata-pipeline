@@ -53,6 +53,8 @@ Genre examples (AAT controlled vocabulary - always lowercase):
 - clippings (information artifacts)
 - prefaces
 
+{summary_style_examples}
+
 OCR TEXT:
 {ocr_text}
 

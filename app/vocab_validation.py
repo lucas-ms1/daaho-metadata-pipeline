@@ -159,8 +159,8 @@ def _build_aat_query(term: str) -> str:
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         SELECT ?label WHERE {{
           ?s a skos:Concept ;
-             skos:prefLabel ?label .
-          FILTER (langMatches(lang(?label), "en"))
+             (skos:prefLabel|skos:altLabel) ?label .
+          FILTER (langMatches(lang(?label), "en") || lang(?label) = "")
           FILTER (CONTAINS(LCASE(STR(?label)), LCASE("{escaped}")))
         }}
         LIMIT 10
