@@ -184,3 +184,9 @@ cython_debug/
 
 # Vercel deployment
 # public/
+
+# Local-only bookkeeping and generated review scratch space
+CODEX_PROMPT_*.md
+emailtemps/
+Microsoft/
+out_fewshot_summary_test/
