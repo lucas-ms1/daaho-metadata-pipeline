@@ -1,0 +1,149 @@
+Name audit for out/*.loc15.json
+Generated from AI title/description/subjects/creator and cross-referenced with emailtemps/AAEM Metadata (Lived Experiences) - Phase1.csv.
+
+Flag summary:
+- BC-0688: AI "Prasobsukh Sukhsvasti" differs from human "Prasobsukh Sukhsvati"
+- BC-0695: AI "Prasob Sukhvashti" differs from human "Prasobsukh Sukhvasti"
+- BC-0703: AI "Swadi Nitibon" differs from human "Swasdi Nitibhon"
+- BC-0703: Known suspect: baseline AI has "Swadi Nitibon" while human has "Swasdi Nitibhon"
+- BC-0708: AI "Weston, S. Burns" differs from human "Weston, S.Burns"
+- BC-0710: AI "Murray Sheehan" differs from human "Murray Seehan"
+- BC-0713: AI "R. Seni Pramoj" differs from human "Pramoj, Senil Upham, Alfred Horatio"
+- BC-0897: AI "Wing Kong Chong" differs from human "Wing Kong"
+- BC-0934: Known suspect: baseline AI has "Ernest H. Hahm" while human has "Hahne, Ernest H."
+- BC-0934: Known suspect: baseline AI transcript/correspondent has "Rose Choi" while human has "Rosa Choi"
+
+## BC-0688
+AI creator values: Sheehan, Murray
+AI personal-name candidates from title/description/subjects: Marshall, Murray Sheehan, Prasobsukh Sukhsvasti
+Human row name candidates: Sheehan, Murray, Marshall, Marie, Murray Sheehan, Marie Marshall, Prasobsukh Sukhsvasti, Upham, Prasobsukh Sukhsvati, Murray  Sheehan, Marie Sukhsvasti
+Flags:
+- AI "Prasobsukh Sukhsvasti" differs from human "Prasobsukh Sukhsvati"
+
+## BC-0692
+AI creator values: (none)
+AI personal-name candidates from title/description/subjects: (none)
+Human row name candidates: Upham, Alfred Horatio, Alfred Upham, Upham, Upahm, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0694
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: Kiyoshi Tomizawa, Alfred H. Upham, San Francisco, Planning World War
+Human row name candidates: Upham, Alfred Horatio, Tomizawa, K., Alfred Upham, K. Tomizawa, San Francisco, Upham, Kiyoshi Tomizawa, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0695
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: His Excellency, Alfred H. Upham, Prasob Sukhvashti
+Human row name candidates: Upham, Alfred Horatio, Alfred Upham, Prasob Sukhvashti, Upham, Thai Prince, Prasobsukh Sukhvasti, Alfred Horatio  Upham, Alfred Horatio Sukhsvasti
+Flags:
+- AI "Prasob Sukhvashti" differs from human "Prasobsukh Sukhvasti"
+
+## BC-0696
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: William M. Jardine, Alfred H. Upham
+Human row name candidates: Upham, Alfred Horatio, Jardine, W.N., Alfred Upham, WN Jardine, Upham, William Jardine, Middle Eastern, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0697
+AI creator values: (none)
+AI personal-name candidates from title/description/subjects: Alfred H. Upham, The Upham
+Human row name candidates: Upham, Alfred Horatio, Family Planning Trip, Upham, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0698
+AI creator values: (none)
+AI personal-name candidates from title/description/subjects: Alfred H. Upham
+Human row name candidates: United Press, Grounded Liner, Upham, The Upham, United Press  United Press
+Flags:
+- (none)
+
+## BC-0699
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: Koichi Hasegawa, Alfred H. Upham
+Human row name candidates: Upham, Alfred Horatio, Hasegawa, K., Alfred Upham, K. Hasegawa, Upham, Koichi Hasegawa, San Francisco, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0703
+AI creator values: Upham, A. H.
+AI personal-name candidates from title/description/subjects: A. H. Upham, Swadi Nitibon
+Human row name candidates: Upham, Alfred Horatio, Alfred Upham, Swasdi Nitibhon, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- AI "Swadi Nitibon" differs from human "Swasdi Nitibhon"
+- Known suspect: baseline AI has "Swadi Nitibon" while human has "Swasdi Nitibhon"
+
+## BC-0708
+AI creator values: Weston, S. Burns
+AI personal-name candidates from title/description/subjects: NYA College, Graduate Aid Program
+Human row name candidates: Weston, S.Burns, Rabe, Harry E., National Youth Administration (NYA), African American, Harry E
+Flags:
+- AI "Weston, S. Burns" differs from human "Weston, S.Burns"
+
+## BC-0710
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: Murray Sheehan, Alfred H. Upham, Karoon Gengradomying
+Human row name candidates: Upham, Alfred Horatio, Sheehan, Murray, Alfred Upham, Murray Sheehan, Karoon Gengradomying, Murray Seehan, Upham, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- AI "Murray Sheehan" differs from human "Murray Seehan"
+
+## BC-0711
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: Murray Sheehan, Alfred H. Upham
+Human row name candidates: Upham, Alfred Horatio, Sheehan, Murray, Alfred Upham, Murray Sheehan, Upham, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0713
+AI creator values: Pramoj, M.R. Seni
+AI personal-name candidates from title/description/subjects: R. Seni Pramoj, H. Upham
+Human row name candidates: Pramoj, Seni, Pramoj, Senil Upham, Alfred Horatio, S. Pramoj, Alfred Upham, World War II, Upham, Seni Pramoj, Seni  Pramoj, Senil Upham, Alfred Horatio
+Flags:
+- AI "R. Seni Pramoj" differs from human "Pramoj, Senil Upham, Alfred Horatio"
+
+## BC-0714
+AI creator values: Upham, Alfred H.
+AI personal-name candidates from title/description/subjects: Murray Sheehan, Alfred H. Upham
+Human row name candidates: Upham, Alfred Horatio, Sheehan, Murray, Alfred Upham, Murray Sheehan, Upham, Miami June, Alfred Horatio  Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0716
+AI creator values: Royal Thai Legation
+AI personal-name candidates from title/description/subjects: A. H. Upham, H. Upham
+Human row name candidates: Sheehan, Murray, Upham, Alfred Horatio, Murray Sheehan, Alfred Upham, Upham, Alfred Horatio
+Flags:
+- (none)
+
+## BC-0718
+AI creator values: Hibbard, C. V.
+AI personal-name candidates from title/description/subjects: A. H. Upham, C. V. Hibbard, War Manpower Commission United States
+Human row name candidates: Hibbard, C.V., V. Hibbard, Alfred Upham, Upham
+Flags:
+- (none)
+
+## BC-0897
+AI creator values: Lucas, Harold V.
+AI personal-name candidates from title/description/subjects: Harold V. Lucas, Alfred H. Upham, Wing Kong Chong
+Human row name candidates: Lucas, Harold V., Upham, Alfred Horatio, Harold Lucas, Alfred Upham, Wing Kong Chong Testimony, Wing Kong Chong, Harold V.  Lucas, Harold V, Alfred Horatio Chong, Wing Kong
+Flags:
+- AI "Wing Kong Chong" differs from human "Wing Kong"
+
+## BC-0926
+AI creator values: (none)
+AI personal-name candidates from title/description/subjects: (none)
+Human row name candidates: Chinese Nationals, American Colleges, American Ambassador
+Flags:
+- (none)
+
+## BC-0934
+AI creator values: (none)
+AI personal-name candidates from title/description/subjects: (none)
+Human row name candidates: Anderson, Carol, Erwin, Paul F., Hahne, Ernest H., Rosa Choi, Paul F, Ernest H.  Anderson, Ernest H. Choi
+Flags:
+- Known suspect: baseline AI has "Ernest H. Hahm" while human has "Hahne, Ernest H."
+- Known suspect: baseline AI transcript/correspondent has "Rose Choi" while human has "Rosa Choi"

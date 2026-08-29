@@ -6,6 +6,7 @@ from .schema import (
     MAX_OCR_CHARS,
     MAX_OUTPUT_TOKENS,
     DEFAULT_MODEL,
+    DEFAULT_OCR_MODEL,
     TIER1_FIELDS,
     TIER2_FIELDS,
     TIER3_FIELDS,
@@ -149,21 +150,31 @@ def _image_to_data_url(img_bytes: bytes) -> str:
     b64 = base64.b64encode(img_bytes).decode("utf-8")
     return f"data:image/png;base64,{b64}"
 
-def transcribe_with_model(img_bytes: bytes, max_chars: int = MAX_OCR_CHARS, model: str = DEFAULT_MODEL) -> str:
+def transcribe_with_model(img_bytes: bytes, max_chars: int = MAX_OCR_CHARS, model: str = DEFAULT_OCR_MODEL) -> str:
     client = _get_client()
     data_url = _image_to_data_url(img_bytes)
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[{
+    messages = [{
             "role": "user",
             "content": [
                 {"type": "text", "text": "Transcribe ALL visible text. Preserve line breaks; prefix clearly handwritten lines with '[handwritten] '. Use '[illegible]'/'[unclear]' for unreadable parts. Return PLAIN TEXT only."},
                 {"type": "image_url", "image_url": {"url": data_url}},
             ],
-        }],
-        temperature=0,
-        max_tokens=900,
-    )
+        }]
+    try:
+        resp = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0,
+            max_tokens=900,
+        )
+    except Exception as exc:
+        if "max_tokens" not in str(exc) or "max_completion_tokens" not in str(exc):
+            raise
+        resp = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            max_completion_tokens=900,
+        )
     text = (resp.choices[0].message.content or "").strip()
     return text[:max_chars]
 

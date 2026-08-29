@@ -21,7 +21,7 @@ try:
 except ImportError:
     pull_files_from_folder = None
 from .ocr import pil_bytes, tesseract_ocr
-from .schema import LOC15_SCHEMA, SCHEMA_VERSION
+from .schema import DEFAULT_OCR_MODEL, LOC15_SCHEMA, SCHEMA_VERSION
 from .validation_core import validate_core
 
 try:
@@ -423,8 +423,15 @@ def rebuild_existing_outputs(
             print(f"x {json_file.name}: {exc}")
             continue
 
-        md = raw.get("metadata", raw)
-        context = raw.get("context", {})
+        if isinstance(raw.get("metadata"), dict):
+            envelope = dict(raw)
+            md = dict(raw.get("metadata") or {})
+        else:
+            envelope = {"metadata": dict(raw)}
+            md = dict(raw)
+        context = dict(envelope.get("context") or {})
+        existing_metadata_tiers = envelope.get("metadata_tiers") or {}
+        existing_field_provenance = envelope.get("field_provenance") or {}
         review_notes: List[str] = []
         if apply_reviews:
             review_path = out_path / f"{json_file.stem.replace('.loc15', '')}.review.json"
@@ -441,6 +448,18 @@ def rebuild_existing_outputs(
         if title_changed and normalized_title:
             md["title"] = normalized_title
         md, metadata_tiers, field_provenance, policy_notes = apply_tier_policy(md, defaults=defaults)
+        merged_metadata_tiers = dict(existing_metadata_tiers) if isinstance(existing_metadata_tiers, dict) else {}
+        for tier_name, tier_values in metadata_tiers.items():
+            existing_tier_values = merged_metadata_tiers.get(tier_name)
+            if isinstance(existing_tier_values, dict) and isinstance(tier_values, dict):
+                merged_tier_values = dict(existing_tier_values)
+                merged_tier_values.update(tier_values)
+                merged_metadata_tiers[tier_name] = merged_tier_values
+            else:
+                merged_metadata_tiers[tier_name] = tier_values
+        merged_field_provenance = dict(field_provenance)
+        if isinstance(existing_field_provenance, dict):
+            merged_field_provenance.update(existing_field_provenance)
         subject_notes = _enforce_approved_subjects(md, approved_subjects)
         if subject_notes:
             policy_notes = policy_notes + subject_notes
@@ -481,12 +500,14 @@ def rebuild_existing_outputs(
         context["schema_version"] = SCHEMA_VERSION
         context["rebuilt_from_existing"] = True
 
-        envelope = {
-            "metadata": md,
-            "metadata_tiers": metadata_tiers,
-            "field_provenance": field_provenance,
-            "context": context,
-        }
+        envelope.update(
+            {
+                "metadata": md,
+                "metadata_tiers": merged_metadata_tiers,
+                "field_provenance": merged_field_provenance,
+                "context": context,
+            }
+        )
         validation_error = _validate(md)
         if validation_error:
             envelope["context"]["validation_error"] = validation_error
@@ -501,6 +522,7 @@ def process_path(
     repository: str,
     permalink: str,
     model: str,
+    ocr_model: str,
     approved_places: Set[str],
     approved_subjects: Set[str],
     approved_genre: Set[str],
@@ -512,6 +534,7 @@ def process_path(
     prompt_version: str = PROMPT_VERSION,
     summary_examples: Optional[Dict[str, Dict[str, str]]] = None,
     summary_fewshot_mode: str = "leave-one-out",
+    force_llm_ocr: bool = False,
 ) -> None:
     item_path = Path(path)
     if not item_path.exists():
@@ -531,16 +554,22 @@ def process_path(
         mode=summary_fewshot_mode,
     )
 
-    text, conf = tesseract_ocr(str(item_path))
+    tesseract_text, tesseract_conf = tesseract_ocr(str(item_path))
+    text, conf = tesseract_text, tesseract_conf
+    ocr_source = "tesseract"
     img_bytes = pil_bytes(str(item_path))
-    if len(text.strip()) < 25:
+    if force_llm_ocr or len(text.strip()) < 25:
         try:
-            model_text = transcribe_with_model(img_bytes, model=model)
-            if len(model_text) > len(text):
+            model_text = transcribe_with_model(img_bytes, model=ocr_model)
+            if force_llm_ocr or len(model_text) > len(text):
                 text = model_text
                 conf = max(conf, 85.0)
-        except Exception:
-            pass
+                ocr_source = "llm"
+        except Exception as exc:
+            message = f"OCR model call failed for {item_path.name} using {ocr_model}: {exc}"
+            if force_llm_ocr:
+                raise RuntimeError(message) from exc
+            print(f" WARNING: {message}", end="", flush=True)
 
     md = extract_metadata(
         img_bytes,
@@ -553,6 +582,27 @@ def process_path(
         prompt_version=prompt_version,
         summary_style_examples=summary_style_examples,
     )
+    extracted_transcript = md.get("transcript")
+    if isinstance(extracted_transcript, str) and extracted_transcript.strip():
+        md["transcript"] = extracted_transcript.strip()
+        transcript_assignment = {
+            "source": "metadata_extraction",
+            "fallback_used": False,
+            "ocr_source": ocr_source,
+        }
+    elif text.strip():
+        md["transcript"] = text.strip()
+        transcript_assignment = {
+            "source": "ocr_fallback",
+            "fallback_used": True,
+            "ocr_source": ocr_source,
+        }
+    else:
+        transcript_assignment = {
+            "source": "none",
+            "fallback_used": False,
+            "ocr_source": ocr_source,
+        }
 
     review_notes: List[str] = []
     if apply_reviews:
@@ -572,6 +622,10 @@ def process_path(
     md, metadata_tiers, field_provenance, policy_notes = apply_tier_policy(
         md, defaults=_policy_defaults(defaults or {}, collection, repository, permalink)
     )
+    if transcript_assignment["source"] == "ocr_fallback":
+        field_provenance["transcript"] = "OCR Transcript (assigned by process_path fallback)"
+    elif transcript_assignment["source"] == "metadata_extraction":
+        field_provenance["transcript"] = "OCR Transcript (returned by metadata extraction)"
     subject_notes = _enforce_approved_subjects(md, approved_subjects)
     if subject_notes:
         policy_notes = policy_notes + subject_notes
@@ -586,6 +640,10 @@ def process_path(
         "filename": item_path.name,
         "processing_confidence": float(conf),
         "model": model,
+        "ocr_model": ocr_model,
+        "ocr_source": ocr_source,
+        "force_llm_ocr": bool(force_llm_ocr),
+        "transcript_assignment": transcript_assignment,
         "prompt_version": prompt_version,
         "schema_version": SCHEMA_VERSION,
     }
@@ -652,6 +710,12 @@ def main() -> None:
     parser.add_argument("--gdrive", action="store_true", help="Fetch from Google Drive folder first")
     parser.add_argument("--samples", action="store_true", help="Process all .jpg files in SAMPLES/")
     parser.add_argument("--model", default="gpt-4o", help="OpenAI model (default: gpt-4o)")
+    parser.add_argument("--ocr-model", default=DEFAULT_OCR_MODEL, help=f"OpenAI OCR/transcription model (default: {DEFAULT_OCR_MODEL})")
+    parser.add_argument(
+        "--force-llm-ocr",
+        action="store_true",
+        help="Use the OCR/transcription model for every input instead of only as a Tesseract fallback.",
+    )
     parser.add_argument("--prompt-version", default=PROMPT_VERSION, help=f"Prompt version in prompts/ (default: {PROMPT_VERSION})")
     parser.add_argument(
         "--summary-examples-csv",
@@ -793,6 +857,7 @@ def main() -> None:
                 repository=args.repository,
                 permalink=args.permalink,
                 model=args.model,
+                ocr_model=args.ocr_model,
                 approved_places=approved_places,
                 approved_subjects=approved_subjects,
                 approved_genre=approved_genre,
@@ -804,8 +869,11 @@ def main() -> None:
                 prompt_version=args.prompt_version,
                 summary_examples=summary_examples,
                 summary_fewshot_mode=args.summary_fewshot_mode,
+                force_llm_ocr=args.force_llm_ocr,
             )
         except Exception as exc:
+            if args.force_llm_ocr:
+                raise
             print(f"x {path}: {exc}")
 
 

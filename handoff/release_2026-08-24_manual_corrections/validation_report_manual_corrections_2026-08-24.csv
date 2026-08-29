@@ -1,0 +1,2 @@
+﻿filename,identifier,source,severity,field,code,message,value,suggestions,evidence
+BC-0710_Recto.loc15.json,BC-0710_Recto,validation_evidence_qc,warning,place,place_mismatch_with_header_sender,Metadata place does not match the probable sender/creation place in header.,Massachusetts--Gloucester,,"{""fast_place"": ""Massachusetts--Glouchester"", ""line_idx"": 3, ""raw"": ""Glouchester, Massachusetts"", ""confidence"": 0.85}"

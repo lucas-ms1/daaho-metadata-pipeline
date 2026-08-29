@@ -2,19 +2,33 @@
 
 Tiny, modular pipeline for extracting OCR + Dublin Core–aligned LOC15 metadata from images/PDFs, with Google Drive download support.
 
+> **Authoritative release (August 24, 2026):** use
+> `out_manual_corrections_2026-08-24/` and
+> `handoff/release_2026-08-24_manual_corrections/final_metadata_manual_corrections_2026-08-24.csv`.
+> Start with `handoff/SUCCESSOR_GUIDE_2026-08-28.md`. The root `out/`, the July
+> freeze, root `final_metadata.csv`, older exports, and viewer data are
+> rollback/historical or noncanonical only. The viewer is retired; no maintained
+> website is included. Always use an explicit new or temporary output directory
+> for commands that write files.
+
 ## Setup
 
-### 1. Environment Setup
-```bash
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+### 1. Environment Setup (Windows PowerShell)
+Runtime dependencies are listed in `requirements.txt`. `requirements-dev.txt`
+includes those dependencies plus the test runner.
+
+```powershell
+py -3.13 -m venv .venv
+& .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r .\requirements-dev.txt
 ```
 
 ### 2. Configuration
-Copy the example files and configure them:
-```bash
-cp .env.example .env
-cp .config/client_secret.json.example .config/client_secret.json
+Create the local environment file:
+
+```powershell
+Copy-Item -LiteralPath .\.env.example -Destination .\.env
 ```
 
 Edit `.env` and set:
@@ -26,68 +40,93 @@ Edit `.config/client_secret.json` with your Google OAuth credentials (only neede
 - Enable Google Drive API
 - Create OAuth 2.0 credentials (Desktop app)
 
+Google Drive is optional. If it is needed, create the configuration directory
+and copy the safe example before replacing its placeholders with authorized
+credentials:
+
+```powershell
+New-Item -ItemType Directory -Path .\.config -Force | Out-Null
+Copy-Item -LiteralPath .\.config\client_secret.json.example -Destination .\.config\client_secret.json
+```
+
+Do not commit `.env`, `client_secret.json`, or `token.json`.
+
+### 3. External OCR Dependency
+Tesseract is not installed by pip. Install it separately and ensure it is on
+`PATH` before processing images:
+
+```powershell
+where.exe tesseract
+tesseract --version
+```
+
+At this handoff, Tesseract was not available on the current machine. If OCR is
+missing or weak, the pipeline may call the `o4-mini` OCR fallback, which can
+create an additional paid API call.
+
 ## Usage
 
 ### Option A: Process local files
-```bash
-python -m app.main --in ./samples --out ./out
+Use a new dated output directory for experiments or new processing runs:
+
+```powershell
+python -m app.main --in .\SAMPLES --out .\out_experiment_2026-07-16
 ```
 
 ### Option B: Pull from Google Drive
-```bash
-python -m app.main --gdrive --out ./out
+```powershell
+python -m app.main --gdrive --out .\out_experiment_2026-07-16
 ```
 
 ### Tier 3 defaults (human-provided)
 These fields are **never AI-generated** and are only set if you pass explicit defaults:
-```bash
-python -m app.main --in ./samples --out ./out \
-  --collection "My Collection" \
-  --repository "My Repository" \
-  --series "Series A" \
-  --folder "Folder 3" \
-  --box "Box 1" \
-  --identifier "ABC-123" \
-  --call-number "MSS-001" \
-  --digital-identifier "DIG-456" \
-  --reproduction-number "REP-789" \
-  --permalink "https://example.com/item/123" \
-  --digital-collection "Digital Collection Name" \
-  --digital-publisher "Digital Publisher" \
+```powershell
+python -m app.main --in .\SAMPLES --out .\out_experiment_2026-07-16 `
+  --collection "My Collection" `
+  --repository "My Repository" `
+  --series "Series A" `
+  --folder "Folder 3" `
+  --box "Box 1" `
+  --identifier "ABC-123" `
+  --call-number "MSS-001" `
+  --digital-identifier "DIG-456" `
+  --reproduction-number "REP-789" `
+  --permalink "https://example.com/item/123" `
+  --digital-collection "Digital Collection Name" `
+  --digital-publisher "Digital Publisher" `
   --digitized true
 ```
 
 ### Additional Options
-```bash
-python -m app.main --in ./samples --out ./out \
-  --model gpt-4o \
-  --overwrite \
-  --apply-reviews \
+```powershell
+python -m app.main --in .\SAMPLES --out .\out_experiment_2026-07-16 `
+  --model gpt-4o `
+  --ocr-model o4-mini `
+  --overwrite `
+  --apply-reviews `
   --validate-vocab
 ```
 
+`gpt-4o` is the metadata extraction default. `o4-mini` is the OCR/transcription
+fallback default. `--force-llm-ocr` uses the OCR model for every input and can
+substantially increase API usage. `--validate-vocab` and the online vocabulary
+advisory can make external FAST/AAT requests.
+
 ### Rebuild outputs from existing JSON (no OCR/AI call)
-```bash
-python -m app.main --out ./out --rebuild-from-existing
+```powershell
+python -m app.main --out .\out_experiment_2026-07-16 --rebuild-from-existing
 ```
 
-## Viewing Metadata
+Do not rebuild `out/` or the frozen package in place. Use a temporary copy or a
+new dated output directory even though transcript preservation is now covered
+by regression tests.
 
-Once you have extracted metadata to the `out/` folder, you can view it with the included web viewer:
+## Viewer status
 
-```bash
-python3 viewer.py
-```
-
-Then open **http://localhost:5000** in your browser.
-
-### Features:
-- 🖼️ **Image thumbnails** with tiered metadata display
-- 🔍 **Live search** across all metadata fields
-- 📋 **Collapsible accordions** for long text fields (transcript, text_reading)
-- 🧾 **Archivist review form** for Tier 2 fields with saved overrides
-- ✅ **Controlled vocabulary hints** with FAST/AAT validation warnings and autocomplete
-- 📊 **Confidence scores** and model information
+The static and Flask viewers are retired legacy artifacts. `public/index.html`
+is a retirement notice; `viewer.py` serves that notice only; `build_static.py`
+does not regenerate data; and `public/data.json` is stale/noncanonical. See
+`LEGACY_VIEWER_NOTICE.md`. No maintained website is included in this handoff.
 
 ## Tiered output format
 Each output file includes:
@@ -101,28 +140,65 @@ Each output file includes:
 ```
 
 ## Review workflow
-1. Run the pipeline to generate AI proposals in `out/*.loc15.json`.
-2. Start the viewer and fill out the Tier 2 review form.
-3. Review overrides are saved as `out/<item>.review.json`.
-4. Re-run with `--apply-reviews` to apply overrides to outputs.
-5. Use `--validate-vocab` to add FAST/AAT validation warnings to outputs.
+1. Run the pipeline to generate AI proposals in a new output folder.
+2. Review proposals outside the retired viewer and save any authorized review
+   file only beside a versioned working copy.
+3. Re-run with `--apply-reviews` against that versioned copy.
+4. Use `--validate-vocab` only when network vocabulary checks are authorized.
 
 ## Exporting CSV
-```bash
-python export_csv.py --out-dir ./out --output final_metadata.csv
+```powershell
+python .\export_csv.py --out-dir .\out_experiment_2026-07-16 --output .\final_metadata.csv
 ```
 
+Without `--template`, the exporter uses 31 built-in unique headers. To use a
+specific template, pass it explicitly:
+
+```powershell
+python .\export_csv.py `
+  --out-dir .\out_experiment_2026-07-16 `
+  --template .\out\final_metadata_2026-04-27_handoff.csv `
+  --output .\final_metadata.csv
+```
+
+Exact duplicate template headers are removed while preserving the first
+occurrence. An explicitly supplied missing template fails clearly. Do not use
+the duplicate-header human review CSV as a direct automated correction source.
+
 With review/provenance columns:
-```bash
-python export_csv.py --out-dir ./out --output final_metadata.csv \
+```powershell
+python .\export_csv.py `
+  --out-dir .\out_experiment_2026-07-16 `
+  --output .\final_metadata.csv `
   --apply-reviews --include-review-columns
 ```
+
+## Testing and Safe Verification
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE = '1'
+python -m pip check
+python -m pytest -q -p no:cacheprovider
+```
+
+The validation report command writes its output file, so use a temporary copy
+or the frozen validation report for strictly read-only checks. The viewer,
+review workflow, export commands, and validation commands can all write files.
+
+The repository accepts image input and has nominal PDF support, but PDF
+processing does not currently have focused test coverage and should be verified
+before production use.
+
+`out/` and `handoff/freeze_2026-07-07_out_baseline/` are rollback/historical
+evidence only. Do not overwrite, rebuild, apply reviews to, or run experiments
+inside them. The authoritative descriptive release is the August corrected
+package named at the top of this README.
 
 ## Notes
 - Keeps code small and split into focused modules.
 - OCR uses Tesseract; if OCR is empty/weak and an image is available, it falls back to a model transcription call.
 - AI extraction is constrained to a compact LOC15 schema and returns an envelope with `metadata_tiers` and `field_provenance`.
-- The `.config/` folder and `.env` file contain sensitive credentials and are gitignored.
+- The `.config/` folder and `.env` file contain sensitive credentials; only the safe client-secret example is intended for version control.
 
 ## File path (Google Drive)
 

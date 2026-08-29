@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve immutable release/freeze bytes and evidence-significant spaces.
+out_manual_corrections_2026-08-24/* -text whitespace=-blank-at-eol
+handoff/release_2026-08-24_manual_corrections/* -text whitespace=-blank-at-eol
+handoff/freeze_2026-07-07_out_baseline/* -text whitespace=-blank-at-eol
+handoff/freeze_2026-07-07_out_baseline/out_baseline/* -text whitespace=-blank-at-eol
+historical_exports/*.csv -text whitespace=-blank-at-eol

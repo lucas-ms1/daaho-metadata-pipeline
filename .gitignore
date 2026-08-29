@@ -181,6 +181,8 @@ cython_debug/
 .cursorindexingignore
 .DS_Store
 .config/*
+!.config/
+!.config/client_secret.json.example
 
 # Vercel deployment
 # public/

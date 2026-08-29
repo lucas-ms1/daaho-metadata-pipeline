@@ -117,6 +117,7 @@ LOC15_SCHEMA: Dict[str, Any] = {
 MAX_OCR_CHARS = 12000
 MAX_OUTPUT_TOKENS = 4096
 DEFAULT_MODEL = "gpt-4o"
+DEFAULT_OCR_MODEL = "o4-mini"
 SCHEMA_VERSION = "loc15_schema_v2"
 
 # Trust tiers for policy enforcement and labeling (ordered for deterministic output).

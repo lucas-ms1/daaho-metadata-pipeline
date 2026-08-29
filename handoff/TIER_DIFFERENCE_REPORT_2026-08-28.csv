@@ -1,0 +1,26 @@
+﻿record,tier,field,top_level_value,tier_value
+BC-0688,tier2,subjects,"[""Miami University (Oxford, Ohio)""]","[""Siamese Legation"", ""Miami University"", ""Prasobsukh Sukhsvasti""]"
+BC-0692,tier2,subjects,"[""correspondence""]",null
+BC-0692,tier2,genre,"[""itineraries""]",null
+BC-0694,tier2,subjects,"[""Vacations--Planning"", ""World War (1939-1945)"", ""correspondence""]",null
+BC-0696,tier2,subjects,"[""university presidents"", ""Vacations--Planning"", ""correspondence""]",null
+BC-0697,tier2,subjects,"[""American students"", ""foreign students"", ""Miami University (Oxford, Ohio)""]",null
+BC-0697,tier2,genre,"[""clippings (information artifacts)""]",null
+BC-0698,tier2,subjects,"[""correspondence""]",null
+BC-0698,tier2,genre,"[""clippings (information artifacts)""]",null
+BC-0699,tier2,subjects,"[""Vacations--Planning"", ""travel""]",null
+BC-0699,tier2,genre,"[""letters (correspondence)""]",null
+BC-0703,tier2,genre,"[""prefaces""]","[""forewords""]"
+BC-0708,tier2,subjects,"[""United States. National Youth Administration""]","[""National Youth Administration"", ""College and Graduate Aid Program""]"
+BC-0710,tier2,subjects,"[""Universities and colleges--Admission"", ""international students""]","[""university admissions"", ""international students""]"
+BC-0711,tier2,subjects,"[""international relations""]","[""Commencement addresses"", ""international relations""]"
+BC-0713,tier2,subjects,"[""Thai students"", ""World War (1939-1945)"", ""Miami University (Oxford, Ohio)""]","[""Thai students"", ""World War, 1939-1945"", ""Miami University""]"
+BC-0714,tier2,subjects,"[""Thailand""]",null
+BC-0714,tier2,genre,"[""letters (correspondence)""]",null
+BC-0716,tier2,subjects,"[""Miami University (Oxford, Ohio)"", ""correspondence""]",null
+BC-0718,tier2,subjects,"[""Japanese American college students"", ""United States. War Manpower Commission"", ""United States. Selective Service System""]","[""Japanese American students"", ""War Manpower Commission"", ""Selective Service System"", ""Nisei students"", ""Deferment policies""]"
+BC-0897,tier1,description,"""A letter from Harold V. Lucas to Alfred H. Upham, president of Miami University (1928–1945) providing a character reference for student Wing Kong Chong, highlighting his qualities as a future educator.""","""A letter from Harold V. Lucas to the President of Miami University providing a character reference for student Wing Kong Chong, highlighting his qualities as a future educator."""
+BC-0897,tier2,subjects,"[""education""]","[""education"", ""character references""]"
+BC-0926,tier2,subjects,"[""Chinese students""]","[""financial assistance"", ""Chinese students"", ""visa applications""]"
+BC-0926,tier2,genre,"[""correspondence""]","[""official correspondence""]"
+BC-0934,tier2,genre,"[""correspondence""]","[""documents""]"

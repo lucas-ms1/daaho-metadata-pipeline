@@ -1,0 +1,3 @@
+﻿filename,identifier,source,severity,field,code,message,value,suggestions,evidence
+BC-0692_Recto.loc15.json,BC-0692_Recto,validation_evidence_qc,warning,place,place_mismatch_with_header_sender,Metadata place does not match the probable sender/creation place in header.,Ohio--Oxford,,"{""fast_place"": ""Ohio--from Oxford"", ""line_idx"": 3, ""raw"": ""from Oxford, Ohio"", ""confidence"": 0.85}"
+BC-0710_Recto.loc15.json,BC-0710_Recto,validation_evidence_qc,warning,place,place_mismatch_with_header_sender,Metadata place does not match the probable sender/creation place in header.,Ohio--Oxford,,"{""fast_place"": ""Massachusetts--Gloucaster"", ""line_idx"": 3, ""raw"": ""Gloucaster, Massachusetts"", ""confidence"": 0.85}"

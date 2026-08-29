@@ -8,15 +8,24 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional
 from app.ai_metadata import apply_review_overrides
 
+DEFAULT_HEADERS = [
+    "Identifier", "Title", "Series", "Issue", "Creator", "Contributors", "Correspondents",
+    "Date", "Publisher", "Location", "Summary", "Extent", "Dimensions",
+    "Subject (FAST)", "Subject (People)", "Subject (Local)", "Decade", "Theme", "Genre",
+    "Type", "Language", "Repository", "Collection", "Folder", "Rights",
+    "Digital Collection", "Digital Publisher", "Digitized", "Transcript",
+    "Identifier", "Preservation Filename", "Object ID",
+]
+
+
 def normalize_headers(headers: List[str]) -> List[str]:
-    """Drop duplicate Identifier headers while preserving the upload order."""
+    """Drop exact duplicate headers while preserving their first occurrence."""
     normalized = []
-    seen_identifier = False
+    seen = set()
     for header in headers:
-        if header == "Identifier":
-            if seen_identifier:
-                continue
-            seen_identifier = True
+        if header in seen:
+            continue
+        seen.add(header)
         normalized.append(header)
     return normalized
 
@@ -114,7 +123,7 @@ def _load_review(out_dir: Path, base_name: str) -> Dict[str, Any]:
 def main():
     ap = argparse.ArgumentParser(description="Export LOC15 JSON to CSV")
     ap.add_argument("--out-dir", default="out", help="Directory with .loc15.json files")
-    ap.add_argument("--template", default=r"C:\Users\freew\Downloads\AAMU-BC Metadata Upload Spreadsheet - Full.csv", help="CSV template with headers")
+    ap.add_argument("--template", help="Optional CSV template whose headers define output column order")
     ap.add_argument("--output", default="final_metadata.csv", help="Output CSV path")
     ap.add_argument("--apply-reviews", action="store_true", help="Apply review overrides before export")
     ap.add_argument("--include-review-columns", action="store_true", help="Include review/provenance columns in CSV")
@@ -122,26 +131,17 @@ def main():
 
     # Paths
     out_dir = Path(args.out_dir)
-    csv_template_path = Path(args.template)
     output_csv = Path(args.output)
-    
-    # Read CSV headers to get exact column order
-    print(f"Reading headers from: {csv_template_path}")
-    try:
+
+    if args.template:
+        csv_template_path = Path(args.template)
+        if not csv_template_path.is_file():
+            ap.error(f"CSV template not found: {csv_template_path}")
+        print(f"Reading headers from: {csv_template_path}")
         headers = read_csv_headers(str(csv_template_path))
-    except FileNotFoundError:
-        print(f"Error: CSV template not found at {csv_template_path}")
-        print("Using default headers from schema...")
-        headers = [
-            "Identifier", "Title", "Series", "Issue", "Creator", "Contributors", "Correspondents",
-            "Date", "Publisher", "Location", "Summary", "Extent", "Dimensions",
-            "Subject (FAST)", "Subject (People)", "Subject (Local)", "Decade", "Theme", "Genre",
-            "Type", "Language", "Repository", "Collection", "Folder", "Rights",
-            "Digital Collection", "Digital Publisher", "Digitized", "Transcript",
-            "Identifier", "Preservation Filename", "Object ID"
-        ]
-        headers = normalize_headers(headers)
-    
+    else:
+        headers = normalize_headers(DEFAULT_HEADERS)
+
     # Find all canonical LOC15 JSON files in out/ directory
     json_files = sorted([f for f in out_dir.glob("*.loc15.json") if not f.name.endswith(".raw.json")])
     
